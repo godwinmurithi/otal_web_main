@@ -1,0 +1,395 @@
+[pl_post_props pagelayer-id="C1p2hZKWBTcG0EyR"  post_title="Branding" post_name="brand" post_status="publish" featured_image="" post_excerpt=""]
+[/pl_post_props]
+[pl_row pagelayer-id="e6NtbkGB0mNoNjle"  stretch="auto" col_gap="10" width_content="auto" row_height="default" overlay_hover_delay="400" row_shape_top_color="#227bc3" row_shape_top_width="100" row_shape_top_height="100" row_shape_bottom_color="#e44993" row_shape_bottom_width="100" row_shape_bottom_height="100" ele_padding="70px,0px,0px,0px"]
+[pl_col pagelayer-id="jnqdEen90d5li5qA"  overlay_hover_delay="400" col="12" border_type="solid" border_width="5px,0px,0px,0px" border_color="#454646ff"]
+[pl_heading pagelayer-id="ByKwtt0EAgaXgnKv"  heading_state="normal" color="#000000ff" align="center" heading_typo="PT Serif,32,,,,,Solid,,Uppercase,2,"]
+
+
+
+<h2>Branding</h2>[/pl_heading]
+[pl_text pagelayer-id="82vNSVW3y6B9QyI1"  ele_css="{{element}} {
+font-family: PT Serif;
+font-size: 15px;
+color: rgba(34,34,34,.6);
+text-align:center;
+letter-spacing: 1px;
+}" ele_custom_pos="true" ele_align="50%" ele_height="auto" ele_custom_width="700px"]
+
+
+
+
+
+
+
+
+<p>Branding News with Meganews</p>[/pl_text]
+[pl_text pagelayer-id="o6azS0WuVS8vEKpQ"  ele_css="{{element}} {
+font-family: Roboto;
+font-size: 14px;
+color: black;
+text-align:center;
+}" ele_custom_pos="true" ele_align="50%" ele_height="auto" ele_custom_width="700px" ele_padding="5px,0px,0px,0px"]
+
+
+
+
+
+
+
+
+
+<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book.</p>[/pl_text]
+[/pl_col]
+[/pl_row]
+[pl_row pagelayer-id="Trwub9RmhWUEppZ0"  stretch="auto" col_gap="10" width_content="auto" row_height="default" overlay_hover_delay="400" row_shape_top_color="#227bc3" row_shape_top_width="100" row_shape_top_height="100" row_shape_bottom_color="#e44993" row_shape_bottom_width="100" row_shape_bottom_height="100" ele_margin="0px,0px,0px,0px"]
+[pl_col pagelayer-id="aqHGeeqfhR85btj1"  overlay_hover_delay="400" col="8" ele_padding="0px,0px,0px,0px" border_width="0px,0px,0px,0px" border_color="#CCC"]
+[pl_inner_row pagelayer-id="boZfWDlHGKOqxdMh"  stretch="auto" col_gap="10" width_content="auto" row_height="default" overlay_hover_delay="400" row_shape_top_color="#227bc3" row_shape_top_width="100" row_shape_top_height="100" row_shape_bottom_color="#e44993" row_shape_bottom_width="100" row_shape_bottom_height="100" ele_padding="20px,0px,0px,0px" ele_padding_mobile="0px,0px,0px,0px"]
+[pl_inner_col pagelayer-id="tJfbr5QyIlA6xCfc"  overlay_hover_delay="400" col_width="50" col_width_tablet="50" col_width_mobile="100"]
+[pl_btn pagelayer-id="lFLB9azRJFhbK8Pg"  text="Branding" align="left" type="pagelayer-btn-custom" size="pagelayer-btn-custom" btn_hover_delay="400" icon_position="pagelayer-btn-icon-left" icon_spacing="5" btn_bg_color="#000000ff" btn_color="#ffffff" btn_typo="Roboto,14,,,,,Solid,,Uppercase,," btn_custom_size="12" btn_border_type="solid" btn_border_color="" btn_border_width="0,0,0,0" btn_border_radius="0,0,0,0"]
+[/pl_btn]
+[pl_heading pagelayer-id="7Mn8rBfe9DobKjJJ"  heading_state="normal" color="#000000ff" heading_typo="PT Serif,24,,600,,,Solid,,,," ele_padding="10px,0px,0px,0px" align="left"]
+
+
+
+<h2>Influencers Give Valuable Tips to African Youths</h2>[/pl_heading]
+[pl_text pagelayer-id="x3jtU3JmlJRluNp9"  ele_css="{{element}} {
+font-family: Roboto;
+font-size: 14px;
+text-align:left;
+color: rgba(34,34,34,.6);
+}" ele_padding="0px,0px,0px,0px"]
+
+
+
+
+
+<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br></p>[/pl_text]
+[pl_text pagelayer-id="OtQq2wLjxHASg9vl"  ele_css="{{element}} {
+font-family: PT Serif;
+font-size: 12px;
+text-align:left;
+color: rgba(0,0,0,.5);
+}"]
+
+
+
+
+
+
+
+
+
+<span>By: William Robots</span>
+<i class="far fa-clock" style="margin-left:20px;"></i><span> June 03, 2020</span>[/pl_text]
+[/pl_inner_col]
+[pl_inner_col pagelayer-id="3bzejPXo0Za50zOi"  overlay_hover_delay="400" col_width="50" col_width_tablet="50" col_width_mobile="100"]
+[pl_image pagelayer-id="aNheWB6fPFwnAeO7"  id="{{theme_url}}/images/branding1.jpg" id-size="full" align="center" img_hover="normal" img_hover_delay="400" caption_color="#ffffffff" overlay="true" icon="" icon_color="" icon_size="50" overlay_bg_type="color" overlay_bg="#22222260" content_position="center" caption_typo="PT Serif,14,,,,,Solid,,Uppercase,," link_type="custom_url" link="#"]
+
+
+
+
+
+
+
+
+
+[/pl_image]
+[/pl_inner_col]
+[/pl_inner_row]
+[pl_inner_row pagelayer-id="cKE7bKGZg3bwe08O"  stretch="auto" col_gap="10" width_content="auto" row_height="default" overlay_hover_delay="400" row_shape_top_color="#227bc3" row_shape_top_width="100" row_shape_top_height="100" row_shape_bottom_color="#e44993" row_shape_bottom_width="100" row_shape_bottom_height="100" ele_padding="20px,0px,0px,0px" ele_padding_mobile="0px,0px,0px,0px"]
+[pl_inner_col pagelayer-id="U4ROkfRED7sV5yhF"  overlay_hover_delay="400" col_width="50" col_width_tablet="50" col_width_mobile="100"]
+[pl_btn pagelayer-id="sL25UxgRzZszMHcn"  text="Branding" align="left" type="pagelayer-btn-custom" size="pagelayer-btn-custom" btn_hover_delay="400" icon_position="pagelayer-btn-icon-left" icon_spacing="5" btn_bg_color="#000000ff" btn_color="#ffffff" btn_typo="Roboto,14,,,,,Solid,,Uppercase,," btn_custom_size="12" btn_border_type="solid" btn_border_color="" btn_border_width="0,0,0,0" btn_border_radius="0,0,0,0"]
+[/pl_btn]
+[pl_heading pagelayer-id="IMrMITndy6KgTDWG"  heading_state="normal" color="#000000ff" heading_typo="PT Serif,24,,600,,,Solid,,,," ele_padding="10px,0px,0px,0px" align="left"]
+
+
+
+<h2>Bata India Q4 net profit down 57 pc to Rs 38 cr</h2>[/pl_heading]
+[pl_text pagelayer-id="98VguaEdZa1RNrBe"  ele_css="{{element}} {
+font-family: Roboto;
+font-size: 14px;
+text-align:left;
+color: rgba(34,34,34,.6);
+}" ele_padding="0px,0px,0px,0px"]
+
+
+
+
+
+<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br></p>[/pl_text]
+[pl_text pagelayer-id="jevyvDCD7qYebnYV"  ele_css="{{element}} {
+font-family: PT Serif;
+font-size: 12px;
+text-align:left;
+color: rgba(0,0,0,.5);
+}"]
+
+
+
+
+
+
+
+
+
+<span>By: William Robots</span>
+<i class="far fa-clock" style="margin-left:20px;"></i><span> June 03, 2020</span>[/pl_text]
+[/pl_inner_col]
+[pl_inner_col pagelayer-id="KC181ZKFjzQkC5eS"  overlay_hover_delay="400" col_width="50" col_width_tablet="50" col_width_mobile="100"]
+[pl_image pagelayer-id="O8eqZIJ1wnFpvEfM"  id="{{theme_url}}/images/branding2.jpg" id-size="full" align="center" img_hover="normal" img_hover_delay="400" caption_color="#ffffffff" overlay="true" icon="" icon_color="" icon_size="50" overlay_bg_type="color" overlay_bg="#22222260" content_position="center" caption_typo="PT Serif,14,,,,,Solid,,Uppercase,," link_type="custom_url" link="#"]
+
+
+
+
+
+
+
+
+
+[/pl_image]
+[/pl_inner_col]
+[/pl_inner_row]
+[pl_inner_row pagelayer-id="NRwmtHXxMSYxNXC4"  stretch="auto" col_gap="10" width_content="auto" row_height="default" overlay_hover_delay="400" row_shape_top_color="#227bc3" row_shape_top_width="100" row_shape_top_height="100" row_shape_bottom_color="#e44993" row_shape_bottom_width="100" row_shape_bottom_height="100" ele_padding="20px,0px,0px,0px" ele_padding_mobile="0px,0px,0px,0px"]
+[pl_inner_col pagelayer-id="hLenrhj2yBilsHNP"  overlay_hover_delay="400" col_width="50" col_width_tablet="50" col_width_mobile="100"]
+[pl_btn pagelayer-id="AehdYo6eh2BfmA1d"  text="Branding" align="left" type="pagelayer-btn-custom" size="pagelayer-btn-custom" btn_hover_delay="400" icon_position="pagelayer-btn-icon-left" icon_spacing="5" btn_bg_color="#000000ff" btn_color="#ffffff" btn_typo="Roboto,14,,,,,Solid,,Uppercase,," btn_custom_size="12" btn_border_type="solid" btn_border_color="" btn_border_width="0,0,0,0" btn_border_radius="0,0,0,0"]
+[/pl_btn]
+[pl_heading pagelayer-id="S3PLQehrQZ8ozmiO"  heading_state="normal" color="#000000ff" heading_typo="PT Serif,24,,600,,,Solid,,,," ele_padding="10px,0px,0px,0px" align="left"]
+
+
+
+<h2>Short-term brand moves, with a long-term purpose</h2>[/pl_heading]
+[pl_text pagelayer-id="ueGCD1z8e0ad7BA7"  ele_css="{{element}} {
+font-family: Roboto;
+font-size: 14px;
+text-align:left;
+color: rgba(34,34,34,.6);
+}" ele_padding="0px,0px,0px,0px"]
+
+
+
+
+
+<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br></p>[/pl_text]
+[pl_text pagelayer-id="mnHKZJgIHUMAnA5o"  ele_css="{{element}} {
+font-family: PT Serif;
+font-size: 12px;
+text-align:left;
+color: rgba(0,0,0,.5);
+}"]
+
+
+
+
+
+
+
+
+
+<span>By: William Robots</span>
+<i class="far fa-clock" style="margin-left:20px;"></i><span> June 03, 2020</span>[/pl_text]
+[/pl_inner_col]
+[pl_inner_col pagelayer-id="sAftSCuYzCftrEyp"  overlay_hover_delay="400" col_width="50" col_width_tablet="50" col_width_mobile="100"]
+[pl_image pagelayer-id="N8swuPIA31Am38in"  id="{{theme_url}}/images/branding3.jpg" id-size="full" align="center" img_hover="normal" img_hover_delay="400" caption_color="#ffffffff" overlay="true" icon="" icon_color="" icon_size="50" overlay_bg_type="color" overlay_bg="#22222260" content_position="center" caption_typo="PT Serif,14,,,,,Solid,,Uppercase,," link_type="custom_url" link="#"]
+
+
+
+
+
+
+
+
+
+[/pl_image]
+[/pl_inner_col]
+[/pl_inner_row]
+[pl_inner_row pagelayer-id="Rer6KXJ8LNDGVf3C"  stretch="auto" col_gap="10" width_content="auto" row_height="default" overlay_hover_delay="400" row_shape_top_color="#227bc3" row_shape_top_width="100" row_shape_top_height="100" row_shape_bottom_color="#e44993" row_shape_bottom_width="100" row_shape_bottom_height="100" ele_padding="20px,0px,0px,0px" ele_padding_mobile="0px,0px,0px,0px"]
+[pl_inner_col pagelayer-id="Y5gN5oJevrvzbN4y"  overlay_hover_delay="400" col_width="50" col_width_tablet="50" col_width_mobile="100"]
+[pl_btn pagelayer-id="EA7GIJLhISZmKq01"  text="Branding" align="left" type="pagelayer-btn-custom" size="pagelayer-btn-custom" btn_hover_delay="400" icon_position="pagelayer-btn-icon-left" icon_spacing="5" btn_bg_color="#000000ff" btn_color="#ffffff" btn_typo="Roboto,14,,,,,Solid,,Uppercase,," btn_custom_size="12" btn_border_type="solid" btn_border_color="" btn_border_width="0,0,0,0" btn_border_radius="0,0,0,0"]
+[/pl_btn]
+[pl_heading pagelayer-id="R55mjnQTddhl03wu"  heading_state="normal" color="#000000ff" heading_typo="PT Serif,24,,600,,,Solid,,,," ele_padding="10px,0px,0px,0px" align="left"]
+
+
+
+<h2>Cast out Negative Thoughts by Coloring on Music Beats</h2>[/pl_heading]
+[pl_text pagelayer-id="F7haoeWT1OxGglLj"  ele_css="{{element}} {
+font-family: Roboto;
+font-size: 14px;
+text-align:left;
+color: rgba(34,34,34,.6);
+}" ele_padding="0px,0px,0px,0px"]
+
+
+
+
+
+<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br></p>[/pl_text]
+[pl_text pagelayer-id="KTjF4Q7P51jVS6TS"  ele_css="{{element}} {
+font-family: PT Serif;
+font-size: 12px;
+text-align:left;
+color: rgba(0,0,0,.5);
+}"]
+
+
+
+
+
+
+
+
+
+<span>By: William Robots</span>
+<i class="far fa-clock" style="margin-left:20px;"></i><span> June 03, 2020</span>[/pl_text]
+[/pl_inner_col]
+[pl_inner_col pagelayer-id="ST6f6ofvsCcOP6l1"  overlay_hover_delay="400" col_width="50" col_width_tablet="50" col_width_mobile="100"]
+[pl_image pagelayer-id="0HmTLuDobJJe15vN"  id="{{theme_url}}/images/branding4.jpg" id-size="full" align="center" img_hover="normal" img_hover_delay="400" caption_color="#ffffffff" overlay="true" icon="" icon_color="" icon_size="50" overlay_bg_type="color" overlay_bg="#22222260" content_position="center" caption_typo="PT Serif,14,,,,,Solid,,Uppercase,," link_type="custom_url" link="#"]
+
+
+
+
+
+
+
+
+
+[/pl_image]
+[/pl_inner_col]
+[/pl_inner_row]
+[pl_inner_row pagelayer-id="lTogVx1iOAzAa6ql"  stretch="auto" col_gap="10" width_content="auto" row_height="default" overlay_hover_delay="400" row_shape_top_color="#227bc3" row_shape_top_width="100" row_shape_top_height="100" row_shape_bottom_color="#e44993" row_shape_bottom_width="100" row_shape_bottom_height="100" ele_padding="20px,0px,0px,0px" ele_padding_mobile="0px,0px,0px,0px"]
+[pl_inner_col pagelayer-id="jyVUPKlK00tID2KN"  overlay_hover_delay="400" col_width="50" col_width_tablet="50" col_width_mobile="100"]
+[pl_btn pagelayer-id="cCrgAEJcgiNcDQFt"  text="Branding" align="left" type="pagelayer-btn-custom" size="pagelayer-btn-custom" btn_hover_delay="400" icon_position="pagelayer-btn-icon-left" icon_spacing="5" btn_bg_color="#000000ff" btn_color="#ffffff" btn_typo="Roboto,14,,,,,Solid,,Uppercase,," btn_custom_size="12" btn_border_type="solid" btn_border_color="" btn_border_width="0,0,0,0" btn_border_radius="0,0,0,0"]
+[/pl_btn]
+[pl_heading pagelayer-id="HTklFTK2p2jbbotW"  heading_state="normal" color="#000000ff" heading_typo="PT Serif,24,,600,,,Solid,,,," ele_padding="10px,0px,0px,0px" align="left"]
+
+
+
+<h2>5 Ways Brands Can Reinvent Their Digital Marketing Strategy</h2>[/pl_heading]
+[pl_text pagelayer-id="IkpBDTBg2p3RecWB"  ele_css="{{element}} {
+font-family: Roboto;
+font-size: 14px;
+text-align:left;
+color: rgba(34,34,34,.6);
+}" ele_padding="0px,0px,0px,0px"]
+
+
+
+
+
+<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.<br></p>[/pl_text]
+[pl_text pagelayer-id="TYeVTQz5ig6auZ4I"  ele_css="{{element}} {
+font-family: PT Serif;
+font-size: 12px;
+text-align:left;
+color: rgba(0,0,0,.5);
+}"]
+
+
+
+
+
+
+
+
+
+<span>By: William Robots</span>
+<i class="far fa-clock" style="margin-left:20px;"></i><span> June 03, 2020</span>[/pl_text]
+[/pl_inner_col]
+[pl_inner_col pagelayer-id="H8D88XiSk7hdRaQY"  overlay_hover_delay="400" col_width="50" col_width_tablet="50" col_width_mobile="100"]
+[pl_image pagelayer-id="pORaHG9d2E3gU5aM"  id="{{theme_url}}/images/branding5.jpg" id-size="full" align="center" img_hover="normal" img_hover_delay="400" caption_color="#ffffffff" overlay="true" icon="" icon_color="" icon_size="50" overlay_bg_type="color" overlay_bg="#22222260" content_position="center" caption_typo="PT Serif,14,,,,,Solid,,Uppercase,," link_type="custom_url" link="#"]
+
+
+
+
+
+
+
+
+
+[/pl_image]
+[/pl_inner_col]
+[/pl_inner_row]
+[pl_btn pagelayer-id="IVqWaMaLS0WqKaJU"  text="View More" align="center" type="pagelayer-btn-custom" size="pagelayer-btn-small" btn_hover_delay="400" icon_position="pagelayer-btn-icon-right" icon_spacing="5" link="#" btn_typo="Roboto,14,,600,,,Solid,,Uppercase,," btn_bg_color="" btn_color="#000000ff" icon="fas fa-long-arrow-alt-right" btn_border_type="solid" btn_border_color="#000000ff" btn_border_width="2,2,2,2" btn_hover="" btn_bg_color_hover="#e81500ff" btn_color_hover="#ffffffff" anim_type="slide" direction="pagelayer-btn-anim-left" ele_padding="20px,0px,0px,0px" ele_margin="0px,0px,0px,0px"]
+[/pl_btn]
+[/pl_col]
+[pl_col pagelayer-id="mvP9CHHVjlv4zMI5"  overlay_hover_delay="400" col="4" ele_css="{{element}} .pagelayer-col-holder{
+position: sticky;
+top: 0;
+}"]
+[pl_heading pagelayer-id="QXKNgoMkl2S3micV"  heading_state="normal" color="#00000070" heading_typo="PT Serif,17,,,,,Solid,,,," ele_align="margin" ele_height="auto" ele_position="relative" align_tablet="center" heading_typo_tablet=",30,,,,,Solid,,,," ele_padding_tablet="50px,0px,0px,0px" align_mobile="center" heading_typo_mobile=",22,,,,,Solid,,,," ele_padding_mobile="50px,0px,0px,0px"]
+
+
+
+
+
+<h2>Highlight</h2>[/pl_heading]
+[pl_testimonial_slider pagelayer-id="z694JcAYApK1RNXl"  slide_items="1" slide_margin="10" arrows_bg="#6a6969" arraow_color="#ffffff" arraow_bg_size="20" arraow_bg_shape="20" slide_controls="none" pager_top_space="NaN" active_dot_size="NaN" dot_size="NaN" slide_autoplay="true" slide_loop="true" slide_hoverpause="true" ele_align="margin" ele_height="auto" ele_position="" ele_hposition_offset="-596px"]
+[pl_testimonial pagelayer-id="jok0N6mqJAHRZBgs"  image_position="aside-position" alignment="center" author-spacing="10" avatar="{{theme_url}}/images/header.jpg" testimonial_image_size="NaN" img_shape="square" cite="" cite_color="#426870" cite_style=",20,,100,,none,,,,," designation="" designation_color="#9cafc0" cite_designation_style=",16,,100,,,,,,,"]
+
+
+
+
+
+<p style="Font-family: PT Serif; font-size: 16px; font-weight: bold; color: Black;">Critics of Trump protest policies span US political spectrum</p>[/pl_testimonial]
+[pl_testimonial pagelayer-id="cs96Xl9eVNs2EnUl"  image_position="aside-position" alignment="center" author-spacing="10" avatar="{{theme_url}}/images/technology2.jpg" testimonial_image_size="NaN" img_shape="square" cite="" cite_color="#426870" cite_style=",20,,100,,none,,,,," designation="" designation_color="#9cafc0" cite_designation_style=",16,,100,,,,,,,"]
+
+
+
+
+
+<p style="Font-family: PT Serif; font-size: 16px; font-weight: bold; color: Black;">Artificial Intelligence Technique helps robots find the front door</p>[/pl_testimonial]
+[pl_testimonial pagelayer-id="m8wadyP6OxIGE181"  image_position="aside-position" alignment="center" author-spacing="10" avatar="{{theme_url}}/images/technology4.jpg" testimonial_image_size="NaN" img_shape="square" cite="" cite_color="#426870" cite_style=",20,,100,,none,,,,," designation="" designation_color="#9cafc0" cite_designation_style=",16,,100,,,,,,,"]
+
+
+
+
+
+<p style="Font-family: PT Serif; font-size: 16px; font-weight: bold; color: Black;">AI could help drones detect dangerous landmine</p>[/pl_testimonial]
+[/pl_testimonial_slider]
+[pl_heading pagelayer-id="OEC7uqi9TI3mLBTV"  heading_state="normal" color="#00000070" heading_typo="PT Serif,17,,,,,Solid,,Uppercase,,"]
+
+
+
+
+
+<h2>Most Read</h2>[/pl_heading]
+[pl_service pagelayer-id="ZHU6U3jd7PpiKjGr"  service_image="{{theme_url}}/images/technology1.jpg" service_image_size="custom" service_alignment="left" service_vertical_alignment="top" img_bor_state="normal" img_filter="0,100,100,0,0,100,100" img_transition="400" img_filter_hover="0,100,100,0,0,100,100" service_heading="Windows 10 update causes Blue Screen of Death" heading_alignment="left" service_title_spacing="0,0,10,10" heading_state="normal" service_heading_color="#000000ff" service_heading_typo="PT Serif,20,,600,,,Solid,,,," heading_transition="400" service_text_alignment="center" service_btn_hover_delay="400" service_img_alignment="left" service_image_custom_size="150" ele_padding="20px,0px,10px,0px" border_type="dashed" border_width="0px,0px,1px,0px" border_color="#CCC" box_url="#" ele_padding_mobile="10px,0px,10px,0px"]
+
+
+
+
+
+[/pl_service]
+[pl_service pagelayer-id="H4rSOmr1Mkeegdi3"  service_image="{{theme_url}}/images/travel2.jpg" service_image_size="custom" service_alignment="left" service_vertical_alignment="top" img_bor_state="normal" img_filter="0,100,100,0,0,100,100" img_transition="400" img_filter_hover="0,100,100,0,0,100,100" service_heading="Turks and Caicos Islands will start welcoming tourists" heading_alignment="left" service_title_spacing="0,0,10,10" heading_state="normal" service_heading_color="#000000ff" service_heading_typo="PT Serif,20,,600,,,Solid,,,," heading_transition="400" service_text_alignment="center" service_btn_hover_delay="400" service_img_alignment="left" service_image_custom_size="150" ele_padding="20px,0px,10px,0px" border_type="dashed" border_width="0px,0px,1px,0px" border_color="#CCC" box_url="#" ele_padding_mobile="10px,0px,10px,0px"]
+
+
+
+
+
+[/pl_service]
+[pl_service pagelayer-id="rcVo1eHk2jY6dF6t"  service_image="{{theme_url}}/images/business1.jpg" service_image_size="custom" service_alignment="left" service_vertical_alignment="top" img_bor_state="normal" img_filter="0,100,100,0,0,100,100" img_transition="400" img_filter_hover="0,100,100,0,0,100,100" service_heading="Extraordinary efforts needed to lift the economy" heading_alignment="left" service_title_spacing="0,0,10,10" heading_state="normal" service_heading_color="#000000ff" service_heading_typo="PT Serif,20,,600,,,Solid,,,," heading_transition="400" service_text_alignment="center" service_btn_hover_delay="400" service_img_alignment="left" service_image_custom_size="150" ele_padding="20px,0px,10px,0px" border_type="dashed" border_width="0px,0px,1px,0px" border_color="#CCC" box_url="#" ele_padding_mobile="10px,0px,10px,0px"]
+
+
+
+
+
+[/pl_service]
+[pl_service pagelayer-id="w7Zp26aij4B2M4To"  service_image="{{theme_url}}/images/branding1.jpg" service_image_size="custom" service_alignment="left" service_vertical_alignment="top" img_bor_state="normal" img_filter="0,100,100,0,0,100,100" img_transition="400" img_filter_hover="0,100,100,0,0,100,100" service_heading="Influencers Give Valuable Tips to African Youths" heading_alignment="left" service_title_spacing="0,0,10,10" heading_state="normal" service_heading_color="#000000ff" service_heading_typo="PT Serif,20,,600,,,Solid,,,," heading_transition="400" service_text_alignment="center" service_btn_hover_delay="400" service_img_alignment="left" service_image_custom_size="150" ele_padding="20px,0px,10px,0px" border_type="dashed" border_width="0px,0px,1px,0px" border_color="#CCC" box_url="#" ele_padding_mobile="10px,0px,10px,0px"]
+
+
+
+
+
+[/pl_service]
+[pl_service pagelayer-id="YIGeeWNMB9ZciMQ5"  service_image="{{theme_url}}/images/lifestyle2.jpg" service_image_size="custom" service_alignment="left" service_vertical_alignment="top" img_bor_state="normal" img_filter="0,100,100,0,0,100,100" img_transition="400" img_filter_hover="0,100,100,0,0,100,100" service_heading="Meet the greatest men&#39;s figure skater ever" heading_alignment="left" service_title_spacing="0,0,10,10" heading_state="normal" service_heading_color="#000000ff" service_heading_typo="PT Serif,20,,600,,,Solid,,,," heading_transition="400" service_text_alignment="center" service_btn_hover_delay="400" service_img_alignment="left" service_image_custom_size="150" ele_padding="20px,0px,10px,0px" border_type="dashed" border_width="0px,0px,1px,0px" border_color="#CCC" box_url="#" ele_padding_mobile="10px,0px,10px,0px"]
+
+
+
+
+
+[/pl_service]
+[/pl_col]
+[/pl_row]
+[pl_row pagelayer-id="ylUMzQP6yM1UKeeB"  stretch="auto" col_gap="10" width_content="auto" row_height="default" overlay_hover_delay="400" row_shape_top_color="#227bc3" row_shape_top_width="100" row_shape_top_height="100" row_shape_bottom_color="#e44993" row_shape_bottom_width="100" row_shape_bottom_height="100" ele_padding="0px,0px,60px,0px"]
+[pl_col pagelayer-id="Izm6JqB717xEngCr"  overlay_hover_delay="400"]
+[/pl_col]
+[/pl_row]

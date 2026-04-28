@@ -1,0 +1,19 @@
+# robots.txt for orionterrametrics.co.ke
+
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin/backend areas (if you have any)
+# Disallow: /admin/
+# Disallow: /forms/
+
+# Disallow crawling of assets that don't need indexing
+Disallow: /assets/vendor/
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Allow crawling of images for image search
+Allow: /assets/img/
+
+# Sitemap location
+Sitemap: https://orionterrametrics.co.ke/sitemap.xml

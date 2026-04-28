@@ -1,0 +1,95 @@
+
+---Upload files---
+Customizer file was not uploaded. Error: Specified file failed upload test.
+
+---Upload files---
+Redux file was not uploaded. Error: Specified file failed upload test.
+
+---Upload files---
+The import files were successfully uploaded!
+Initial max execution time = 1500
+Files info:
+Site URL = https://demo.freshthemes.com/newsnow-pro
+Data file = /www/wwwroot/demo.freshthemes.com/wp-content/uploads/sites/49/2020/03/newsnowpro-1.xml
+Widget file = /www/wwwroot/demo.freshthemes.com/wp-content/uploads/sites/49/2020/03/newsnowpro-1.wie
+Customizer file = not defined!
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Sidebar : 
+
+happythemes-ad - No Title - Site does not support widget
+&raquo; Social Icons - Follow Us - Widget already exists
+&raquo; Newsletter - Newsletter Widget - Widget already exists
+&raquo; Most Viewed Posts - Most Viewed Posts - Widget already exists
+Search - No Title - Widget already exists
+happythemes-ad - Advertisement - Site does not support widget
+&raquo; Random Posts - Random Posts - Widget already exists
+happythemes-ad - Advertisement - Site does not support widget
+Tag Cloud - Tag Cloud - Widget already exists
+
+Homepage Content : 
+
+happythemes-ad - No Title - Site does not support widget
+happythemes-home-block-one - No Title - Site does not support widget
+happythemes-ad - No Title - Site does not support widget
+happythemes-home-two-columns - No Title - Site does not support widget
+happythemes-ad - No Title - Site does not support widget
+happythemes-home-three-columns - No Title - Site does not support widget
+happythemes-ad - No Title - Site does not support widget
+
+Homepage Sidebar : 
+
+happythemes-ad - No Title - Site does not support widget
+&raquo; Social Icons - Follow Us - Widget already exists
+&raquo; Newsletter - Newsletter Widget - Widget already exists
+&raquo; Most Viewed Posts - Most Viewed Posts - Widget already exists
+Search - No Title - Widget already exists
+happythemes-ad - Advertisement - Site does not support widget
+&raquo; Random Posts - Random Posts - Widget already exists
+Recent Comments - No Title - Widget already exists
+happythemes-ad - No Title - Site does not support widget
+Tag Cloud - No Title - Widget already exists
+
+Footer Column 1 : 
+
+Text - About The Theme - Widget already exists
+
+Footer Column 2 : 
+
+&raquo; Recent Posts - Recent Posts - Widget already exists
+
+Footer Column 3 : 
+
+&raquo; Popular Posts - Popular Posts - Widget already exists
+
+Footer Column 4 : 
+
+Categories - No Title - Widget already exists
+
+Header Advertisement : 
+
+happythemes-ad - No Title - Site does not support widget
+
+Content Advertisement : 
+
+happythemes-ad - No Title - Site does not support widget
+
+

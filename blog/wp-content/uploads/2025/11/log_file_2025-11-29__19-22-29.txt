@@ -1,0 +1,120 @@
+
+---Downloaded files---
+The import files for: Demo content were successfully downloaded!
+Initial max execution time = 30
+Files info:
+Site URL = https://orionterrametrics.co.ke/blog
+Data file = /home/orionter/domains/orionterrametrics.co.ke/public_html/blog/wp-content/themes/newsnow-pro/demo-content/demo-content.xml
+Widget file = /home/orionter/domains/orionterrametrics.co.ke/public_html/blog/wp-content/themes/newsnow-pro/demo-content/demo-widgets.wie
+Customizer file = not defined!
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Sidebar : 
+
+&raquo; Advertisement - No Title - Imported
+&raquo; Social Icons - Follow Us - Imported
+&raquo; Newsletter - Newsletter Widget - Imported
+&raquo; Most Viewed Posts - Most Viewed Posts - Imported
+&raquo; Advertisement - No Title - Imported
+&raquo; Random Posts - Random Posts - Imported
+Tag Cloud - Tag Cloud - Imported
+&raquo; Advertisement - No Title - Imported
+
+Homepage Content : 
+
+&raquo; Advertisement - No Title - Imported
+&raquo; Home One Column - Editor&#039;s Picks - Imported
+&raquo; Advertisement - No Title - Imported
+&raquo; Home Two Columns - No Title - Imported
+&raquo; Advertisement - No Title - Imported
+&raquo; Home Three Columns - No Title - Imported
+&raquo; Advertisement - No Title - Imported
+&raquo; Home One Column - No Title - Imported
+
+Homepage Sidebar : 
+
+&raquo; Advertisement - No Title - Imported
+&raquo; Social Icons - Follow Us - Imported
+&raquo; Newsletter - Newsletter Widget - Imported
+&raquo; Most Viewed Posts - Most Viewed Posts - Imported
+&raquo; Advertisement - No Title - Imported
+&raquo; Random Posts - Random Posts - Imported
+&raquo; Advertisement - No Title - Imported
+&raquo; Recent Posts - Recent Posts - Imported
+Tag Cloud - No Title - Imported
+&raquo; Popular Posts - Popular Posts - Imported
+
+Footer Column 1 : 
+
+Text - About The Theme - Imported
+
+Footer Column 2 : 
+
+&raquo; Recent Posts - Recent Posts - Imported
+
+Footer Column 3 : 
+
+&raquo; Popular Posts - Popular Posts - Imported
+
+Footer Column 4 : 
+
+Categories - No Title - Imported
+
+Header Advertisement : 
+
+&raquo; Advertisement - No Title - Imported
+
+Content Advertisement : 
+
+&raquo; Advertisement - No Title - Imported
+
+
+
+---ocdi/after_import---
+

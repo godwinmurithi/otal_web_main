@@ -1,0 +1,49 @@
+[pl_row pagelayer-id="E60knvV5J08XafZk"  stretch="auto" col_gap="10" width_content="auto" row_height="default" overlay_hover_delay="400" row_shape_top_color="#227bc3" row_shape_top_width="100" row_shape_top_height="100" row_shape_bottom_color="#e44993" row_shape_bottom_width="100" row_shape_bottom_height="100" ele_padding="30px,0px,0px,0px" ele_bg_type="color" ele_bg_color="#000000ff"]
+[pl_col pagelayer-id="9PnaVYNYdZyjh1Qg"  overlay_hover_delay="400" col="2" content_pos="center" hide_mobile="true" hide_tablet="true"]
+[/pl_col]
+[pl_col pagelayer-id="B34Pxa47pZJK7a93"  overlay_hover_delay="400" col="6" content_pos="center"]
+[pl_heading pagelayer-id="5WJvMGMw1ESxZ7Da"  heading_state="normal" color="#ffffffff" align="center" heading_typo="PT Serif,80,,,,Underline Overline,Solid,1,Uppercase,," ele_align="0%" ele_height="auto" ele_position="" heading_typo_tablet=",60,,,,,Solid,,,," heading_typo_mobile=",40,,,,,Solid,,,,"]
+
+
+
+
+
+
+
+<h2><span style="color: #E81500;">Mega</span>news</h2>[/pl_heading]
+[pl_heading pagelayer-id="ki0R0OF0BHpp8BJy"  heading_state="normal" color="#ffffffff" align_tablet="center" heading_typo_tablet="Roboto,16,,400,,,Solid,,Uppercase,10," align="center" heading_typo="Roboto,20,,400,,,Solid,,Uppercase,10," heading_typo_mobile=",14,,,,,Solid,,,4.5,"]
+
+<h2>NEWS AND MAGAZINES</h2>[/pl_heading]
+[pl_inner_row pagelayer-id="Sin1mQyd2TymHWL1"  stretch="auto" col_gap="10" width_content="auto" row_height="default" overlay_hover_delay="400" row_shape_top_color="#227bc3" row_shape_top_width="100" row_shape_top_height="100" row_shape_bottom_color="#e44993" row_shape_bottom_width="100" row_shape_bottom_height="100" ele_padding="0px,0px,0px,0px"]
+[pl_inner_col pagelayer-id="Jxh05CDJL33zvh5O"  overlay_hover_delay="400"]
+[pl_text pagelayer-id="hSEjsWTLOqGbRd8U"  ele_css="{{element}} {
+font-family: Roboto;
+font-size: 14px;
+color: white;
+text-align:center;
+}" ele_custom_pos="true" ele_align="50%" ele_height="auto" ele_custom_width="700px" ele_padding="5px,0px,0px,0px"]
+
+
+
+
+
+<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book.</p>[/pl_text]
+[pl_author_box pagelayer-id="veIC6R0rkYvUtqQt"  box_source="custom" author_picture="true" show_name="true" name_style="h4" layout="center" alignment="center" type="pagelayer-btn-default" size="pagelayer-btn-large" btn_hover_delay="400" user_url="none" avatar="{{theme_url}}/images/author.png" display_name="By: William Robots" show_bio="" description="This is my Bio!" image_size="50" image_gap="10" image_border="" image_border_type="solid" image_border_radius="100" image_border_color="#ffffffff" image_border_width="3" title_gap="NaN" name_color="#ffffffff" name_typography="Roboto,14,,400,,,Solid,,,," image_border_shadow=",,,,0," ele_css="{{element}} .pagelayer-author-title{
+margin-top: 10px;
+margin-bottom: -10px;
+}"]
+[/pl_author_box]
+[pl_share_grp pagelayer-id="Pr0bJZyxFR5pyIrz"  type="icon" bg_shape="pagelayer-social-shape-circle" align="center" vspace="10" hspace="30" height="30" icon_size="20" icon_space="5" color_scheme="" icon_color="#ffffff" social_hover_delay="400" name_typo=",15,,,,,solid,,,," icon_bg_color="#e81500ff"]
+[pl_share pagelayer-id="WQdspO8oFdveOAO1"  icon="fab fa-facebook-f"]
+[/pl_share]
+[pl_share pagelayer-id="TiJDvl3DranmqUsy"  icon="fab fa-twitter"]
+[/pl_share]
+[pl_share pagelayer-id="cXF7ACBr35jHAMUC"  icon="fab fa-linkedin-in"]
+[/pl_share]
+[/pl_share_grp]
+[/pl_inner_col]
+[/pl_inner_row]
+[/pl_col]
+[pl_col pagelayer-id="St81rsu73pkELSkb"  overlay_hover_delay="400" col="2" content_pos="center" hide_tablet="true" hide_mobile="true"]
+[/pl_col]
+[/pl_row]

@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MT4CKPHV49"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MT4CKPHV49');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orion Spatial Data Hub - Africa's Open Geospatial Infrastructure</title>
+    <meta name="description" content="Orion Spatial Data Hub - Breaking down barriers to geospatial data across Africa with AI-powered discovery, real-time analysis, and open standards.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    
+  <!-- Favicons -->
+  <link href="assets/img/OrionLogoIcon.png" rel="icon">
+  <link href="assets/img/OrionLogoIcon.png.png" rel="apple-touch-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --primary-green: #008751;
+            --secondary-green: #006B3F;
+            --dark-blue: #003B5C;
+            --accent-blue: #005A8C;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        /* Header Styles - Matching Orion Brand */
+        .header {
+            background: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .navmenu {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navmenu ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 25px;
+            align-items: center;
+        }
+        
+        .navmenu a {
+            color: var(--text-dark);  /* or var(--primary-green) for green nav links */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s;
+    font-family: 'Nunito Sans', sans-serif;
+        }
+        
+        .navmenu a:hover {
+            color: var(--primary-green);
+        }
+        
+        .btn-getstarted {
+            padding: 10px 25px;
+    background: var(--primary-green);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.3s;
+    margin-left: 20px;
+        }
+        
+        .btn-getstarted:hover {
+            transform: translateY(-2px);
+        }
+        
+        .mobile-nav-toggle {
+            display: none;
+    font-size: 28px;
+    color: var(--text-dark);
+    cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .hero .tagline {
+            font-size: 22px;
+            margin-bottom: 15px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        
+        .hero .description {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            padding: 15px 40px;
+            background: white;
+            color: var(--primary-green);
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            padding: 15px 40px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .platform-features {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            font-size: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .platform-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .platform-feature i {
+            font-size: 24px;
+        }
+        
+        /* Main Content Sections */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-alt {
+            background: var(--bg-light);
+        }
+        
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .section-title {
+            font-size: 38px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .feature-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .capability-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .capability-list li {
+            padding: 15px 0;
+            display: flex;
+            align-items: start;
+            gap: 15px;
+            font-size: 16px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .capability-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .capability-list i {
+            color: var(--primary-green);
+            font-size: 24px;
+            margin-top: 2px;
+        }
+        
+        .capability-list strong {
+            color: var(--dark-blue);
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .phase-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .phase-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .phase-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .phase-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .phase-card h3 {
+            font-size: 20px;
+            color: var(--dark-blue);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .phase-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .stat-item {
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        
+        .tech-badge {
+            padding: 10px 20px;
+            background: #f0f7ff;
+            color: var(--dark-blue);
+            border-radius: 8px;
+            font-weight: 600;
+            border: 2px solid #c8e6c9;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--accent-blue) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .benefit-item {
+            text-align: center;
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+        }
+        
+        .benefit-item h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-item p {
+            opacity: 0.9;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .contact-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .contact-intro h2 {
+            font-size: 40px;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .contact-intro p {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            color: var(--dark-blue);
+            margin-bottom: 25px;
+        }
+        
+        .contact-method {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+        
+        .contact-details p {
+            color: var(--text-light);
+            margin: 0;
+        }
+        
+        .contact-form {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 12px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+        }
+        
+       
+/* Footer - Matching Orion Brand */
+.footer {
+background: linear-gradient(135deg, var(--dark-blue) 0%, var(--accent-blue) 100%);
+color: white;
+padding: 60px 0 20px;
+}
+
+.footer-top {
+display: grid;
+grid-template-columns: 2fr 1fr 1fr 1.5fr;
+gap: 40px;
+margin-bottom: 40px;
+}
+
+.footer-about .logo {
+margin-bottom: 20px;
+height: 40px;
+margin-right: 10px;
+filter: brightness(0) invert(1);
+}
+
+.footer-about .logo-img {
+height: 40px;
+margin-right: 10px;
+filter: brightness(0) invert(1);
+}
+
+.footer-about p {
+font-size: 14px;
+line-height: 1.6;
+opacity: 0.95;
+margin-bottom: 15px;
+}
+
+.social-links {
+display: flex;
+gap: 15px;
+margin-top: 20px;
+}
+
+.social-links a {
+width: 40px;
+height: 40px;
+background: rgba(255,255,255,0.15);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 18px;
+transition: all 0.3s;
+border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-links a:hover {
+background: var(--primary-green);
+border-color: var(--primary-green);
+transform: translateY(-3px);
+}
+
+.footer-links h4 {
+font-size: 16px;
+font-weight: 600;
+margin-bottom: 20px;
+color: white;
+font-family: 'Raleway', sans-serif;
+}
+
+.footer-links ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-links li {
+margin-bottom: 10px;
+}
+
+.footer-links a {
+color: rgba(255,255,255,0.9);
+text-decoration: none;
+font-size: 14px;
+transition: color 0.3s;
+}
+
+.footer-links a:hover {
+color: #4CAF50;
+}
+
+.footer-contact p {
+font-size: 14px;
+margin-bottom: 8px;
+opacity: 0.95;
+}
+
+.footer-contact strong {
+display: block;
+margin-top: 15px;
+margin-bottom: 5px;
+font-weight: 600;
+}
+
+.footer-contact a {
+color: white;
+text-decoration: none;
+opacity: 0.95;
+}
+
+.footer-contact a:hover {
+opacity: 1;
+text-decoration: underline;
+}
+
+.copyright {
+text-align: center;
+padding-top: 30px;
+border-top: 1px solid rgba(255,255,255,0.2);
+font-size: 14px;
+opacity: 0.9;
+}
+
+.sitename {
+font-weight: 600;
+}
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .two-col, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .phase-cards {
+                grid-template-columns: 1fr;
+            }
+            .benefit-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .navmenu ul {
+                display: none;
+            }
+            .mobile-nav-toggle {
+                display: block;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="https://orionterrametrics.co.ke/" class="logo">
+            <img src="assets/img/OrionLogo.png" alt="Orion Logo Main"> 
+                <!--<span>Orion Spatial Data Hub</span>-->
+            </a>
+            
+            <nav class="navmenu">
+                <ul>
+                    <li><a href="#platform">Platform</a></li>
+                    <li><a href="#capabilities">Capabilities</a></li>
+                    <li><a href="#technology">Technology</a></li>
+                    <li><a href="https://orionterrametrics.co.ke/blog/">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle bi bi-list"></i>
+            </nav>
+            
+            <a class="btn-getstarted" href="https://orionterrametrics.com">ACCESS PLATFORM</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>Africa's Open Geospatial<br>Data Infrastructure</h1>
+            <p class="tagline">Connecting Data, Insights, and Decisions</p>
+            <p class="description">
+                Breaking down barriers to geospatial data across Africa. Our unified platform enables researchers, governments, and organizations to discover, analyze, and act upon spatial intelligence—powered by open standards and intelligent technology.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://orionterrametrics.com" class="btn-primary">Explore the Platform</a>
+                <a href="#contact" class="btn-secondary">Request Demo</a>
+            </div>
+            <div class="platform-features">
+                <div class="platform-feature">
+                    <i class="bi bi-globe-africa"></i>
+                    <span>Africa-Focused</span>
+                </div>
+                <div class="platform-feature">
+                    <i class="bi bi-unlock"></i>
+                    <span>Open Standards</span>
+                </div>
+                <div class="platform-feature">
+                    <i class="bi bi-robot"></i>
+                    <span>AI-Powered Discovery</span>
+                </div>
+                <div class="platform-feature">
+                    <i class="bi bi-diagram-3"></i>
+                    <span>Real-Time Analysis</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Platform Section -->
+    <div class="section" id="platform">
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <h2 class="section-title">The Challenge We're Solving</h2>
+                    <p class="section-subtitle">
+                        Across Africa, critical geospatial data remains locked in silos, difficult to discover, and challenging to use effectively. Organizations struggle with fragmented sources, inconsistent standards, and limited tools for spatial analysis.
+                    </p>
+                    <p class="section-subtitle">
+                        The Orion Spatial Data Hub eliminates these barriers, providing a comprehensive infrastructure where spatial intelligence becomes accessible, actionable, and collaborative.
+                    </p>
+                </div>
+                <div>
+                    <img src="assets/img/portfolio/orion_homepage.png" alt="Platform Overview" class="feature-image">
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">2,800+</div>
+                    <div class="stat-label">Datasets Available</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">47</div>
+                    <div class="stat-label">African Countries Covered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Platform Uptime</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12K+</div>
+                    <div class="stat-label">Active Users</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Capabilities Section -->
+    <div class="section section-alt" id="capabilities">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 class="section-title">Three-Phase Architecture</h2>
+                <p class="section-subtitle" style="max-width: 800px; margin: 0 auto;">
+                    Built for scalability, our platform evolves from foundational data management to advanced AI-driven intelligence
+                </p>
+            </div>
+
+            <div class="phase-cards">
+                <div class="phase-card">
+                    <div class="phase-number">01</div>
+                    <h3>Data Catalog & Hosting</h3>
+                    <p>Comprehensive dataset storage with standardized metadata, automatic format conversion, and version control. Access vector and raster data through multiple formats including GeoJSON, Shapefile, GeoTIFF, and more.</p>
+                </div>
+                <div class="phase-card">
+                    <div class="phase-number">02</div>
+                    <h3>Real-Time Analysis</h3>
+                    <p>Dynamic spatial operations including buffer analysis, clipping, dissolving, and intersection. Interactive visualization with customizable maps, charts, and tables. Export results in multiple formats for use in external GIS software.</p>
+                </div>
+                <div class="phase-card">
+                    <div class="phase-number">03</div>
+                    <h3>AI Intelligence Layer</h3>
+                    <p>Machine learning-powered dataset recommendations using NLP and semantic search. Intelligent query assistance suggests optimal filters and operations. Automated metadata validation ensures data quality.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Discovery Section -->
+    <div class="section">
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <img src="assets/img/portfolio/Orion_ai_data_discovery.png" alt="Data Discovery" class="feature-image">
+                </div>
+                <div>
+                    <h2 class="section-title">Intelligent Data Discovery</h2>
+                    <p class="section-subtitle">
+                        Finding the right geospatial data shouldn't take hours. Our AI-powered search understands your needs and recommends the most relevant datasets instantly.
+                    </p>
+                    <ul class="capability-list">
+                        <li>
+                            <i class="bi bi-search"></i>
+                            <div>
+                                <strong>Natural Language Search</strong>
+                                Describe your project in plain language and receive ranked dataset recommendations
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-lightbulb"></i>
+                            <div>
+                                <strong>Contextual Suggestions</strong>
+                                Get intelligent recommendations based on your workflow and previous queries
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-tags"></i>
+                            <div>
+                                <strong>Advanced Filtering</strong>
+                                Filter by region, data type, format, license, and temporal coverage
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spatial Analysis Section -->
+    <div class="section section-alt">
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <h2 class="section-title">Powerful Spatial Analysis</h2>
+                    <p class="section-subtitle">
+                        Transform raw data into actionable insights with our comprehensive suite of geospatial analysis tools—no desktop software required.
+                    </p>
+                    <ul class="capability-list">
+                        <li>
+                            <i class="bi bi-bounding-box"></i>
+                            <div>
+                                <strong>Spatial Operations</strong>
+                                Buffer zones, spatial joins, overlay analysis, and geometric transformations
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-graph-up"></i>
+                            <div>
+                                <strong>Statistical Analysis</strong>
+                                Aggregate, summarize, and extract insights from spatial and attribute data
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-map"></i>
+                            <div>
+                                <strong>Interactive Visualization</strong>
+                                Create custom maps with multiple layers, styling options, and export capabilities
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="assets/img/portfolio/Orion_Map_viewer.png" alt="Spatial Analysis" class="feature-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interoperability Section -->
+    <div class="section">
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <img src="assets/img/portfolio/api_data.png" alt="API Integration" class="feature-image">
+                </div>
+                <div>
+                    <h2 class="section-title">Built for Interoperability</h2>
+                    <p class="section-subtitle">
+                        Our platform embraces open standards, ensuring your data works seamlessly with existing GIS tools and workflows.
+                    </p>
+                    <ul class="capability-list">
+                        <li>
+                            <i class="bi bi-link-45deg"></i>
+                            <div>
+                                <strong>OGC-Compliant Services</strong>
+                                WMS, WFS, and WCS endpoints compatible with QGIS, ArcGIS, and other GIS software
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-code-square"></i>
+                            <div>
+                                <strong>RESTful API</strong>
+                                Comprehensive API for programmatic access to all platform features
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-file-earmark-code"></i>
+                            <div>
+                                <strong>Multiple Format Support</strong>
+                                Import and export data in GeoJSON, Shapefile, KML, GPKG, GeoTIFF, and more
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technology Section -->
+    <div class="section section-alt" id="technology">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h2 class="section-title">Built on Proven Technology</h2>
+                <p class="section-subtitle" style="max-width: 800px; margin: 0 auto;">
+                    Our platform combines enterprise-grade open-source technologies with custom innovations for optimal performance, security, and scalability
+                </p>
+            </div>
+            <div class="tech-stack">
+                <div class="tech-badge">Django + GeoDjango</div>
+                <div class="tech-badge">PostgreSQL + PostGIS</div>
+                <div class="tech-badge">React + Next.js</div>
+                <div class="tech-badge">MapLibre GL</div>
+                <div class="tech-badge">Elasticsearch</div>
+                <div class="tech-badge">GeoServer</div>
+                <div class="tech-badge">GDAL</div>
+                <div class="tech-badge">Celery + Redis</div>
+                <div class="tech-badge">Docker</div>
+                <div class="tech-badge">AWS / GCP / Azure</div>
+                <div class="tech-badge">OpenAI + LangChain</div>
+                <div class="tech-badge">FAISS</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <div class="container">
+            <h2>Why Organizations Choose Orion</h2>
+            <p>
+                We're not just providing software—we're building the geospatial infrastructure that Africa needs to address its most pressing challenges in development, climate adaptation, public health, and sustainable growth.
+            </p>
+            <div class="benefit-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="bi bi-speedometer2"></i>
+                    </div>
+                    <h4>Eliminate Data Silos</h4>
+                    <p>Centralize all spatial resources in one accessible platform with standardized metadata and quality controls</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h4>Enable Collaboration</h4>
+                    <p>Multi-user workspaces facilitate cross-department and inter-agency spatial data sharing</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h4>Accelerate Insights</h4>
+                    <p>AI-powered discovery and real-time analysis reduce time from data to decision</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-intro">
+                    <h2>Let's Transform Your Spatial Intelligence</h2>
+                    <p>Connect with our team to explore how the Orion Spatial Data Hub can empower your organization</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Call Us</h4>
+                                <p>+254 799 882 124</p>
+                                <p>+254 729 212 061</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>info@orionterrametrics.co.ke</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Mukhtar Dadah Street</p>
+                                <p>GMC Mansion, 1st Floor</p>
+                                <p>Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" value="Spatial Data Hub Inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell us about your needs</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                        <div id="formMessage" style="margin-top:20px;padding:15px;border-radius:8px;display:none;"></div>
+                    </form>
+                    
+                    <script>
+                        document.getElementById('contactForm').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        
+                        const form = this;
+                        const formData = new FormData(form);
+                        const submitBtn = form.querySelector('.btn-submit');
+                        const messageDiv = document.getElementById('formMessage');
+                        
+                        // Disable button and show loading
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'Sending...';
+                        messageDiv.style.display = 'none';
+                        
+                        fetch('forms/contact.php', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.text().then(text => ({status: response.status, text: text})))
+                        .then(result => {
+                            if (result.status === 200 && result.text.trim() === 'OK') {
+                                messageDiv.style.display = 'block';
+                                messageDiv.style.background = '#d4edda';
+                                messageDiv.style.color = '#155724';
+                                messageDiv.style.border = '1px solid #c3e6cb';
+                                messageDiv.textContent = 'Thank you! Your message has been sent successfully. We will get back to you soon.';
+                                form.reset();
+                                document.getElementById('subject').value = 'Spatial Data Hub Inquiry';
+                            } else {
+                                throw new Error(result.text);
+                            }
+                        })
+                        .catch(error => {
+                            messageDiv.style.display = 'block';
+                            messageDiv.style.background = '#f8d7da';
+                            messageDiv.style.color = '#721c24';
+                            messageDiv.style.border = '1px solid #f5c6cb';
+                            messageDiv.textContent = 'Sorry, there was an error sending your message. Please try again later.';
+                        })
+                        .finally(() => {
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Send Message';
+                        });
+                    });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <a href="https://orionterrametrics.co.ke/" class="logo">
+                      <img src="assets/img/OrionLogo.png" alt="Orion Logo Main">
+                      <!--<span>Orion Spatial Data Hub</span>-->
+                    </a>
+                    <p>Orion Terrametrics Africa Limited is a premier geospatial and engineering firm based in Nairobi. We offer cutting-edge services in GIS, surveying, remote sensing, civil infrastructure design, environmental consultancy, and utility modernization across East Africa.</p>
+                    <p>We build on a legacy of large-scale projects, ISO-certified quality systems, and a commitment to innovation and sustainability.</p>
+                    <div class="social-links">
+                        <a href="https://x.com/OrionGeospatial"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61572468435793"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/orion-geospatial"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>The Company</h4>
+                    <ul>
+                        <li><a href="https://orionterrametrics.co.ke/">Home</a></li>
+                        <li><a href="https://orionterrametrics.co.ke/#about">About us</a></li>
+                        <!--<li><a href="https://orionterrametrics.co.ke/#services">Services</a></li>-->
+                        <!--<li><a href="https://orionterrametrics.co.ke/#portfolio">Portfolio</a></li>-->
+                        <li><a href="https://orionterrametrics.co.ke/blog/">Blog</a></li>
+                        <li><a href="https://orionterrametrics.co.ke/#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>What We Do</h4>
+                    <ul>
+                        <li><a href="https://orionterrametrics.co.ke/surveying.html">Surveying Services</a></li>
+                        <li><a href="https://orionterrametrics.co.ke/GIS.html">Geographic Information Systems (GIS)</a></li>
+                        <li><a href="https://orionterrametrics.co.ke/Remote-Sensing.html">Remote Sensing</a></li>
+                        <li><a href="https://orionterrametrics.co.ke/Civil-Engineering.html">Civil Engineering</a></li>
+                    </ul>
+
+                    <h4>Our Solutions</h4>
+                    <ul>
+                        <li><a href="https://orionterrametrics.co.ke/OrionSpatialDataHub.html">Spatial Data Hub</a></li>
+                        <li><a href="CloudGIS">OrionGIS</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Mukhtar Dadah Street</p>
+                    <p>GMC Mansion, 1st Floor</p>
+                    <p>Nairobi, Kenya</p>
+                    <p><strong>Phone:</strong></p>
+                    <p><a href="tel:+254799882124">+254 799 882 124</a></p>
+                    <p><a href="tel:+254729212061">+254 729 212 061</a></p>
+                    <p><strong>Email:</strong></p>
+                    <p><a href="mailto:info@orionterrametrics.com">info@orionterrametrics.com</a></p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 <span>Copyright</span> <strong class="sitename">Orion Terrametrics Africa Limited</strong> <span>All Rights Reserved</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

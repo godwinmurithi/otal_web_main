@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MT4CKPHV49"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MT4CKPHV49');
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enroll — Gentle Introduction to GIS in QGIS | Orion Terrametrics Africa</title>
+  <meta name="description" content="Secure your spot on the Orion Terrametrics GIS course. Beginner-friendly, practical QGIS training built for Africa.">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:        #0f172a;
+      --navy-mid:    #1e293b;
+      --navy-light:  #334155;
+      --teal:        #0a3d4f;
+      --teal-mid:    #0e5068;
+      --gold:        #d4af37;
+      --gold-light:  #e8cb6a;
+      --white:       #ffffff;
+      --muted:       #94a3b8;
+      --border:      rgba(212,175,55,0.18);
+      --shadow:      0 12px 40px rgba(0,0,0,0.28);
+      --shadow-soft: 0 6px 20px rgba(0,0,0,0.14);
+      --radius-lg:   20px;
+      --radius-md:   14px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── PAGE BACKGROUND — contour map ─── */
+    /* ─── HEADER ─── */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,23,42,0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo img {
+      max-height: 38px;
+      width: auto;
+      display: block;
+    }
+
+    .header-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.2s;
+    }
+
+    .header-back:hover { color: var(--gold); }
+    .header-back i { font-size: 1rem; }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.25);
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ─── MAIN LAYOUT ─── */
+    .page-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      text-align: center;
+      margin-bottom: 56px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.25);
+      padding: 7px 18px;
+      border-radius: 999px;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      margin-bottom: 20px;
+    }
+
+    .page-header h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+
+    .page-header h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .page-header p {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 52ch;
+      margin: 0 auto;
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    /* ─── MAIN GRID ─── */
+    .enroll-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 32px;
+      align-items: start;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+
+    /* ─── PAYMENT CARD ─── */
+    .payment-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .payment-card-header {
+      background: linear-gradient(135deg, var(--teal), var(--teal-mid));
+      padding: 24px 28px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .payment-card-header .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(212,175,55,0.15);
+      border: 1px solid rgba(212,175,55,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .payment-card-header h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 3px;
+    }
+
+    .payment-card-header p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.62);
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    .payment-card-body {
+      padding: 32px 28px;
+    }
+
+    /* ─── IFRAME WRAPPER ─── */
+    .iframe-wrapper {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,175,55,0.12);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .iframe-label {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .iframe-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Scale up the PesaPal embed to fill the card nicely */
+    .iframe-container iframe {
+      width: 100% !important;
+      max-width: 340px;
+      height: 56px !important;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .secure-note {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      justify-content: center;
+    }
+
+    .secure-note i { color: var(--gold); font-size: 0.9rem; }
+
+    /* ─── WHAT'S INCLUDED ─── */
+    .includes-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .includes-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.78);
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    .includes-list li i {
+      color: var(--gold);
+      font-size: 1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 22px 0;
+    }
+
+    /* ─── NEED HELP ─── */
+    .help-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .help-btn {
+      flex: 1;
+      min-width: 130px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      color: rgba(255,255,255,0.7);
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .help-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(212,175,55,0.06);
+    }
+
+    .help-btn i { font-size: 1rem; }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(212,175,55,0.12);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      transition: border-color 0.25s;
+    }
+
+    .sidebar-card:hover { border-color: rgba(212,175,55,0.28); }
+
+    .sidebar-card h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar-card h3 i { color: var(--gold); }
+
+    /* Course summary */
+    .course-meta {
+      display: grid;
+      gap: 12px;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.86rem;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .meta-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .meta-label {
+      color: var(--muted);
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    .meta-value {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      color: var(--white);
+      font-size: 0.88rem;
+    }
+
+    .meta-value.gold { color: var(--gold); }
+
+    /* Modules list */
+    .module-mini {
+      display: grid;
+      gap: 10px;
+    }
+
+    .module-mini-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.7);
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    .module-mini-item .num {
+      min-width: 24px;
+      height: 24px;
+      border-radius: 7px;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.2);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 800;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    /* Instructor mini */
+    .instructor-mini {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .instructor-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1px solid rgba(212,175,55,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .instructor-info p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-family: 'Nunito Sans', sans-serif;
+      margin-top: 3px;
+    }
+
+    .instructor-info strong {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 800;
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+
+    /* ─── FOOTER ─── */
+    .page-footer {
+      position: relative;
+      z-index: 1;
+      background: #070f1f;
+      border-top: 1px solid rgba(212,175,55,0.1);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer-brand span { color: var(--gold); }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.28);
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .enroll-grid {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-wrap { padding: 40px 18px 60px; }
+      .sidebar { grid-template-columns: 1fr; }
+      .payment-card-body { padding: 22px 18px; }
+      .payment-card-header { padding: 18px 20px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .header-badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── HEADER ─── -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="https://orionterrametrics.co.ke/index.html" class="logo">
+        <img src="assets/img/OrionLogo.png" alt="Orion Terrametrics Africa">
+      </a>
+      <a href="introduction-to-GIS-using-QGIS.html" class="header-back">
+        <i class="bi bi-arrow-left"></i> Back to Course
+      </a>
+      <div class="header-badge">
+        <i class="bi bi-shield-lock-fill"></i> Secure Enrolment
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── PAGE ─── -->
+  <div class="page-wrap">
+
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="eyebrow">
+        <i class="bi bi-mortarboard-fill"></i>
+        Orion Academy &nbsp;·&nbsp; Course Enrolment
+      </div>
+      <h1>Secure Your Spot on the<br><em>GIS Course</em></h1>
+      <p>One payment of <strong style="color:var(--gold);">$7 USD Limited Offer</strong> Price — lifetime access to all course materials. Start learning at your own pace, on your own schedule.</p>
+    </div>
+
+    <!-- Main grid -->
+    <div class="enroll-grid">
+
+      <!-- LEFT — Payment card -->
+      <div class="payment-card">
+        <div class="payment-card-header">
+          <div class="icon"><i class="bi bi-credit-card-fill"></i></div>
+          <div>
+            <h2>Complete Your Payment</h2>
+            <p>Gentle Introduction to GIS in QGIS Software</p>
+          </div>
+        </div>
+
+        <!-- Price display -->
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; padding:20px 28px; background:rgba(212,175,55,0.06); border-bottom:1px solid rgba(212,175,55,0.15);">
+          <div style="display:flex; align-items:baseline; gap:6px;">
+            <span style="font-family:'Raleway',sans-serif; font-size:2.6rem; font-weight:900; color:var(--gold); line-height:1;">$7</span>
+            <span style="font-family:'Nunito Sans',sans-serif; font-size:0.85rem; color:var(--muted);">USD · Limited Offer . One-time payment</span>
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span style="display:inline-flex; align-items:center; gap:6px; padding:7px 14px; border-radius:999px; background:rgba(212,175,55,0.1); border:1px solid rgba(212,175,55,0.3); font-family:'Nunito Sans',sans-serif; font-size:0.78rem; font-weight:800; color:var(--gold); text-transform:uppercase; letter-spacing:0.6px;">
+              <i class="bi bi-infinity"></i> Lifetime Access
+            </span>
+            <span style="display:inline-flex; align-items:center; gap:6px; padding:7px 14px; border-radius:999px; background:rgba(79,209,92,0.08); border:1px solid rgba(79,209,92,0.25); font-family:'Nunito Sans',sans-serif; font-size:0.78rem; font-weight:800; color:#4fd15c; text-transform:uppercase; letter-spacing:0.6px;">
+              <i class="bi bi-shield-check"></i> Full Course Access
+            </span>
+          </div>
+        </div>
+        <div class="payment-card-body">
+
+          <!-- What's included -->
+          <ul class="includes-list">
+            <li><i class="bi bi-check-circle-fill"></i> 8 structured learning modules</li>
+            <li><i class="bi bi-check-circle-fill"></i> Practical hands-on QGIS exercises</li>
+            <li><i class="bi bi-check-circle-fill"></i> Vector, raster & spatial analysis workflows</li>
+            <li><i class="bi bi-check-circle-fill"></i> Map design & professional output creation</li>
+            <li><i class="bi bi-check-circle-fill"></i> Guided by Orion's field-experienced geospatial team</li>
+            <li><i class="bi bi-check-circle-fill"></i> No prior GIS experience required</li>
+            <li><i class="bi bi-check-circle-fill"></i> QGIS software is free — no extra cost</li>
+            <li><i class="bi bi-infinity" style="color:var(--gold);"></i> <strong style="color:var(--white);">Lifetime access</strong> — revisit materials anytime</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <!-- PesaPal embed -->
+          <div class="iframe-wrapper">
+            <div class="iframe-label">
+              <i class="bi bi-lock-fill" style="color:var(--gold); margin-right:6px;"></i>
+              Click below to proceed to secure payment
+            </div>
+            <div class="iframe-container">
+              <iframe
+                width="200"
+                height="40"
+                src="https://store.pesapal.com/embed-code?pageUrl=https://store.pesapal.com/learngisthepracticalwaywithqgis"
+                frameborder="0"
+                allowfullscreen
+                style="border-radius:8px;">
+              </iframe>
+            </div>
+            <div class="secure-note">
+              <i class="bi bi-shield-check"></i>
+              Payments are processed securely. Your details are protected.
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <!-- Need help -->
+          <p style="font-family:'Nunito Sans',sans-serif; font-size:0.84rem; color:var(--muted); margin-bottom:14px;">
+            Need assistance with your enrolment?
+          </p>
+          <div class="help-row">
+            <a href="https://wa.me/254799882124?text=Hello%20Orion%20Terrametrics,%20I%20need%20help%20enrolling%20in%20the%20GIS%20course." target="_blank" rel="noopener noreferrer" class="help-btn">
+              <i class="bi bi-whatsapp"></i> WhatsApp Us
+            </a>
+            <a href="tel:+254799882124" class="help-btn">
+              <i class="bi bi-telephone-fill"></i> Call Us
+            </a>
+            <a href="tel:+254729212061" class="help-btn">
+              <i class="bi bi-telephone-fill"></i> +254 729 212 061
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT — Sidebar -->
+      <div class="sidebar">
+
+        <!-- Course summary -->
+        <div class="sidebar-card">
+          <h3><i class="bi bi-info-circle-fill"></i> Course Summary</h3>
+          <div class="course-meta">
+            <div class="meta-row">
+              <span class="meta-label">Price</span>
+              <span class="meta-value gold">$7 USD</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Access</span>
+              <span class="meta-value gold">Lifetime · Full Course</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Level</span>
+              <span class="meta-value">Beginner</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Software</span>
+              <span class="meta-value">QGIS (Free)</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Modules</span>
+              <span class="meta-value">8</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Format</span>
+              <span class="meta-value">Self-paced</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Language</span>
+              <span class="meta-value">English</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Provider</span>
+              <span class="meta-value gold">Orion Academy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curriculum at a glance -->
+        <div class="sidebar-card">
+          <h3><i class="bi bi-list-check"></i> Curriculum at a Glance</h3>
+          <div class="module-mini">
+            <div class="module-mini-item"><span class="num">01</span>Introduction to GIS</div>
+            <div class="module-mini-item"><span class="num">02</span>Getting Started with QGIS</div>
+            <div class="module-mini-item"><span class="num">03</span>Understanding Spatial Data</div>
+            <div class="module-mini-item"><span class="num">04</span>Importing & Preparing Data</div>
+            <div class="module-mini-item"><span class="num">05</span>Basic Spatial Analysis</div>
+            <div class="module-mini-item"><span class="num">06</span>Buffer & Distance Analysis</div>
+            <div class="module-mini-item"><span class="num">07</span>Elevation & Land Cover</div>
+            <div class="module-mini-item"><span class="num">08</span>Map Design & Presentation</div>
+          </div>
+        </div>
+
+        <!-- Instructor -->
+        <div class="sidebar-card">
+          <h3><i class="bi bi-person-badge-fill"></i> Your Instructor</h3>
+          <div class="instructor-mini">
+            <div class="instructor-avatar"><img src="assets/img/Orion_Large_Icon.png" alt="Orion Terrametrics Africa" style="width:44px; height:44px; object-fit:contain;"></div>
+            <div class="instructor-info">
+              <strong>Orion Terrametrics Africa</strong>
+              <p>20+ years · GIS, Surveying & Remote Sensing across East Africa</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Offices -->
+        <div class="sidebar-card">
+          <h3><i class="bi bi-geo-alt-fill"></i> Our Offices</h3>
+          <div class="course-meta">
+            <div class="meta-row" style="flex-direction:column; align-items:flex-start; gap:4px;">
+              <span class="meta-value" style="font-size:0.82rem;">Nairobi HQ</span>
+              <span class="meta-label" style="font-size:0.8rem;">Mukhtar Dadah Street, GMC Mansion, 1st Floor</span>
+            </div>
+            <div class="meta-row" style="flex-direction:column; align-items:flex-start; gap:4px; border-bottom:none;">
+              <span class="meta-value" style="font-size:0.82rem;">Meru Office</span>
+              <span class="meta-label" style="font-size:0.8rem;">Alexander House, 1st Floor, Njuri Ncheke Street, Meru Town</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Orion <span>Terrametrics</span> Africa Limited</div>
+      <div class="footer-links">
+        <a href="orion-gis-course.html">Course Page</a>
+        <a href="https://orionterrametrics.co.ke">Main Website</a>
+        <a href="https://wa.me/254799882124">WhatsApp</a>
+        <a href="tel:+254799882124">+254 799 882 124</a>
+      </div>
+      <div class="footer-copy">© 2026 Orion Terrametrics Africa Limited. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
