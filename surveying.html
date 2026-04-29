@@ -200,7 +200,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/OrionLogoIcon.png" rel="icon">
-  <link href="assets/img/OrionLogoIcon.png.png" rel="apple-touch-icon">
+  <link href="assets/img/OrionLogoIcon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -241,30 +241,25 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About us</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li><a href="https://orionterrametrics.co.ke/blog/">Blog</a></li>
-          <li><a href="index.html#team">Team</a></li>
-          <!--<li><a href="#team">Team</a></li>-->
-          <!--<li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="index.html#about">About</a></li>
+          <li class="dropdown"><a href="index.html#services"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <li><a href="surveying.html">Surveying &amp; Field Data Collection</a></li>
+              <li><a href="GIS.html">GIS &amp; Spatial Analytics</a></li>
+              <li><a href="Remote-Sensing.html">Remote Sensing &amp; Earth Observation</a></li>
+              <li><a href="Utilities.html">Geospatial Digital Transformation</a></li>
             </ul>
-          </li>-->
-          <li><a href="#contact">Contact</a></li>
+          </li>
+          <li class="dropdown"><a href="index.html#products"><span>Products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="CloudGIS.html">OrionGIS &mdash; Cloud GIS Platform</a></li>
+              <li><a href="OrionSpatialDataHub.html">OrionSpatial Data Hub</a></li>
+              <li><a href="index.html#contact">Mobile Field Apps</a></li>
+            </ul>
+          </li>
+          <li><a href="https://orionterrametrics.co.ke/blog/">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="CloudGIS.html" class="nav-trial-btn">Start Free Trial</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -276,397 +271,576 @@
 
   <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade">
-      <div class="container position-relative">
-        <h1>Surveying</h1>
-        <!--<p> We provide expert surveying and mapping services including cadastral, topographic, engineering, drone mapping, LiDAR, GPR, laser scanning, and bathymetric & hydrographic surveys.</p>-->
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Service Details</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
-
-      <div class="col-lg-8 order-1">
-            <div class="service-main-content">
-              <div class="service-header" data-aos="fade-up">
-                <h1>Surveying & Mapping Services</h1>
-          
-                <p class="lead">
-                  Accurate spatial data is the foundation of every successful project — from land registration to infrastructure
-                  development. We've been delivering professional surveying and mapping services that help engineers,
-                  developers, planners, and government agencies make confident, data-driven decisions.
-                </p>
+    <!-- ======================== SERVICE HERO ======================== -->
+    <section class="svc-hero">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7" data-aos="fade-right">
+            <nav class="svc-breadcrumb" aria-label="breadcrumb">
+              <a href="index.html">Home</a> <span>/</span>
+              <a href="index.html#services">Services</a> <span>/</span>
+              <span>Surveying &amp; Field Data Collection</span>
+            </nav>
+            <h1>Surveying &amp; Field Data Collection</h1>
+            <p class="svc-hero-sub">Accurate spatial data is the foundation of every successful project. We deliver professional land, engineering, drone, and hydrographic surveys that give engineers, developers, planners, and government agencies the confidence to make decisions that last.</p>
+            <div class="cta-group">
+              <a href="index.html#contact" class="btn-hero-primary">Get a Survey Quote</a>
+              <a href="tel:+254799882124" class="btn-hero-secondary">Call +254 799 882124 <i class="bi bi-telephone ms-1"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
+            <div class="svc-stats-grid">
+              <div class="svc-stat-card">
+                <span class="stat-num">5,000+</span>
+                <span class="stat-label">Projects Delivered</span>
               </div>
-
-              <div class="service-tabs" data-aos="fade-up" data-aos-delay="200">
-                <ul class="nav nav-tabs" id="serviceTab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#service-details-tab-1" type="button" role="tab" aria-controls="overview" aria-selected="true">
-                      <i class="bi bi-info-circle"></i> Overview
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#service-details-tab-2" type="button" role="tab" aria-controls="process" aria-selected="false">
-                      <i class="bi bi-diagram-3"></i> Process
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#service-details-tab-3" type="button" role="tab" aria-controls="benefits" aria-selected="false">
-                      <i class="bi bi-graph-up-arrow"></i> Benefits
-                    </button>
-                  </li>
-                </ul>
-
-                <div class="tab-content">
-
-                  <div class="tab-pane fade show active" id="service-details-tab-1" role="tabpanel" aria-labelledby="overview-tab">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="content-block">
-                          <h3>What we do</h3>
-                          <p>We specialize in comprehensive land and engineering surveys using advanced geospatial technology. Whether mapping
-                          terrain for design, defining property boundaries, or modeling complex sites, our team ensures every dataset meets the
-                          highest accuracy standards.
-                          <p>We combine the latest GNSS, LiDAR, UAV, and hydrographic systems with intelligent data processing workflows to deliver
-                          high-precision outputs. Our survey data integrates seamlessly with GIS, CAD, and BIM platforms, enabling smooth
-                          transitions from field to design to construction.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <img src="assets/img/portfolio/surv1.webp" alt="Digital Marketing Strategy" class="img-fluid rounded">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="tab-pane fade" id="service-details-tab-2" role="tabpanel" aria-labelledby="process-tab">
-                    <div class="process-timeline">
-                      <div class="timeline-item">
-                        <div class="timeline-marker">01</div>
-                        <div class="timeline-content">
-                          <h4>Client Engagement &amp; Site Assessment</h4>
-                          <p>We begin by understanding your project needs through consultations and preliminary site visits to assess terrain, boundaries, or infrastructure requirements.</p>
-                        </div>
-                      </div>
-
-                      <div class="timeline-item">
-                        <div class="timeline-marker">02</div>
-                        <div class="timeline-content">
-                          <h4>Survey Design &amp; Equipment Mobilizatio</h4>
-                          <p>We design the appropriate survey methodology—be it cadastral, topographic, hydrographic, or LiDAR—and deploy field teams with GNSS, drones, total stations, or sonar tools as needed.</p>
-                        </div>
-                      </div>
-
-                      <div class="timeline-item">
-                        <div class="timeline-marker">03</div>
-                        <div class="timeline-content">
-                          <h4>Field Data Collection &amp; Ground Truthing</h4>
-                          <p>We collect spatial, elevation, or imagery data with precision instruments. Ground control points and reference markers are established where needed for accuracy validation.</p>
-                        </div>
-                      </div>
-
-                      <div class="timeline-item">
-                        <div class="timeline-marker">04</div>
-                        <div class="timeline-content">
-                          <h4>Field Deliverables &amp; Plan Implementation</h4>
-                          <p>We execute field tasks such as beaconing, demarcation, plan implementation (e.g. zoning layouts), land subdivision, and physical setting out of infrastructure alignments or plot boundaries.</p>
-                        </div>
-                      </div>
-                    
-
-                      <div class="timeline-item">
-                        <div class="timeline-marker">04</div>
-                        <div class="timeline-content">
-                          <h4>Submission &amp; Handover</h4>
-                          <p>Final deliverables—including hardcopy maps, digital files (DWG, SHP, PDF), and certified reports—are submitted. We also offer assistance with approvals or registration if required</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div class="tab-pane fade" id="service-details-tab-3" role="tabpanel" aria-labelledby="benefits-tab">
-                    <div class="row g-4">
-                      <div class="col-md-6">
-                        <div class="benefit-card">
-                          <div class="benefit-icon">
-                            <i class="bi bi-graph-up"></i>
-                          </div>
-                          <h4>High-Accuracy Data</h4>
-<p>Our surveys deliver centimeter-level precision, ensuring reliable outputs for planning, construction, and legal documentation.</p>
-
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="benefit-card">
-                          <div class="benefit-icon">
-                            <i class="bi bi-people"></i>
-                          </div>
-                          <h4>Efficient Project Delivery</h4>
-<p>We leverage drones, GNSS, and automated processing to reduce turnaround time without compromising on quality.</p>
-
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="benefit-card">
-                          <div class="benefit-icon">
-                            <i class="bi bi-cash-coin"></i>
-                          </div>
-                          <h4>Comprehensive Field-to-Office Workflow</h4>
-<p>From fieldwork to final deliverables, we manage the entire geospatial lifecycle seamlessly and professionally.</p>
-
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="benefit-card">
-                          <div class="benefit-icon">
-                            <i class="bi bi-bar-chart-line"></i>
-                          </div>
-                          <h4>Regulatory Compliance</h4>
-<p>All our deliverables are compliant with local and international standards for legal registration and approval processes.</p>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-
-              <div class="service-gallery" data-aos="fade-up" data-aos-delay="300">
-                <h3>Our Surveying Portfolio</h3>
-                <div class="service-details-slider swiper init-swiper">
-                  <script type="application/json" class="swiper-config">
-                    {
-                      "loop": true,
-                      "speed": 800,
-                      "autoplay": {
-                        "delay": 5000
-                      },
-                      "slidesPerView": 1,
-                      "spaceBetween": 30,
-                      "breakpoints": {
-                        "768": {
-                          "slidesPerView": 2
-                        }
-                      },
-                      "pagination": {
-                        "el": ".swiper-pagination",
-                        "type": "bullets",
-                        "clickable": true
-                      }
-                    }
-                  </script>
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="portfolio-item">
-                        <img src="assets/img/services/Service-9.webp" alt="" class="img-fluid" loading="lazy">
-                        <div class="portfolio-info">
-                          <h5> 50 Ha - Nyeri Land Subdivison </h5>
-                          <p>Survey and planning for subdivision of 50 acres into 92 residential plots with road reserves and public utility spaces..</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="portfolio-item">
-                        <img src="assets/img/services/droneimage.jpg" alt="" class="img-fluid" loading="lazy">
-                        <div class="portfolio-info">
-                          <h5>Drone-Based Topographic Survey – Greenfields Estate, Kiambu</h5>
-                          <p>Conducted a UAV-enabled topographical mapping campaign with RTK correction, delivering 5cm-resolution orthophotos, DSM, DTM, and elevation contours for 500-acre site planning.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="portfolio-item">
-                        <img src="assets/img/services/ALTA4.jpg" alt="" class="img-fluid" loading="lazy">
-                        <div class="portfolio-info">
-                          <h5>Boundary Re-establishment – Nyeri</h5>
-                          <p>Fixed boundary pillars and coordinated wall construction for Mwania Properties in Nyeri.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-pagination"></div>
-                </div>
+              <div class="svc-stat-card">
+                <span class="stat-num">20+</span>
+                <span class="stat-label">Years of Experience</span>
+              </div>
+              <div class="svc-stat-card">
+                <span class="stat-num">ISO</span>
+                <span class="stat-label">Certified &amp; Registered</span>
+              </div>
+              <div class="svc-stat-card">
+                <span class="stat-num">cm</span>
+                <span class="stat-label">Centimetre-Level Accuracy</span>
               </div>
             </div>
           </div>
-
-      <div class="col-lg-4 order-2">
-            <div class="service-sidebar" data-aos="fade-left">
-            
-              <div class="service-features-list" data-aos="fade-up" data-aos-delay="200">
-                <h4>What We Offer</h4>
-                <ul>
-                  <li>
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <div>
-                      <h5>Cadastral & Boundary Surveys</h5>
-<p>Land subdivision, title preparation, beaconing, and legal boundary mapping</p>
-
-                    </div>
-                  </li>
-                  <li>
-                    <i class="bi bi-alt"></i>
-                    <div>
-                      <h5>Topographic & Engineering Surveys</h5>
-<p>Detailed elevation models and ground features for design and construction</p>
-
-                    </div>
-                  </li>
-                  <li>
-                    <i class="bi bi-airplane-engines"></i>
-                    <div>
-                     <h5>Drone & Aerial Mapping</h5>
-<p>High-resolution orthophotos, 3D terrain models, and volumetric analysis</p>
-
-                    </div>
-                  </li>
-                  <li>
-                    <i class="bi bi-water"></i>
-                    <div>
-                      <h5>Bathymetric & Hydrographic Surveys</h5>
-<p>Subsurface profiling for dams, rivers, reservoirs, and marine infrastructure</p>
-
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="testimonial-header">
-                  <i class="bi bi-quote"></i>
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-
-                  
-                </div>
-
-                <p class="testimonial-text">
-                   "Orion Terrametrics executed our boundary reopening and topographic survey with unmatched precision. Their team delivered ahead of schedule and with great professionalism."
-                </p>
-                <div class="client-info">
-                  <img src="assets/img/portfolio/parcel-map.png" alt="Client" class="client-image">
-                  <div class="client-details">
-                    <h5>Moses Bundi</h5>
-                    <span>Director, AMN Construction</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="contact-info" data-aos="fade-up" data-aos-delay="400">
-                <h4>Have Questions?</h4>
-                <div class="contact-method">
-                  <i class="bi bi-telephone-fill"></i>
-                  <div>
-                    <span>Call Us Now</span>
-                    <p>+254 799882124</p>
-                    <p>+254 729212061</p>
-                  </div>
-                </div>
-                <div class="contact-method">
-                  <i class="bi bi-envelope-fill"></i>
-                  <div>
-                    <span>Email Us</span>
-                    <p>info@orionterrametrics.com</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Service Details Section -->
+    <!-- ======================== TRUST STRIP ======================== -->
+    <section class="svc-trust">
+      <div class="container">
+        <p class="trust-label">Serving clients across Kenya, East Africa, and the Horn of Africa</p>
+        <div class="trust-badges">
+          <span class="trust-badge"><i class="bi bi-building-fill"></i> Government &amp; County Authorities</span>
+          <span class="trust-badge"><i class="bi bi-gear-wide-connected"></i> Engineering &amp; Construction</span>
+          <span class="trust-badge"><i class="bi bi-house-fill"></i> Real Estate &amp; Developers</span>
+          <span class="trust-badge"><i class="bi bi-tree"></i> Agriculture &amp; Land Management</span>
+          <span class="trust-badge"><i class="bi bi-water"></i> Water &amp; Environmental</span>
+          <span class="trust-badge"><i class="bi bi-building-gear"></i> Mining &amp; Resources</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== OVERVIEW ======================== -->
+    <section class="svc-overview" data-aos="fade-up">
+      <div class="container">
+        <div class="row align-items-center gx-5 gy-5">
+          <div class="col-lg-6">
+            <img src="assets/img/portfolio/surv1.webp" alt="Professional Land Survey — Orion Terrametrics" class="img-fluid rounded-3 shadow-sm">
+          </div>
+          <div class="col-lg-6">
+            <p class="svc-label">What We Do</p>
+            <h2>The Foundation Every Project Needs</h2>
+            <p class="lead">We specialize in comprehensive land and engineering surveys using advanced geospatial technology — combining GNSS, LiDAR, UAV, and hydrographic systems with intelligent data processing workflows to deliver high-precision outputs that integrate with GIS, CAD, and BIM.</p>
+            <ul class="svc-check-list">
+              <li><i class="bi bi-check-circle-fill"></i> Cadastral &amp; boundary surveys — land subdivision, title, beaconing</li>
+              <li><i class="bi bi-check-circle-fill"></i> Topographic &amp; engineering surveys for design and construction</li>
+              <li><i class="bi bi-check-circle-fill"></i> UAV drone mapping — orthophotos, DSM, DTM, volumetrics</li>
+              <li><i class="bi bi-check-circle-fill"></i> Hydrographic &amp; bathymetric surveys for dams, rivers, reservoirs</li>
+              <li><i class="bi bi-check-circle-fill"></i> As-built surveys, construction staking &amp; monitoring</li>
+            </ul>
+            <a href="index.html#contact" class="svc-link-btn">Request a Custom Scope <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== WHO WE SERVE ======================== -->
+    <section class="svc-sectors" data-aos="fade-up">
+      <div class="container">
+        <div class="svc-section-title">
+          <h2>Who We Serve</h2>
+          <p>Precision survey solutions for every sector and project type</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="svc-sector-card">
+              <div class="svc-sector-icon"><i class="bi bi-building-fill"></i></div>
+              <h4>Government &amp; Land Agencies</h4>
+              <p>Cadastral surveys for land adjudication, subdivision, titling, and boundary disputes — licensed Survey of Kenya professionals delivering certified, legally compliant deliverables for county and national land programs.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="svc-sector-card">
+              <div class="svc-sector-icon"><i class="bi bi-gear-wide-connected"></i></div>
+              <h4>Engineering &amp; Infrastructure</h4>
+              <p>Topographic surveys, construction staking, monitoring surveys, and as-built documentation for roads, bridges, dams, pipelines, and utility networks — delivered to CAD and GIS-ready formats.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="svc-sector-card">
+              <div class="svc-sector-icon"><i class="bi bi-house-fill"></i></div>
+              <h4>Real Estate &amp; Developers</h4>
+              <p>From plot subdivision and boundary establishment to drone-enabled site feasibility surveys — giving developers accurate spatial data from the earliest planning stage to handover.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="svc-sector-card">
+              <div class="svc-sector-icon"><i class="bi bi-tree"></i></div>
+              <h4>Agriculture &amp; Land Management</h4>
+              <p>Farm boundary demarcation, large-scale cadastral mapping, drone-based crop area measurement, and irrigation infrastructure surveys — enabling precision land management at any scale.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="svc-sector-card">
+              <div class="svc-sector-icon"><i class="bi bi-water"></i></div>
+              <h4>Water &amp; Environmental</h4>
+              <p>Bathymetric and hydrographic surveys for dam capacity, river cross-sections, reservoir sediment analysis, and wetland delineation — supporting water resource planning and environmental compliance.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="svc-sector-card">
+              <div class="svc-sector-icon"><i class="bi bi-building-gear"></i></div>
+              <h4>Mining &amp; Resources</h4>
+              <p>Stockpile volumetric surveys, mine boundary delineation, slope stability monitoring, and progress survey schedules — using UAV photogrammetry for safe, rapid, high-accuracy coverage of active mining sites.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== HOW WE WORK ======================== -->
+    <section class="svc-process" data-aos="fade-up">
+      <div class="container">
+        <div class="svc-section-title">
+          <h2>How We Work</h2>
+          <p>From your first call to certified deliverables — a proven, systematic field-to-office workflow</p>
+        </div>
+        <div class="svc-process-row">
+          <div class="svc-process-step">
+            <div class="step-num">01</div>
+            <h5>Consultation &amp; Site Assessment</h5>
+            <p>We understand your project scope, terrain, regulatory requirements, and timelines through consultations and preliminary site reconnaissance.</p>
+          </div>
+          <div class="svc-process-step">
+            <div class="step-num">02</div>
+            <h5>Survey Design &amp; Mobilization</h5>
+            <p>We select the right methodology — cadastral, topographic, drone, hydrographic, or LiDAR — and deploy field teams with the appropriate precision equipment.</p>
+          </div>
+          <div class="svc-process-step">
+            <div class="step-num">03</div>
+            <h5>Field Data Collection</h5>
+            <p>We collect spatial, elevation, or imagery data with centimetre-level precision. Ground control points and reference markers are established for accuracy validation.</p>
+          </div>
+          <div class="svc-process-step">
+            <div class="step-num">04</div>
+            <h5>Processing &amp; Plan Preparation</h5>
+            <p>Raw field data is processed into maps, models, and plans — DWG, SHP, PDF — with quality checks at every stage before final output production.</p>
+          </div>
+          <div class="svc-process-step">
+            <div class="step-num">05</div>
+            <h5>Submission &amp; Handover</h5>
+            <p>Certified deliverables are submitted to you and relevant authorities. We support approvals, registration, and post-handover queries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== BENEFITS ======================== -->
+    <section class="svc-benefits" data-aos="fade-up">
+      <div class="container">
+        <div class="svc-section-title">
+          <h2>What You Gain</h2>
+          <p>The outcomes our clients consistently achieve when they work with Orion Terrametrics</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="svc-benefit-card">
+              <div class="svc-benefit-icon"><i class="bi bi-crosshair2"></i></div>
+              <h4>Centimetre-Level Accuracy</h4>
+              <p>Our surveys deliver precision that meets or exceeds Survey of Kenya standards — ensuring your data is legally defensible and suitable for engineering design, titling, and approval.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="svc-benefit-card">
+              <div class="svc-benefit-icon"><i class="bi bi-clock-history"></i></div>
+              <h4>Faster Project Turnaround</h4>
+              <p>UAV photogrammetry, RTK GNSS, and automated processing workflows reduce field time and data turnaround dramatically — without any compromise on quality or compliance.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="svc-benefit-card">
+              <div class="svc-benefit-icon"><i class="bi bi-layers-fill"></i></div>
+              <h4>Seamless Field-to-Design Integration</h4>
+              <p>Deliverables formatted for direct import into AutoCAD, ArcGIS, QGIS, Civil 3D, and BIM — removing conversion delays and data loss between survey and design teams.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="svc-benefit-card">
+              <div class="svc-benefit-icon"><i class="bi bi-patch-check-fill"></i></div>
+              <h4>Regulatory Compliance</h4>
+              <p>All cadastral and boundary survey deliverables are signed and stamped by registered Survey of Kenya professionals — meeting all legal requirements for title processing and court-admissible records.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== PORTFOLIO ======================== -->
+    <section class="svc-portfolio" data-aos="fade-up">
+      <div class="container">
+        <div class="svc-section-title">
+          <h2>Selected Projects</h2>
+          <p>A snapshot of surveying engagements across land, engineering, and environmental sectors</p>
+        </div>
+        <div class="service-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 800,
+              "autoplay": { "delay": 5000 },
+              "slidesPerView": 1,
+              "spaceBetween": 30,
+              "breakpoints": {
+                "768": { "slidesPerView": 2 },
+                "1200": { "slidesPerView": 3 }
+              },
+              "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
+            }
+          </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="portfolio-item">
+                <img src="assets/img/services/Service-9.webp" alt="Nyeri Land Subdivision" class="img-fluid" loading="lazy">
+                <div class="portfolio-info">
+                  <h5>50 Ha Land Subdivision – Nyeri</h5>
+                  <p>Survey and planning for subdivision of 50 hectares into 92 residential plots with road reserves and public utility spaces.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="portfolio-item">
+                <img src="assets/img/services/droneimage.jpg" alt="Drone Topographic Survey" class="img-fluid" loading="lazy">
+                <div class="portfolio-info">
+                  <h5>Drone Topographic Survey – Greenfields Estate, Kiambu</h5>
+                  <p>UAV-enabled topographic mapping with RTK correction delivering 5cm-resolution orthophotos, DSM, DTM, and elevation contours for 500-acre site planning.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="portfolio-item">
+                <img src="assets/img/services/ALTA4.jpg" alt="Boundary Re-establishment" class="img-fluid" loading="lazy">
+                <div class="portfolio-info">
+                  <h5>Boundary Re-establishment – Nyeri</h5>
+                  <p>Fixed boundary pillars and coordinated wall construction for Mwania Properties in Nyeri — certified and submitted to Survey of Kenya.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== TESTIMONIAL ======================== -->
+    <section class="svc-testimonial" data-aos="fade-up">
+      <div class="container">
+        <div class="svc-testimonial-inner">
+          <i class="bi bi-quote svc-quote-icon"></i>
+          <blockquote>"Orion Terrametrics executed our boundary reopening and topographic survey with unmatched precision. Their team delivered ahead of schedule and with great professionalism — and the certified plans were accepted without any queries."</blockquote>
+          <div class="svc-testimonial-author">
+            <div class="author-avatar"><i class="bi bi-person-circle"></i></div>
+            <div>
+              <strong>Moses Bundi</strong>
+              <span>Director, AMN Construction</span>
+            </div>
+            <div class="rating ms-auto">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== BOTTOM CTA ======================== -->
+    <section class="svc-cta-bottom" data-aos="fade-up">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-8">
+            <h2>Ready to Get Accurate Survey Data?</h2>
+            <p>Tell us your project location and what you need — we'll scope the right survey methodology and deliver a proposal within 24 hours.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <div class="cta-group flex-lg-column flex-row">
+              <a href="index.html#contact" class="btn-cta-primary">Request a Quote</a>
+              <a href="tel:+254799882124" class="btn-cta-secondary mt-lg-3">Call +254 799 882124</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  </main>
-<footer id="footer" class="footer">
+  <style>
+    /* ====== SERVICE PAGE 2.0 ====== */
+    .svc-hero { background: linear-gradient(135deg, #07263a 0%, #0a3d5c 100%); padding: 130px 0 80px; color: #fff; }
+    .svc-breadcrumb { font-size: 0.82rem; color: rgba(255,255,255,0.55); margin-bottom: 22px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .svc-breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .svc-breadcrumb a:hover { color: #fff; }
+    .svc-breadcrumb span:not(a) { color: rgba(255,255,255,0.3); }
+    .svc-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 18px; }
+    .svc-hero-sub { font-size: 1.08rem; color: rgba(255,255,255,0.82); max-width: 580px; line-height: 1.65; margin-bottom: 32px; }
+    .svc-hero .cta-group { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn-hero-primary { background: var(--accent-color, #1a73e8); color: #fff !important; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: opacity 0.25s; display: inline-block; }
+    .btn-hero-primary:hover { opacity: 0.88; }
+    .btn-hero-secondary { background: transparent; color: rgba(255,255,255,0.9) !important; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; border: 2px solid rgba(255,255,255,0.35); transition: border-color 0.25s, background 0.25s; display: inline-block; }
+    .btn-hero-secondary:hover { border-color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.08); }
+    .svc-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .svc-stat-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: 12px; padding: 28px 20px; text-align: center; transition: background 0.25s; }
+    .svc-stat-card:hover { background: rgba(255,255,255,0.12); }
+    .svc-stat-card .stat-num { display: block; font-size: 2.2rem; font-weight: 800; color: #fff; line-height: 1; }
+    .svc-stat-card .stat-label { display: block; font-size: 0.76rem; color: rgba(255,255,255,0.6); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.07em; }
+    .svc-trust { background: #f1f5f9; padding: 22px 0; border-bottom: 1px solid #e2e8f0; }
+    .svc-trust .trust-label { font-size: 0.78rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; text-align: center; }
+    .svc-trust .trust-badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .trust-badge { background: #fff; border: 1px solid #e2e8f0; border-radius: 999px; padding: 7px 16px; font-size: 0.83rem; color: #334155; display: inline-flex; align-items: center; gap: 7px; }
+    .trust-badge i { color: var(--accent-color, #1a73e8); font-size: 0.9rem; }
+    .svc-overview { padding: 90px 0; background: #fff; }
+    .svc-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-color, #1a73e8); margin-bottom: 12px; display: block; }
+    .svc-overview h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: var(--heading-color, #07334f); line-height: 1.25; margin-bottom: 16px; }
+    .svc-overview .lead { font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 20px; }
+    .svc-check-list { list-style: none; padding: 0; margin: 0 0 26px; }
+    .svc-check-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: #334155; margin-bottom: 11px; line-height: 1.5; }
+    .svc-check-list li i { color: var(--accent-color, #1a73e8); font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+    .svc-link-btn { color: var(--accent-color, #1a73e8) !important; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+    .svc-link-btn:hover { gap: 10px; }
+    .svc-sectors { background: #f8fafc; padding: 90px 0; }
+    .svc-section-title { text-align: center; margin-bottom: 52px; }
+    .svc-section-title h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: var(--heading-color, #07334f); margin-bottom: 10px; }
+    .svc-section-title p { color: #64748b; font-size: 1rem; max-width: 500px; margin: 0 auto; line-height: 1.6; }
+    .svc-sector-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 30px 26px; height: 100%; transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s; cursor: default; }
+    .svc-sector-card:hover { border-color: var(--accent-color, #1a73e8); box-shadow: 0 8px 28px rgba(0,0,0,0.08); transform: translateY(-4px); }
+    .svc-sector-icon { width: 50px; height: 50px; background: rgba(26,115,232,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .svc-sector-icon i { font-size: 1.4rem; color: var(--accent-color, #1a73e8); }
+    .svc-sector-card h4 { font-size: 1rem; font-weight: 700; color: var(--heading-color, #07334f); margin-bottom: 8px; }
+    .svc-sector-card p { font-size: 0.87rem; color: #64748b; line-height: 1.65; margin: 0; }
+    .svc-process { background: #fff; padding: 90px 0; }
+    .svc-process-row { display: flex; gap: 0; position: relative; flex-wrap: wrap; }
+    .svc-process-row::before { content: ''; position: absolute; top: 27px; left: calc(10% + 10px); right: calc(10% + 10px); height: 2px; background: #e2e8f0; z-index: 0; }
+    .svc-process-step { flex: 1; min-width: 150px; text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+    .svc-process-step .step-num { width: 54px; height: 54px; background: var(--accent-color, #1a73e8); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 800; margin: 0 auto 18px; border: 3px solid #fff; box-shadow: 0 0 0 3px var(--accent-color, #1a73e8); }
+    .svc-process-step h5 { font-size: 0.88rem; font-weight: 700; color: var(--heading-color, #07334f); margin-bottom: 8px; }
+    .svc-process-step p { font-size: 0.81rem; color: #64748b; line-height: 1.55; }
+    .svc-benefits { background: #f8fafc; padding: 90px 0; }
+    .svc-benefit-card { background: #fff; border-radius: 14px; padding: 34px 28px; height: 100%; border: 1px solid #e2e8f0; transition: box-shadow 0.25s, transform 0.25s; }
+    .svc-benefit-card:hover { box-shadow: 0 10px 32px rgba(0,0,0,0.09); transform: translateY(-3px); }
+    .svc-benefit-icon { width: 58px; height: 58px; background: linear-gradient(135deg, var(--accent-color, #1a73e8), #0ea5e9); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
+    .svc-benefit-icon i { font-size: 1.5rem; color: #fff; }
+    .svc-benefit-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--heading-color, #07334f); margin-bottom: 10px; }
+    .svc-benefit-card p { font-size: 0.9rem; color: #64748b; line-height: 1.68; margin: 0; }
+    .svc-portfolio { background: #fff; padding: 90px 0; }
+    .svc-testimonial { background: #f8fafc; padding: 70px 0; }
+    .svc-testimonial-inner { max-width: 780px; margin: 0 auto; text-align: center; position: relative; }
+    .svc-quote-icon { font-size: 3.5rem; color: var(--accent-color, #1a73e8); opacity: 0.25; display: block; line-height: 1; margin-bottom: 8px; }
+    .svc-testimonial-inner blockquote { font-size: 1.15rem; color: #334155; font-style: italic; line-height: 1.75; margin: 0 0 30px; border: none; padding: 0; }
+    .svc-testimonial-author { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .author-avatar { width: 48px; height: 48px; background: var(--accent-color, #1a73e8); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .author-avatar i { font-size: 1.6rem; color: #fff; }
+    .svc-testimonial-author strong { display: block; font-size: 0.95rem; color: var(--heading-color, #07334f); }
+    .svc-testimonial-author span { font-size: 0.82rem; color: #64748b; }
+    .svc-testimonial-author .rating i { color: #f59e0b; font-size: 0.85rem; }
+    .svc-cta-bottom { background: linear-gradient(135deg, #07263a 0%, #0a3d5c 100%); padding: 90px 0; color: #fff; }
+    .svc-cta-bottom h2 { font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 800; color: #fff; margin-bottom: 16px; }
+    .svc-cta-bottom p { font-size: 1rem; color: rgba(255,255,255,0.78); line-height: 1.65; margin: 0; }
+    .svc-cta-bottom .cta-group { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn-cta-primary { background: var(--accent-color, #1a73e8); color: #fff !important; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: opacity 0.25s; display: inline-block; }
+    .btn-cta-primary:hover { opacity: 0.88; }
+    .btn-cta-secondary { background: transparent; color: rgba(255,255,255,0.88) !important; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; border: 2px solid rgba(255,255,255,0.35); transition: border-color 0.25s, background 0.25s; display: inline-block; }
+    .btn-cta-secondary:hover { border-color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.08); }
+    @media (max-width: 768px) {
+      .svc-hero { padding: 100px 0 60px; }
+      .svc-stats-grid { grid-template-columns: 1fr 1fr; }
+      .svc-process-row::before { display: none; }
+      .svc-process-step { min-width: 140px; margin-bottom: 24px; }
+      .svc-cta-bottom .cta-group { justify-content: center; }
+      .svc-testimonial-author { flex-direction: column; }
+    }
+  </style>
 
+  <footer id="footer" class="footer">
     <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-             <!--<span class="sitename">Strategy</span>-->
-             <img src="assets/img/OrionLogo.png" alt="OrionTerrametrics Logo Main" class="logo-img">
+      <div class="row gy-5">
+        <div class="col-lg-4 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center mb-3">
+            <img src="assets/img/OrionLogo.png" alt="Orion Terrametrics Africa" class="logo-img">
           </a>
-          <p>Orion Terrametrics Africa Limited is a premier geospatial and engineering firm based in Nairobi. We offer cutting-edge services in GIS, surveying, remote sensing, civil infrastructure design, environmental consultancy, and utility modernization across East Africa.</p>
-          <p>We build on a legacy of large-scale projects, ISO-certified quality systems, and a commitment to innovation and sustainability.</p>
-          <div class="social-links d-flex mt-4">
-            <a href="https://x.com/OrionGeospatial"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61572468435793"><i class="bi bi-facebook"></i></a>
-            <!--<a href=""><i class="bi bi-instagram"></i></a>-->
-            <a href="https://www.linkedin.com/company/orion-geospatia"><i class="bi bi-linkedin"></i></a>
+          <p class="footer-tagline">Africa's Geospatial Technology Company — combining field expertise with cloud-native spatial tools to help governments, development organizations, and enterprises make better decisions with location data.</p>
+          <div class="social-links d-flex mt-4 gap-2">
+            <a href="https://www.linkedin.com/company/orion-geospatia" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://x.com/OrionGeospatial" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61572468435793" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
           </div>
         </div>
-
         <div class="col-lg-2 col-6 footer-links">
-          <h4>The Company</h4>
+          <h4>Services</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About us</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="surveying.html">Surveying &amp; Field Data</a></li>
+            <li><a href="GIS.html">GIS &amp; Spatial Analytics</a></li>
+            <li><a href="Remote-Sensing.html">Remote Sensing &amp; EO</a></li>
+            <li><a href="Utilities.html">Geospatial Digital Transformation</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="CloudGIS.html">OrionGIS Platform</a></li>
+            <li><a href="OrionSpatialDataHub.html">Spatial Data Hub</a></li>
+            <li><a href="index.html#contact">Mobile Field Apps</a></li>
+          </ul>
+          <h4 class="mt-4">Company</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#team">Leadership</a></li>
             <li><a href="https://orionterrametrics.co.ke/blog/">Blog</a></li>
-            <li><a href="index.html#team">Team</a></li>
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>What We Do</h4>
-          <ul>
-            <li><a href="surveying.html">Surveying Services</a></li>
-            <li><a href="GIS.html">Geospatial Information Systems(GIS)</a></li>
-            <li><a href="Remote-Sensing.html">Remote Sensing</a></li>
-            <li><a href="Utilities.html">Geospatial Digital Transformation</a></li>
-            <li><a href="OrionSpatialDataHub.html">Spatial Data Hub</a></li>
-          </ul>
+        <div class="col-lg-4 col-md-12 footer-contact">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><p>Mukhtar Dadah Street, GMC Mansion, 1st Floor<br>Nairobi, Kenya</p></div>
+          <div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><div><a href="tel:+254799882124">+254 799 882124</a><br><a href="tel:+254729212061">+254 729 212061</a></div></div>
+          <div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><a href="mailto:info@orionterrametrics.com">info@orionterrametrics.com</a></div>
+          <a href="CloudGIS.html" class="footer-trial-btn mt-4 d-inline-flex align-items-center gap-2">Start Free Trial <i class="bi bi-arrow-right"></i></a>
         </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>Mukhtar Dadah Street</p>
-          <p>GMC Mansion, 1st Floor</p>
-          <p>Nairobi, Kenya</p>
-          <p class="mt-4"><strong>Phone:</strong><span><strong><a href="tel:+254799882124" style="font-size: 17px;"></strong></span><span>+254799882124</span></p>
-          <p><span><strong><a href="tel:+254729212061" style="font-size: 17px;"></strong></span><span>+254729212061</span></p>
-          <p class="mt-4"><strong>Email:</strong><span><a href="mailto:info@orionterrametrics.com" style="font-size: 17px;"></span><span>info@orionterrametrics.com</span></p>
-        </div>
-
       </div>
     </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© 2025 <span>Copyright</span> <strong class="px-1 sitename"> Orion Terrametrics Africa Limited </strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        <!--Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+    <div class="container footer-bottom">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start"><p>&copy; 2026 <strong>Orion Terrametrics Africa Limited</strong>. All Rights Reserved.</p></div>
+        <div class="col-md-6 text-center text-md-end"><p class="footer-geo">Nairobi &middot; Meru &middot; Kampala &middot; Harare</p></div>
       </div>
     </div>
-
   </footer>
+
+  <style>
+    #footer {
+      background: #07263a !important;
+      color: rgba(255,255,255,0.8) !important;
+    }
+    #footer .footer-top {
+      padding: 60px 0 40px;
+    }
+    #footer .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1) !important;
+      padding: 20px 0;
+    }
+    #footer .logo-img {
+      height: 40px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+    #footer .footer-tagline {
+      color: rgba(255,255,255,0.7) !important;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    #footer .social-links a {
+      background: rgba(255,255,255,0.1) !important;
+      color: rgba(255,255,255,0.8) !important;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    #footer .social-links a:hover {
+      background: var(--accent-color) !important;
+      color: #fff !important;
+    }
+    #footer .footer-links h4 {
+      color: #ffffff !important;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    #footer .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #footer .footer-links ul li {
+      margin-bottom: 8px;
+    }
+    #footer .footer-links ul a {
+      color: rgba(255,255,255,0.65) !important;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+    #footer .footer-links ul a:hover {
+      color: var(--accent-color) !important;
+    }
+    #footer .footer-contact h4 {
+      color: #ffffff !important;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    #footer .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    #footer .footer-contact-item i {
+      color: var(--accent-color) !important;
+      font-size: 1rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    #footer .footer-contact-item p,
+    #footer .footer-contact-item div,
+    #footer .footer-contact-item a {
+      color: rgba(255,255,255,0.7) !important;
+      font-size: 0.9rem;
+      margin: 0;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+    #footer .footer-contact-item a:hover {
+      color: var(--accent-color) !important;
+    }
+    #footer .footer-trial-btn {
+      background: var(--accent-color) !important;
+      color: #ffffff !important;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    #footer .footer-trial-btn:hover {
+      opacity: 0.88;
+    }
+    #footer .footer-bottom p {
+      color: rgba(255,255,255,0.5) !important;
+      font-size: 0.85rem;
+      margin: 0;
+    }
+    #footer .footer-bottom strong {
+      color: rgba(255,255,255,0.75) !important;
+    }
+    #footer .footer-geo {
+      color: rgba(255,255,255,0.4) !important;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+    }
+  </style>
 
 
 

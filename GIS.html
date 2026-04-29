@@ -94,7 +94,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/OrionLogoIcon.png" rel="icon">
-  <link href="assets/img/OrionLogoIcon.png.png" rel="apple-touch-icon">
+  <link href="assets/img/OrionLogoIcon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -133,30 +133,26 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="https://orionterrametrics.co.ke/blog/">Blog</a></li>
-          <li><a href="#team">Team</a></li>
-          <!--<li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="index.html#services"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <li><a href="surveying.html">Surveying &amp; Field Data Collection</a></li>
+              <li><a href="GIS.html">GIS &amp; Spatial Analytics</a></li>
+              <li><a href="Remote-Sensing.html">Remote Sensing &amp; Earth Observation</a></li>
+              <li><a href="Utilities.html">Geospatial Digital Transformation</a></li>
             </ul>
-          </li>-->
-          <li><a href="#contact">Contact</a></li>
+          </li>
+          <li class="dropdown"><a href="index.html#products"><span>Products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="CloudGIS.html">OrionGIS &mdash; Cloud GIS Platform</a></li>
+              <li><a href="OrionSpatialDataHub.html">OrionSpatial Data Hub</a></li>
+              <li><a href="index.html#contact">Mobile Field Apps</a></li>
+            </ul>
+          </li>
+          <li><a href="https://orionterrametrics.co.ke/blog/">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="CloudGIS.html" class="nav-trial-btn">Start Free Trial</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -168,419 +164,726 @@
 
   <main class="main">
 
-    <!-- Page Title -->
-<div class="page-title dark-background" data-aos="fade">
-  <div class="container position-relative">
-    <h1>GIS Solutions</h1>
-    <nav class="breadcrumbs">
-      <ol>
-        <li><a href="index.html">Home</a></li>
-        <li class="current">Service Details</li>
-      </ol>
-    </nav>
-  </div>
-</div><!-- End Page Title -->
-
-<!-- Service Details Section -->
-<section id="service-details" class="service-details section">
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row gy-5">
-
-      <div class="col-lg-8 order-1">
-        <div class="service-main-content">
-          <div class="service-header" data-aos="fade-up">
-            <h1>Geographic Information Systems (GIS)</h1>
-            <p class="lead">
-            Trusted Globally, we deliver expert GIS solutions including Cloud GIS, Web GIS, custom GIS application
-            development (web & mobile), spatial data analytics, and advanced mapping services. Our enterprise geospatial solutions
-            empower organizations to harness the power of location intelligence, enhance decision-making, and drive data-driven
-            transformation through innovative mapping and analytics technologies.
-            </p>
-          </div>
-
-          <div class="service-tabs" data-aos="fade-up" data-aos-delay="200">
-            <ul class="nav nav-tabs" id="serviceTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#service-details-tab-1" type="button" role="tab" aria-controls="overview" aria-selected="true">
-                  <i class="bi bi-info-circle"></i> Overview
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#service-details-tab-2" type="button" role="tab" aria-controls="process" aria-selected="false">
-                  <i class="bi bi-diagram-3"></i> Process
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#service-details-tab-3" type="button" role="tab" aria-controls="benefits" aria-selected="false">
-                  <i class="bi bi-graph-up-arrow"></i> Benefits
-                </button>
-              </li>
-            </ul>
-
-            <div class="tab-content">
-              <div class="tab-pane fade show active" id="service-details-tab-1" role="tabpanel" aria-labelledby="overview-tab">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="content-block">
-                    <h3>Our GIS Capabilities</h3>
-                    <p>We specialize in enterprise-grade geospatial solutions that connect data, place, and purpose. Our expertise covers
-                        the full spectrum: spatial data integration, predictive modeling, location intelligence, and real-time
-                        visualization—deployed across urban development, disaster response, climate action, agriculture, and healthcare
-                        systems.
-                    </p>
-                    <p>Whether it's a cloud-based mapping portal, a field data collection app, or an executive dashboard, we create GIS
-                        tools that transform complex spatial information into clear, actionable intelligence. The result? Organizations
-                        equipped to plan better, respond faster, and achieve outcomes that matter.
-                    </p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <img src="assets/img/portfolio/county-gis.png" alt="County Health GIS Dashboard" class="img-fluid rounded">
-                  </div>
-                </div>
-              </div>
-
-              <div class="tab-pane fade" id="service-details-tab-2" role="tabpanel" aria-labelledby="process-tab">
-                <div class="process-timeline">
-                  <div class="timeline-item">
-                    <div class="timeline-marker">01</div>
-                    <div class="timeline-content">
-                      <h4>Client Needs Assessment</h4>
-                      <p>We begin by understanding your spatial challenges, data sources, and desired outcomes through stakeholder consultations and system audits.</p>
-                    </div>
-                  </div>
-
-                  <div class="timeline-item">
-                    <div class="timeline-marker">02</div>
-                    <div class="timeline-content">
-                      <h4>System Design & Data Structuring</h4>
-                      <p>We develop an architecture for GIS integration, defining data models, layers, and technology stack for desktop, mobile, or web deployment.</p>
-                    </div>
-                  </div>
-
-                  <div class="timeline-item">
-                    <div class="timeline-marker">03</div>
-                    <div class="timeline-content">
-                      <h4>Development & Configuration</h4>
-                      <p>We build and deploy GIS apps and dashboards tailored to your sector needs—public health, utilities, urban planning, or asset monitoring.</p>
-                    </div>
-                  </div>
-
-                  <div class="timeline-item">
-                    <div class="timeline-marker">04</div>
-                    <div class="timeline-content">
-                      <h4>Testing, Deployment & Training</h4>
-                      <p>Final deliverables are deployed with full user training, system testing, and user documentation. Support is provided post-deployment.</p>
-                    </div>
-                  </div>
-
-                  <div class="timeline-item">
-                    <div class="timeline-marker">05</div>
-                    <div class="timeline-content">
-                      <h4>Ongoing Support & Enhancement</h4>
-                      <p>We offer long-term maintenance, spatial database updates, and feature enhancements as your spatial needs evolve.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            <div class="tab-pane fade" id="service-details-tab-3" role="tabpanel" aria-labelledby="benefits-tab">
-                <div class="row g-4">
-                  <div class="col-md-6">
-                    <div class="benefit-card">
-                      <div class="benefit-icon">
-                        <i class="bi bi-graph-up"></i>
-                      </div>
-                    <h2 style="font-size: 1rem; font-weight: bold">Transform Data Into Action</h2>
-                    <p>Turn raw geographic data into strategic intelligence. Our spatial analysis reveals hidden patterns, optimizes
-                        resource allocation, and empowers smarter, evidence-based decision-making.</p>
-                  </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="benefit-card">
-                      <div class="benefit-icon">
-                        <i class="bi bi-people"></i>
-                      </div>
-                    <h2 style="font-size: 1rem; font-weight: bold">Elevate Service Delivery</h2>
-                    <p>Deliver transparent, responsive governance through intuitive dashboards. Enable real-time monitoring, faster response
-                        times, and data-backed policies that improve community outcomes.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="benefit-card">
-                      <div class="benefit-icon">
-                        <i class="bi bi-cash-coin"></i>
-                      </div>
-                    <h2 style="font-size: 1rem; font-weight: bold">Purpose-Built Solutions</h2>
-                    <p>Get GIS applications designed for your workflows. From automated field collection to interactive portals, we build
-                        platforms that integrate seamlessly with your operations.
-                    </p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="benefit-card">
-                      <div class="benefit-icon">
-                        <i class="bi bi-bar-chart-line"></i>
-                      </div>
-                    <h2 style="font-size: 1rem; font-weight: bold">Versatile Applications</h2>
-                    <p>Deploy solutions across agriculture, disaster preparednes and management, climate change, infrastructure, health, and urban planning. One platform with unlimited
-                        potential—scalable from local projects to national systems.
-                    </p>
-                        </div>
-                  </div>
-                </div>
-              </div>
-
+    <!-- ======================== SERVICE HERO ======================== -->
+    <section class="svc-hero">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7" data-aos="fade-right">
+            <nav class="svc-breadcrumb" aria-label="breadcrumb">
+              <a href="index.html">Home</a> <span>/</span>
+              <a href="index.html#services">Services</a> <span>/</span>
+              <span>GIS &amp; Spatial Analytics</span>
+            </nav>
+            <h1>GIS &amp; Spatial Analytics</h1>
+            <p class="svc-hero-sub">We build cloud GIS platforms, spatial databases, and analytics dashboards for governments, NGOs, and enterprises across Africa — turning complex location data into decisions that drive real impact.</p>
+            <div class="cta-group">
+              <a href="index.html#contact" class="btn-hero-primary">Book a Free Consultation</a>
+              <a href="CloudGIS.html" class="btn-hero-secondary">Explore OrionGIS <i class="bi bi-arrow-right ms-1"></i></a>
             </div>
           </div>
-
-          <div class="service-gallery" data-aos="fade-up" data-aos-delay="300">
-            <h3>Our Portfolio</h3>
-            <div class="service-details-slider swiper init-swiper">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 800,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": 1,
-                  "spaceBetween": 30,
-                  "breakpoints": {
-                    "768": {
-                      "slidesPerView": 2
-                    }
-                  },
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="portfolio-item">
-                    <img src="assets/img/portfolio/smartcity.jpg" alt="National Smart City GIS Platform" class="img-fluid" loading="lazy">
-                    <div class="portfolio-info">
-                      <h5>National Smart Geoportal</h5>
-                      <p>Developed a nationwide GIS platform integrating IoT sensors, real-time traffic, utilities, and environmental data for smart city management across multiple metropolitan areas.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="portfolio-item">
-                    <img src="assets/img/portfolio/disease-suveilance.png" alt="Cross-Border Disease Surveillance GIS" class="img-fluid" loading="lazy">
-                    <div class="portfolio-info">
-                      <h5>Cross-Border Disease Surveillance GIS</h5>
-                      <p>Engineered a real-time GIS system for tracking and predicting disease outbreaks across East African borders, integrating health, mobility, and climate data for rapid response.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="portfolio-item">
-                    <img src="assets/img/portfolio/utility-digital-twin.jpg" alt="Utility Network Digital Twin" class="img-fluid" loading="lazy">
-                    <div class="portfolio-info">
-                      <h5>Utility Network Digital Twin</h5>
-                      <p>Created a digital twin of a national water and power utility network, enabling predictive maintenance, asset optimization, and live incident management through advanced GIS analytics.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="portfolio-item">
-                    <img src="assets/img/portfolio/parcel-map.png" alt="National Land Parcel Blockchain Registry" class="img-fluid" loading="lazy">
-                    <div class="portfolio-info">
-                      <h5>National Land Parcel Blockchain Registry</h5>
-                      <p>Launched Africa’s first blockchain-based GIS land registry, providing secure, transparent, and tamper-proof land ownership records for millions of parcels.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="portfolio-item">
-                    <img src="assets/img/portfolio/gis-disaster.png" alt="Disaster Response & Resilience GIS Hub" class="img-fluid" loading="lazy">
-                    <div class="portfolio-info">
-                      <h5>Disaster Response & Resilience GIS Hub</h5>
-                      <p>Built a GIS hub for disaster preparedness and response, integrating satellite imagery, drone data, and AI-driven risk models to support emergency services and humanitarian agencies.</p>
-                    </div>
-                  </div>
-                </div>
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
+            <div class="svc-stats-grid">
+              <div class="svc-stat-card">
+                <span class="stat-num">300+</span>
+                <span class="stat-label">GIS Projects Delivered</span>
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="svc-stat-card">
+                <span class="stat-num">15+</span>
+                <span class="stat-label">Countries Served</span>
+              </div>
+              <div class="svc-stat-card">
+                <span class="stat-num">ISO</span>
+                <span class="stat-label">Certified Quality Systems</span>
+              </div>
+              <div class="svc-stat-card">
+                <span class="stat-num">5yr+</span>
+                <span class="stat-label">Cloud GIS Platform</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-lg-4 order-2">
-        <div class="service-sidebar" data-aos="fade-left">
-
-          <div class="service-features-list" data-aos="fade-up" data-aos-delay="200">
-            <h4>What We Offer</h4>
-            <ul>
-              <li>
-                <i class="bi bi-geo-alt-fill"></i>
-                <div>
-                  <h2 style="font-size: 1rem; font-weight: bold">Cloud GIS Deployment</h2>
-                  <p>We provide scalable <strong>Cloud GIS solutions</strong> for hosting, managing, and sharing geospatial data and
-                applications securely across distributed environments.</p>
-                </div>
-              </li>
-              <li>
-                <i class="bi bi-bar-chart-line"></i>
-                <div>
-                <h2 style="font-size: 1rem; font-weight: bold">Custom GIS Solutions Development</h2>
-                  <p>End-to-end development of <strong>custom GIS applications</strong>—from web and mobile platforms to enterprise
-                systems—tailored to your operational workflows and data needs.</p>
-                </div>
-              </li>
-              <li>
-                <i class="bi bi-layers"></i>
-                <div>
-                <h2 style="font-size: 1rem; font-weight: bold">Geoportal & Data Infrastructure</h2>
-                  <p>Development of <strong>enterprise geoportals</strong> and <strong>spatial data infrastructures (SDI)</strong> to
-                integrate, catalog, and distribute geospatial datasets efficiently across teams and partners.</p>
-                </div>
-              </li>
-              <li>
-                <i class="bi bi-shield-lock"></i>
-                <div>
-                <h2 style="font-size: 1rem; font-weight: bold">GIS Consulting</h2>
-                  <p>We provide strategic <strong>GIS consulting services</strong> to help organizations plan, implement, and optimize
-                geospatial systems that align with business objectives and technical requirements.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-        <div class="action-card" data-aos="zoom-in" data-aos-delay="100">
-            <h3>Need GIS Expertise?</h3>
-            <p>Talk to our Experts today to discuss your digital mapping, data integration, or GIS needs. We offer
-                tailored consultations and demos.</p>
-            <a href="tel:+254799882124" class="btn-primary">Speak to a GIS Expert</a>
-            <span class="guarantee"><i class="bi bi-shield-check"></i> Certified GIS Professionals</span>
-        </div>
-
-          <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="testimonial-header">
-              <i class="bi bi-quote"></i>
-              <div class="rating">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-            </div>
-            <p class="testimonial-text">
-              "Orion built our Spatial Data Infrastructure from scratch. The accuracy, responsiveness, and support have been outstanding."
-            </p>
-            <div class="client-info">
-              <img src="assets/img/portfolio/county-gis.png" alt="Client" class="client-image">
-              <div class="client-details">
-                <h5>Joseph Meruaki</h5>
-                <span>Director, EHRM</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-info" data-aos="fade-up" data-aos-delay="400">
-            <h4>Have Questions?</h4>
-            <div class="contact-method">
-              <i class="bi bi-telephone-fill"></i>
-              <div>
-                <span>Call Us Now</span>
-                <p>+254 799882124</p>
-                <p>+254 729212061</p>
-              </div>
-            </div>
-            <div class="contact-method">
-              <i class="bi bi-envelope-fill"></i>
-              <div>
-                <span>Email Us</span>
-                <p>info@orionterrametrics.com</p>
-              </div>
-            </div>
-          </div>
-
+    <!-- ======================== TRUST STRIP ======================== -->
+    <section class="svc-trust">
+      <div class="container">
+        <p class="trust-label">Trusted by leading organizations across Africa</p>
+        <div class="trust-badges">
+          <span class="trust-badge"><i class="bi bi-building-fill"></i> Government &amp; Municipal</span>
+          <span class="trust-badge"><i class="bi bi-globe-americas"></i> NGOs &amp; Development</span>
+          <span class="trust-badge"><i class="bi bi-gear-wide-connected"></i> Engineering &amp; Infrastructure</span>
+          <span class="trust-badge"><i class="bi bi-tree"></i> Agriculture &amp; Land</span>
+          <span class="trust-badge"><i class="bi bi-lightning-charge-fill"></i> Utilities &amp; Telecoms</span>
+          <span class="trust-badge"><i class="bi bi-mortarboard-fill"></i> Research &amp; Academia</span>
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section><!-- /Service Details Section -->
-<!-- /Service Details Section -->
+    <!-- ======================== OVERVIEW ======================== -->
+    <section class="svc-overview" data-aos="fade-up">
+      <div class="container">
+        <div class="row align-items-center gx-5 gy-5">
+          <div class="col-lg-6">
+            <img src="assets/img/portfolio/county-gis.png" alt="GIS Analytics Dashboard — Orion Terrametrics" class="img-fluid rounded-3 shadow-sm">
+          </div>
+          <div class="col-lg-6">
+            <p class="svc-label">What We Do</p>
+            <h2>From Raw Coordinates to Strategic Intelligence</h2>
+            <p class="lead">We design, build, and operate enterprise GIS environments — from cloud platform deployment and custom application development to geoportal infrastructure and executive analytics dashboards.</p>
+            <ul class="svc-check-list">
+              <li><i class="bi bi-check-circle-fill"></i> Cloud GIS platform deployment on OrionGIS</li>
+              <li><i class="bi bi-check-circle-fill"></i> Custom GIS web &amp; mobile application development</li>
+              <li><i class="bi bi-check-circle-fill"></i> Geoportal &amp; Spatial Data Infrastructure (SDI)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Spatial analytics, predictive modeling &amp; executive dashboards</li>
+              <li><i class="bi bi-check-circle-fill"></i> Field data collection systems &amp; real-time sync</li>
+            </ul>
+            <a href="CloudGIS.html" class="svc-link-btn">Explore OrionGIS Platform <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== WHO WE SERVE ======================== -->
+    <section class="svc-sectors" data-aos="fade-up">
+      <div class="container">
+        <div class="svc-section-title">
+          <h2>Who We Serve</h2>
+          <p>Purpose-built GIS solutions for every sector and use case across Africa</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="svc-sector-card">
+              <div class="svc-sector-icon"><i class="bi bi-building-fill"></i></div>
+              <h4>Government &amp; Land Agencies</h4>
+              <p>Make better infrastructure decisions with real-time spatial data — digitize land registries, automate permit workflows, and give executives always-current operational visibility.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="svc-sector-card">
+              <div class="svc-sector-icon"><i class="bi bi-globe-americas"></i></div>
+              <h4>NGOs &amp; Development Organizations</h4>
+              <p>From field to map in hours, not weeks — cloud GIS platforms that aggregate multi-source field data, track program coverage, and generate reporting-ready spatial outputs for donors and leadership.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="svc-sector-card">
+              <div class="svc-sector-icon"><i class="bi bi-gear-wide-connected"></i></div>
+              <h4>Engineering &amp; Infrastructure</h4>
+              <p>Precision spatial analysis for route planning, environmental impact assessment, infrastructure siting, and multi-project portfolio management across complex and remote terrain.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="svc-sector-card">
+              <div class="svc-sector-icon"><i class="bi bi-tree"></i></div>
+              <h4>Agriculture &amp; Land Management</h4>
+              <p>Spatially indexed crop monitoring, farm boundary management, soil analysis layers, and land use change detection — at plot level or landscape scale, updated from satellite or drone imagery.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="svc-sector-card">
+              <div class="svc-sector-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+              <h4>Utilities &amp; Telecoms</h4>
+              <p>Network planning, asset register digitization, service area analysis, and outage management dashboards — built on a spatial platform your entire operations team can access and act on.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="svc-sector-card">
+              <div class="svc-sector-icon"><i class="bi bi-mortarboard-fill"></i></div>
+              <h4>Research &amp; Academia</h4>
+              <p>Cloud GIS environments for multi-researcher collaboration, research-grade spatial datasets from the OrionSpatial Data Hub, and publication-ready cartographic outputs — all in one platform.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== HOW WE WORK ======================== -->
+    <section class="svc-process" data-aos="fade-up">
+      <div class="container">
+        <div class="svc-section-title">
+          <h2>How We Work</h2>
+          <p>A structured, proven engagement model — from discovery to deployment and beyond</p>
+        </div>
+        <div class="svc-process-row">
+          <div class="svc-process-step">
+            <div class="step-num">01</div>
+            <h5>Requirements &amp; Data Audit</h5>
+            <p>We assess your data assets, stakeholder workflows, and spatial challenges to define the right architecture and scope.</p>
+          </div>
+          <div class="svc-process-step">
+            <div class="step-num">02</div>
+            <h5>Platform Architecture &amp; Design</h5>
+            <p>We design the geodatabase schema, integration points, and user role structure for your cloud GIS deployment.</p>
+          </div>
+          <div class="svc-process-step">
+            <div class="step-num">03</div>
+            <h5>Data Migration &amp; Integration</h5>
+            <p>We migrate, clean, and structure your existing spatial datasets and connect all external and real-time data sources.</p>
+          </div>
+          <div class="svc-process-step">
+            <div class="step-num">04</div>
+            <h5>Platform Build &amp; Configuration</h5>
+            <p>We build your cloud GIS environment, custom apps, and analytics dashboards on the OrionGIS platform.</p>
+          </div>
+          <div class="svc-process-step">
+            <div class="step-num">05</div>
+            <h5>Training &amp; Ongoing Support</h5>
+            <p>We onboard your team with hands-on training and provide continuous support as your platform and data needs grow.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== BENEFITS ======================== -->
+    <section class="svc-benefits" data-aos="fade-up">
+      <div class="container">
+        <div class="svc-section-title">
+          <h2>What You Gain</h2>
+          <p>Outcomes our clients achieve by working with Orion Terrametrics</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="svc-benefit-card">
+              <div class="svc-benefit-icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <h4>Transform Data Into Action</h4>
+              <p>Turn raw geographic data into strategic intelligence — revealing patterns, optimizing resource allocation, and enabling evidence-based decisions at every level of your organization.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="svc-benefit-card">
+              <div class="svc-benefit-icon"><i class="bi bi-people-fill"></i></div>
+              <h4>Elevate Service Delivery</h4>
+              <p>Deliver transparent, responsive governance through intuitive dashboards — enabling real-time monitoring, faster response times, and data-backed policies that improve outcomes.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="svc-benefit-card">
+              <div class="svc-benefit-icon"><i class="bi bi-puzzle-fill"></i></div>
+              <h4>Purpose-Built for Your Workflows</h4>
+              <p>GIS applications designed around your operations — from automated field collection to interactive geoportals — that integrate seamlessly with your existing systems and teams.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="svc-benefit-card">
+              <div class="svc-benefit-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h4>Scalable Across Any Use Case</h4>
+              <p>Deploy one platform across agriculture, disaster response, health, infrastructure, and urban planning — scalable from a pilot department to a national enterprise system.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== PORTFOLIO ======================== -->
+    <section class="svc-portfolio" data-aos="fade-up">
+      <div class="container">
+        <div class="svc-section-title">
+          <h2>Selected Projects</h2>
+          <p>A snapshot of GIS engagements across government, NGO, and enterprise clients</p>
+        </div>
+        <div class="service-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 800,
+              "autoplay": { "delay": 5000 },
+              "slidesPerView": 1,
+              "spaceBetween": 30,
+              "breakpoints": {
+                "768": { "slidesPerView": 2 },
+                "1200": { "slidesPerView": 3 }
+              },
+              "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
+            }
+          </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="portfolio-item">
+                <img src="assets/img/portfolio/smartcity.jpg" alt="National Smart Geoportal" class="img-fluid" loading="lazy">
+                <div class="portfolio-info">
+                  <h5>National Smart Geoportal</h5>
+                  <p>Nationwide GIS platform integrating IoT sensors, real-time traffic, utilities, and environmental data for smart city management.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="portfolio-item">
+                <img src="assets/img/portfolio/disease-suveilance.png" alt="Disease Surveillance GIS" class="img-fluid" loading="lazy">
+                <div class="portfolio-info">
+                  <h5>Cross-Border Disease Surveillance GIS</h5>
+                  <p>Real-time GIS system tracking disease outbreaks across East African borders, integrating health, mobility, and climate data.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="portfolio-item">
+                <img src="assets/img/portfolio/parcel-map.png" alt="Land Registry GIS" class="img-fluid" loading="lazy">
+                <div class="portfolio-info">
+                  <h5>National Land Parcel Registry</h5>
+                  <p>Secure, spatially-indexed land ownership platform providing transparent records for millions of registered parcels.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="portfolio-item">
+                <img src="assets/img/portfolio/gis-disaster.png" alt="Disaster GIS Hub" class="img-fluid" loading="lazy">
+                <div class="portfolio-info">
+                  <h5>Disaster Response &amp; Resilience GIS Hub</h5>
+                  <p>GIS hub for disaster preparedness integrating satellite imagery, drone data, and risk models for emergency services and humanitarian agencies.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="portfolio-item">
+                <img src="assets/img/portfolio/county-gis.png" alt="County GIS Dashboard" class="img-fluid" loading="lazy">
+                <div class="portfolio-info">
+                  <h5>County Spatial Data Infrastructure</h5>
+                  <p>Built a full county-level SDI with geoportal, asset registers, and executive dashboards for land, water, and public health management.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== TESTIMONIAL ======================== -->
+    <section class="svc-testimonial" data-aos="fade-up">
+      <div class="container">
+        <div class="svc-testimonial-inner">
+          <i class="bi bi-quote svc-quote-icon"></i>
+          <blockquote>"Orion built our Spatial Data Infrastructure from scratch. The accuracy, responsiveness, and support have been outstanding. We now have real-time visibility across all our county operations."</blockquote>
+          <div class="svc-testimonial-author">
+            <div class="author-avatar"><i class="bi bi-person-circle"></i></div>
+            <div>
+              <strong>Joseph Meruaki</strong>
+              <span>Director, EHRM</span>
+            </div>
+            <div class="rating ms-auto">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== BOTTOM CTA ======================== -->
+    <section class="svc-cta-bottom" data-aos="fade-up">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-8">
+            <h2>Ready to Unlock the Power of Your Spatial Data?</h2>
+            <p>Book a free consultation with our GIS team — we’ll scope your project, show you what’s possible, and provide a detailed proposal within 24 hours.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <div class="cta-group flex-lg-column flex-row">
+              <a href="index.html#contact" class="btn-cta-primary">Book a Consultation</a>
+              <a href="CloudGIS.html" class="btn-cta-secondary mt-lg-3">Try OrionGIS Free</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  </main>
-<footer id="footer" class="footer">
+  <style>
+    /* ====== SERVICE PAGE 2.0 ====== */
 
+    /* Hero */
+    .svc-hero {
+      background: linear-gradient(135deg, #07263a 0%, #0a3d5c 100%);
+      padding: 130px 0 80px;
+      color: #fff;
+    }
+    .svc-breadcrumb {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .svc-breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .svc-breadcrumb a:hover { color: #fff; }
+    .svc-breadcrumb span:not(a) { color: rgba(255,255,255,0.3); }
+    .svc-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+    .svc-hero-sub {
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.82);
+      max-width: 580px;
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+    .svc-hero .cta-group { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn-hero-primary {
+      background: var(--accent-color, #1a73e8);
+      color: #fff !important;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: opacity 0.25s;
+      display: inline-block;
+    }
+    .btn-hero-primary:hover { opacity: 0.88; }
+    .btn-hero-secondary {
+      background: transparent;
+      color: rgba(255,255,255,0.9) !important;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.35);
+      transition: border-color 0.25s, background 0.25s;
+      display: inline-block;
+    }
+    .btn-hero-secondary:hover { border-color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.08); }
+
+    /* Stats grid */
+    .svc-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .svc-stat-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: background 0.25s;
+    }
+    .svc-stat-card:hover { background: rgba(255,255,255,0.12); }
+    .svc-stat-card .stat-num { display: block; font-size: 2.2rem; font-weight: 800; color: #fff; line-height: 1; }
+    .svc-stat-card .stat-label { display: block; font-size: 0.76rem; color: rgba(255,255,255,0.6); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.07em; }
+
+    /* Trust strip */
+    .svc-trust { background: #f1f5f9; padding: 22px 0; border-bottom: 1px solid #e2e8f0; }
+    .svc-trust .trust-label { font-size: 0.78rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; text-align: center; }
+    .svc-trust .trust-badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .trust-badge {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 999px;
+      padding: 7px 16px;
+      font-size: 0.83rem;
+      color: #334155;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .trust-badge i { color: var(--accent-color, #1a73e8); font-size: 0.9rem; }
+
+    /* Overview */
+    .svc-overview { padding: 90px 0; background: #fff; }
+    .svc-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-color, #1a73e8); margin-bottom: 12px; display: block; }
+    .svc-overview h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: var(--heading-color, #07334f); line-height: 1.25; margin-bottom: 16px; }
+    .svc-overview .lead { font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 20px; }
+    .svc-check-list { list-style: none; padding: 0; margin: 0 0 26px; }
+    .svc-check-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: #334155; margin-bottom: 11px; line-height: 1.5; }
+    .svc-check-list li i { color: var(--accent-color, #1a73e8); font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+    .svc-link-btn { color: var(--accent-color, #1a73e8) !important; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+    .svc-link-btn:hover { gap: 10px; }
+
+    /* Sectors */
+    .svc-sectors { background: #f8fafc; padding: 90px 0; }
+    .svc-section-title { text-align: center; margin-bottom: 52px; }
+    .svc-section-title h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: var(--heading-color, #07334f); margin-bottom: 10px; }
+    .svc-section-title p { color: #64748b; font-size: 1rem; max-width: 500px; margin: 0 auto; line-height: 1.6; }
+    .svc-sector-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 30px 26px;
+      height: 100%;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+      cursor: default;
+    }
+    .svc-sector-card:hover { border-color: var(--accent-color, #1a73e8); box-shadow: 0 8px 28px rgba(0,0,0,0.08); transform: translateY(-4px); }
+    .svc-sector-icon { width: 50px; height: 50px; background: rgba(26,115,232,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .svc-sector-icon i { font-size: 1.4rem; color: var(--accent-color, #1a73e8); }
+    .svc-sector-card h4 { font-size: 1rem; font-weight: 700; color: var(--heading-color, #07334f); margin-bottom: 8px; }
+    .svc-sector-card p { font-size: 0.87rem; color: #64748b; line-height: 1.65; margin: 0; }
+
+    /* Process */
+    .svc-process { background: #fff; padding: 90px 0; }
+    .svc-process-row {
+      display: flex;
+      gap: 0;
+      position: relative;
+      flex-wrap: wrap;
+    }
+    .svc-process-row::before {
+      content: ‘’;
+      position: absolute;
+      top: 27px;
+      left: calc(10% + 10px);
+      right: calc(10% + 10px);
+      height: 2px;
+      background: #e2e8f0;
+      z-index: 0;
+    }
+    .svc-process-step { flex: 1; min-width: 150px; text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+    .svc-process-step .step-num {
+      width: 54px;
+      height: 54px;
+      background: var(--accent-color, #1a73e8);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 800;
+      margin: 0 auto 18px;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px var(--accent-color, #1a73e8);
+    }
+    .svc-process-step h5 { font-size: 0.88rem; font-weight: 700; color: var(--heading-color, #07334f); margin-bottom: 8px; }
+    .svc-process-step p { font-size: 0.81rem; color: #64748b; line-height: 1.55; }
+
+    /* Benefits */
+    .svc-benefits { background: #f8fafc; padding: 90px 0; }
+    .svc-benefit-card { background: #fff; border-radius: 14px; padding: 34px 28px; height: 100%; border: 1px solid #e2e8f0; transition: box-shadow 0.25s, transform 0.25s; }
+    .svc-benefit-card:hover { box-shadow: 0 10px 32px rgba(0,0,0,0.09); transform: translateY(-3px); }
+    .svc-benefit-icon { width: 58px; height: 58px; background: linear-gradient(135deg, var(--accent-color, #1a73e8), #0ea5e9); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
+    .svc-benefit-icon i { font-size: 1.5rem; color: #fff; }
+    .svc-benefit-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--heading-color, #07334f); margin-bottom: 10px; }
+    .svc-benefit-card p { font-size: 0.9rem; color: #64748b; line-height: 1.68; margin: 0; }
+
+    /* Portfolio */
+    .svc-portfolio { background: #fff; padding: 90px 0; }
+
+    /* Testimonial */
+    .svc-testimonial { background: #f8fafc; padding: 70px 0; }
+    .svc-testimonial-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+    .svc-quote-icon { font-size: 3.5rem; color: var(--accent-color, #1a73e8); opacity: 0.25; display: block; line-height: 1; margin-bottom: 8px; }
+    .svc-testimonial-inner blockquote {
+      font-size: 1.15rem;
+      color: #334155;
+      font-style: italic;
+      line-height: 1.75;
+      margin: 0 0 30px;
+      border: none;
+      padding: 0;
+    }
+    .svc-testimonial-author { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .author-avatar { width: 48px; height: 48px; background: var(--accent-color, #1a73e8); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .author-avatar i { font-size: 1.6rem; color: #fff; }
+    .svc-testimonial-author strong { display: block; font-size: 0.95rem; color: var(--heading-color, #07334f); }
+    .svc-testimonial-author span { font-size: 0.82rem; color: #64748b; }
+    .svc-testimonial-author .rating i { color: #f59e0b; font-size: 0.85rem; }
+
+    /* Bottom CTA */
+    .svc-cta-bottom { background: linear-gradient(135deg, #07263a 0%, #0a3d5c 100%); padding: 90px 0; color: #fff; }
+    .svc-cta-bottom h2 { font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 800; color: #fff; margin-bottom: 16px; }
+    .svc-cta-bottom p { font-size: 1rem; color: rgba(255,255,255,0.78); line-height: 1.65; margin: 0; }
+    .svc-cta-bottom .cta-group { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn-cta-primary { background: var(--accent-color, #1a73e8); color: #fff !important; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: opacity 0.25s; display: inline-block; }
+    .btn-cta-primary:hover { opacity: 0.88; }
+    .btn-cta-secondary { background: transparent; color: rgba(255,255,255,0.88) !important; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; border: 2px solid rgba(255,255,255,0.35); transition: border-color 0.25s, background 0.25s; display: inline-block; }
+    .btn-cta-secondary:hover { border-color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.08); }
+
+    @media (max-width: 768px) {
+      .svc-hero { padding: 100px 0 60px; }
+      .svc-stats-grid { grid-template-columns: 1fr 1fr; }
+      .svc-process-row::before { display: none; }
+      .svc-process-step { min-width: 140px; margin-bottom: 24px; }
+      .svc-cta-bottom .cta-group { justify-content: center; }
+      .svc-testimonial-author { flex-direction: column; }
+    }
+  </style>
+
+  <footer id="footer" class="footer">
     <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-             <!--<span class="sitename">Strategy</span>-->
-             <img src="assets/img/OrionLogo.png" alt="OrionTerrametrics Logo Main" class="logo-img">
+      <div class="row gy-5">
+        <div class="col-lg-4 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center mb-3">
+            <img src="assets/img/OrionLogo.png" alt="Orion Terrametrics Africa" class="logo-img">
           </a>
-          <p>Orion Terrametrics Africa Limited is a premier geospatial and engineering firm based in Nairobi. We offer cutting-edge services in GIS, surveying, remote sensing, civil infrastructure design, environmental consultancy, and utility modernization across East Africa.</p>
-          <p>We build on a legacy of large-scale projects, ISO-certified quality systems, and a commitment to innovation and sustainability.</p>
-          <div class="social-links d-flex mt-4">
-            <a href="https://x.com/OrionGeospatial"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61572468435793"><i class="bi bi-facebook"></i></a>
-            <!--<a href=""><i class="bi bi-instagram"></i></a>-->
-            <a href="https://www.linkedin.com/company/orion-geospatia"><i class="bi bi-linkedin"></i></a>
+          <p class="footer-tagline">Africa's Geospatial Technology Company — combining field expertise with cloud-native spatial tools to help governments, development organizations, and enterprises make better decisions with location data.</p>
+          <div class="social-links d-flex mt-4 gap-2">
+            <a href="https://www.linkedin.com/company/orion-geospatia" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://x.com/OrionGeospatial" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61572468435793" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
           </div>
         </div>
-
         <div class="col-lg-2 col-6 footer-links">
-          <h4>The Company</h4>
+          <h4>Services</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About us</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="surveying.html">Surveying &amp; Field Data</a></li>
+            <li><a href="GIS.html">GIS &amp; Spatial Analytics</a></li>
+            <li><a href="Remote-Sensing.html">Remote Sensing &amp; EO</a></li>
+            <li><a href="Utilities.html">Geospatial Digital Transformation</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="CloudGIS.html">OrionGIS Platform</a></li>
+            <li><a href="OrionSpatialDataHub.html">Spatial Data Hub</a></li>
+            <li><a href="index.html#contact">Mobile Field Apps</a></li>
+          </ul>
+          <h4 class="mt-4">Company</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#team">Leadership</a></li>
             <li><a href="https://orionterrametrics.co.ke/blog/">Blog</a></li>
-            <li><a href="index.html#team">Team</a></li>
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>What We Do</h4>
-          <ul>
-            <li><a href="surveying.html">Surveying Services</a></li>
-            <li><a href="GIS.html">Geospatial Information Systems(GIS)</a></li>
-            <li><a href="Remote-Sensing.html">Remote Sensing</a></li>
-            <li><a href="Utilities.html">Geospatial Digital Transformation</a></li>
-            <li><a href="OrionSpatialDataHub.html">Spatial Data Hub</a></li>
-          </ul>
+        <div class="col-lg-4 col-md-12 footer-contact">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><p>Mukhtar Dadah Street, GMC Mansion, 1st Floor<br>Nairobi, Kenya</p></div>
+          <div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><div><a href="tel:+254799882124">+254 799 882124</a><br><a href="tel:+254729212061">+254 729 212061</a></div></div>
+          <div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><a href="mailto:info@orionterrametrics.com">info@orionterrametrics.com</a></div>
+          <a href="CloudGIS.html" class="footer-trial-btn mt-4 d-inline-flex align-items-center gap-2">Start Free Trial <i class="bi bi-arrow-right"></i></a>
         </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>Mukhtar Dadah Street</p>
-          <p>GMC Mansion, 1st Floor</p>
-          <p>Nairobi, Kenya</p>
-          <p class="mt-4"><strong>Phone:</strong><span><strong><a href="tel:+254799882124" style="font-size: 17px;"></strong></span><span>+254799882124</span></p>
-          <p><span><strong><a href="tel:+254729212061" style="font-size: 17px;"></strong></span><span>+254729212061</span></p>
-          <p class="mt-4"><strong>Email:</strong><span><a href="mailto:info@orionterrametrics.com" style="font-size: 17px;"></span><span>info@orionterrametrics.com</span></p>
-        </div>
-
       </div>
     </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© 2025 <span>Copyright</span> <strong class="px-1 sitename"> Orion Terrametrics Africa Limited </strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        <!--Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+    <div class="container footer-bottom">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start"><p>&copy; 2026 <strong>Orion Terrametrics Africa Limited</strong>. All Rights Reserved.</p></div>
+        <div class="col-md-6 text-center text-md-end"><p class="footer-geo">Nairobi &middot; Meru &middot; Kampala &middot; Harare</p></div>
       </div>
     </div>
-
   </footer>
+
+  <style>
+    #footer {
+      background: #07263a !important;
+      color: rgba(255,255,255,0.8) !important;
+    }
+    #footer .footer-top {
+      padding: 60px 0 40px;
+    }
+    #footer .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1) !important;
+      padding: 20px 0;
+    }
+    #footer .logo-img {
+      height: 40px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+    #footer .footer-tagline {
+      color: rgba(255,255,255,0.7) !important;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    #footer .social-links a {
+      background: rgba(255,255,255,0.1) !important;
+      color: rgba(255,255,255,0.8) !important;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    #footer .social-links a:hover {
+      background: var(--accent-color) !important;
+      color: #fff !important;
+    }
+    #footer .footer-links h4 {
+      color: #ffffff !important;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    #footer .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #footer .footer-links ul li {
+      margin-bottom: 8px;
+    }
+    #footer .footer-links ul a {
+      color: rgba(255,255,255,0.65) !important;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+    #footer .footer-links ul a:hover {
+      color: var(--accent-color) !important;
+    }
+    #footer .footer-contact h4 {
+      color: #ffffff !important;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    #footer .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    #footer .footer-contact-item i {
+      color: var(--accent-color) !important;
+      font-size: 1rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    #footer .footer-contact-item p,
+    #footer .footer-contact-item div,
+    #footer .footer-contact-item a {
+      color: rgba(255,255,255,0.7) !important;
+      font-size: 0.9rem;
+      margin: 0;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+    #footer .footer-contact-item a:hover {
+      color: var(--accent-color) !important;
+    }
+    #footer .footer-trial-btn {
+      background: var(--accent-color) !important;
+      color: #ffffff !important;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    #footer .footer-trial-btn:hover {
+      opacity: 0.88;
+    }
+    #footer .footer-bottom p {
+      color: rgba(255,255,255,0.5) !important;
+      font-size: 0.85rem;
+      margin: 0;
+    }
+    #footer .footer-bottom strong {
+      color: rgba(255,255,255,0.75) !important;
+    }
+    #footer .footer-geo {
+      color: rgba(255,255,255,0.4) !important;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+    }
+  </style>
 
 
 
