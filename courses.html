@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MT4CKPHV49"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MT4CKPHV49');
+</script>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Orion Academy — Geospatial Courses | Orion Terrametrics Africa</title>
+  <meta name="description" content="Learn GIS, Remote Sensing, and geospatial technology with Orion Academy. Professional courses built by Africa's leading geospatial practitioners.">
+  <meta name="keywords" content="GIS courses Africa, QGIS training Kenya, geospatial courses online, remote sensing training, Orion Academy, learn GIS Africa">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Orion Terrametrics Africa Limited">
+  <link rel="canonical" href="https://www.orionterrametrics.com/courses.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.orionterrametrics.com/courses.html">
+  <meta property="og:title" content="Orion Academy — Geospatial Courses | Orion Terrametrics Africa">
+  <meta property="og:description" content="Learn GIS, Remote Sensing, and geospatial technology with Orion Academy — courses built by Africa's leading practitioners.">
+
+  <!-- Favicons -->
+  <link href="assets/img/OrionLogoIcon.png" rel="icon">
+  <link href="assets/img/OrionLogoIcon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900&family=Raleway:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* ── Academy Hero ── */
+    .academy-hero {
+      background: linear-gradient(135deg, #07263a 0%, #0a3d5c 100%);
+      padding: 140px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .academy-hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(26,179,90,0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .academy-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 22px;
+    }
+    .academy-hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 900;
+      color: #ffffff !important;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .academy-hero h1 span { color: var(--accent-color, #1a9e55); }
+    .academy-hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.78);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .academy-hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+    .academy-stat {
+      text-align: left;
+    }
+    .academy-stat strong {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #ffffff !important;
+      line-height: 1;
+    }
+    .academy-stat span {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .academy-hero-visual {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .hero-feature-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .hero-feature-icon {
+      width: 42px; height: 42px;
+      background: rgba(26,179,90,0.12);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .hero-feature-icon i { font-size: 1.15rem; color: var(--accent-color, #1a9e55); }
+    .hero-feature-text strong {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #fff !important;
+    }
+    .hero-feature-text span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ── Course Catalog ── */
+    .academy-catalog { padding: 90px 0; background: #f8fafc; }
+    .academy-section-title { text-align: center; margin-bottom: 52px; }
+    .academy-section-title h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: #07334f !important; margin-bottom: 10px; }
+    .academy-section-title p { color: #64748b; font-size: 1rem; max-width: 520px; margin: 0 auto; line-height: 1.6; }
+    .academy-eyebrow-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-color, #1a9e55);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    /* Course Card */
+    .course-card {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .course-card:hover { box-shadow: 0 12px 36px rgba(0,0,0,0.10); transform: translateY(-4px); }
+    .course-card-thumb {
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #07263a 0%, #0a3d5c 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .course-card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .course-card:hover .course-card-thumb img { transform: scale(1.05); }
+    .course-card-thumb-icon {
+      font-size: 4rem;
+      color: rgba(255,255,255,0.15);
+    }
+    .course-badge-wrap {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      display: flex;
+      gap: 8px;
+    }
+    .badge-level, .badge-price {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .badge-level { background: rgba(26,179,90,0.92); color: #fff; }
+    .badge-price { background: rgba(255,255,255,0.92); color: #07263a; }
+    .badge-price.paid { background: #07263a; color: #fff; }
+
+    .course-card-body { padding: 26px 24px; flex: 1; display: flex; flex-direction: column; }
+    .course-card-body h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #07334f !important;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .course-card-body p {
+      font-size: 0.88rem;
+      color: #64748b;
+      line-height: 1.65;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+    .course-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 22px;
+      padding-top: 16px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .course-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: #475569;
+    }
+    .course-meta-item i { color: var(--accent-color, #1a9e55); font-size: 0.88rem; }
+    .btn-course-enroll {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--accent-color, #1a9e55);
+      color: #fff !important;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      width: 100%;
+    }
+    .btn-course-enroll:hover { opacity: 0.88; transform: translateY(-1px); color: #fff !important; }
+
+    /* Coming Soon Card */
+    .course-card.coming-soon { opacity: 0.72; cursor: default; }
+    .course-card.coming-soon:hover { transform: none; box-shadow: none; }
+    .badge-soon {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(100,116,139,0.92);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .btn-course-soon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #f1f5f9;
+      color: #94a3b8 !important;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      width: 100%;
+      cursor: default;
+    }
+
+    /* ── Instructor Strip ── */
+    .academy-instructor { padding: 72px 0; background: #fff; }
+    .instructor-card {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 32px 36px;
+      border: 1px solid #e2e8f0;
+    }
+    .instructor-avatar {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #07263a, #0a3d5c);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .instructor-avatar i { font-size: 2.4rem; color: #fff; }
+    .instructor-info h4 { font-size: 1.1rem; font-weight: 800; color: #07334f !important; margin-bottom: 4px; }
+    .instructor-info .role { font-size: 0.85rem; color: var(--accent-color, #1a9e55); font-weight: 600; margin-bottom: 8px; }
+    .instructor-info p { font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.6; }
+    .instructor-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .instructor-stat { text-align: center; }
+    .instructor-stat strong { display: block; font-size: 1.4rem; font-weight: 900; color: #07334f !important; }
+    .instructor-stat span { font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* ── Bottom CTA ── */
+    .academy-cta {
+      background: linear-gradient(135deg, #07263a 0%, #0a3d5c 100%);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .academy-cta h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 900; color: #fff !important; margin-bottom: 16px; }
+    .academy-cta p { color: rgba(255,255,255,0.78); font-size: 1rem; max-width: 500px; margin: 0 auto 36px; line-height: 1.7; }
+    .btn-cta-academy-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent-color, #1a9e55); color: #fff !important;
+      padding: 14px 32px; border-radius: 8px; font-size: 0.95rem; font-weight: 700;
+      text-decoration: none; transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-cta-academy-primary:hover { opacity: 0.88; transform: translateY(-2px); color: #fff !important; }
+    .btn-cta-academy-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.1); color: #fff !important;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 14px 32px; border-radius: 8px; font-size: 0.95rem; font-weight: 700;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .btn-cta-academy-secondary:hover { background: rgba(255,255,255,0.18); color: #fff !important; }
+
+    @media (max-width: 768px) {
+      .instructor-card { flex-direction: column; text-align: center; }
+      .instructor-stats { margin-left: 0; justify-content: center; }
+    }
+  </style>
+
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/OrionLogo.png" alt="Orion Logo Main">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li class="dropdown"><a href="index.html#services"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="surveying.html">Surveying &amp; Field Data Collection</a></li>
+              <li><a href="GIS.html">GIS &amp; Spatial Analytics</a></li>
+              <li><a href="Remote-Sensing.html">Remote Sensing &amp; Earth Observation</a></li>
+              <li><a href="Utilities.html">Geospatial Digital Transformation</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="index.html#products"><span>Products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="CloudGIS.html">OrionGIS &mdash; Cloud GIS Platform</a></li>
+              <li><a href="OrionSpatialDataHub.html">OrionSpatial Data Hub</a></li>
+              <li><a href="index.html#contact">Mobile Field Apps</a></li>
+            </ul>
+          </li>
+          <li><a href="courses.html" class="active">Academy</a></li>
+          <li><a href="https://orionterrametrics.co.ke/blog/">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="CloudGIS.html" class="nav-trial-btn">Start Free Trial</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="tel:+254799882124">TALK TO US</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- ── HERO ── -->
+    <section class="academy-hero">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7" data-aos="fade-right">
+            <div class="academy-eyebrow"><i class="bi bi-mortarboard-fill"></i> Orion Academy</div>
+            <h1>Learn Geospatial Skills<br><span>That Move Africa Forward</span></h1>
+            <p class="academy-hero-sub">Professional-grade GIS, Remote Sensing, and geospatial technology courses — designed by practitioners with 20+ years of on-the-ground African experience.</p>
+            <div class="academy-hero-stats">
+              <div class="academy-stat"><strong>1</strong><span>Course Available</span></div>
+              <div class="academy-stat"><strong>450+</strong><span>Learners Trained</span></div>
+              <div class="academy-stat"><strong>8</strong><span>Modules</span></div>
+              <div class="academy-stat"><strong>100%</strong><span>Online &amp; Self-Paced</span></div>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left">
+            <div class="academy-hero-visual">
+              <div class="hero-feature-row">
+                <div class="hero-feature-icon"><i class="bi bi-globe2"></i></div>
+                <div class="hero-feature-text">
+                  <strong>Real-World African Datasets</strong>
+                  <span>Practice with data from Kenya, Uganda &amp; beyond</span>
+                </div>
+              </div>
+              <div class="hero-feature-row">
+                <div class="hero-feature-icon"><i class="bi bi-tools"></i></div>
+                <div class="hero-feature-text">
+                  <strong>Industry-Standard Tools</strong>
+                  <span>QGIS, ArcGIS, Python, and open-source platforms</span>
+                </div>
+              </div>
+              <div class="hero-feature-row">
+                <div class="hero-feature-icon"><i class="bi bi-person-check-fill"></i></div>
+                <div class="hero-feature-text">
+                  <strong>Taught by Practitioners</strong>
+                  <span>Not academics — professionals who deliver projects daily</span>
+                </div>
+              </div>
+              <div class="hero-feature-row">
+                <div class="hero-feature-icon"><i class="bi bi-patch-check-fill"></i></div>
+                <div class="hero-feature-text">
+                  <strong>Certificate on Completion</strong>
+                  <span>Recognised proof of your geospatial competency</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COURSE CATALOG ── -->
+    <section class="academy-catalog" data-aos="fade-up">
+      <div class="container">
+        <div class="academy-section-title">
+          <span class="academy-eyebrow-label">Course Catalog</span>
+          <h2>Available Courses</h2>
+          <p>Start with our flagship GIS course — more courses launching soon across surveying, remote sensing, and geospatial data science.</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <!-- ── LIVE COURSE: Intro to GIS with QGIS ── -->
+          <div class="col-lg-4 col-md-6">
+            <div class="course-card">
+              <div class="course-card-thumb">
+                <img src="assets/img/portfolio/county-gis.png" alt="Introduction to GIS Using QGIS" loading="lazy">
+                <div class="course-badge-wrap">
+                  <span class="badge-level"><i class="bi bi-bar-chart-steps"></i> Beginner</span>
+                  <span class="badge-price">Free</span>
+                </div>
+              </div>
+              <div class="course-card-body">
+                <h3>Introduction to GIS Using QGIS</h3>
+                <p>A practical beginner-friendly course covering spatial data fundamentals, QGIS workflows, vector &amp; raster analysis, and professional map production — using real African datasets.</p>
+                <div class="course-meta-row">
+                  <span class="course-meta-item"><i class="bi bi-collection-play-fill"></i> 8 Modules</span>
+                  <span class="course-meta-item"><i class="bi bi-clock-fill"></i> Self-Paced</span>
+                  <span class="course-meta-item"><i class="bi bi-patch-check-fill"></i> Certificate</span>
+                </div>
+                <a href="introduction-to-GIS-using-QGIS.html" class="btn-course-enroll">Start Learning <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── COMING SOON: Remote Sensing ── -->
+          <div class="col-lg-4 col-md-6">
+            <div class="course-card coming-soon">
+              <div class="course-card-thumb" style="background: linear-gradient(135deg, #0a3d2e 0%, #166534 100%);">
+                <i class="bi bi-satellite course-card-thumb-icon"></i>
+                <span class="badge-soon"><i class="bi bi-clock"></i> Coming Soon</span>
+              </div>
+              <div class="course-card-body">
+                <h3>Introduction to Remote Sensing</h3>
+                <p>Learn how to acquire, process, and interpret satellite and drone imagery for agriculture, land cover mapping, urban analysis, and environmental monitoring.</p>
+                <div class="course-meta-row">
+                  <span class="course-meta-item"><i class="bi bi-collection-play-fill"></i> ~10 Modules</span>
+                  <span class="course-meta-item"><i class="bi bi-clock-fill"></i> Self-Paced</span>
+                  <span class="course-meta-item"><i class="bi bi-patch-check-fill"></i> Certificate</span>
+                </div>
+                <span class="btn-course-soon"><i class="bi bi-bell"></i> Notify Me When Live</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── COMING SOON: Python for Geospatial ── -->
+          <div class="col-lg-4 col-md-6">
+            <div class="course-card coming-soon">
+              <div class="course-card-thumb" style="background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 100%);">
+                <i class="bi bi-code-square course-card-thumb-icon"></i>
+                <span class="badge-soon"><i class="bi bi-clock"></i> Coming Soon</span>
+              </div>
+              <div class="course-card-body">
+                <h3>Python for Geospatial Analysis</h3>
+                <p>Automate GIS workflows, process large spatial datasets, and build geospatial applications using Python, GeoPandas, Shapely, and Rasterio.</p>
+                <div class="course-meta-row">
+                  <span class="course-meta-item"><i class="bi bi-collection-play-fill"></i> ~12 Modules</span>
+                  <span class="course-meta-item"><i class="bi bi-bar-chart-steps"></i> Intermediate</span>
+                  <span class="course-meta-item"><i class="bi bi-patch-check-fill"></i> Certificate</span>
+                </div>
+                <span class="btn-course-soon"><i class="bi bi-bell"></i> Notify Me When Live</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── COMING SOON: Land Surveying ── -->
+          <div class="col-lg-4 col-md-6">
+            <div class="course-card coming-soon">
+              <div class="course-card-thumb" style="background: linear-gradient(135deg, #422006 0%, #92400e 100%);">
+                <i class="bi bi-geo-alt-fill course-card-thumb-icon"></i>
+                <span class="badge-soon"><i class="bi bi-clock"></i> Coming Soon</span>
+              </div>
+              <div class="course-card-body">
+                <h3>Land Surveying Fundamentals</h3>
+                <p>Master the principles of boundary surveying, topographic mapping, total station operations, and GNSS data collection for professional survey practice.</p>
+                <div class="course-meta-row">
+                  <span class="course-meta-item"><i class="bi bi-collection-play-fill"></i> ~8 Modules</span>
+                  <span class="course-meta-item"><i class="bi bi-bar-chart-steps"></i> Beginner</span>
+                  <span class="course-meta-item"><i class="bi bi-patch-check-fill"></i> Certificate</span>
+                </div>
+                <span class="btn-course-soon"><i class="bi bi-bell"></i> Notify Me When Live</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── COMING SOON: Web GIS ── -->
+          <div class="col-lg-4 col-md-6">
+            <div class="course-card coming-soon">
+              <div class="course-card-thumb" style="background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%);">
+                <i class="bi bi-layers-fill course-card-thumb-icon"></i>
+                <span class="badge-soon"><i class="bi bi-clock"></i> Coming Soon</span>
+              </div>
+              <div class="course-card-body">
+                <h3>Building Web GIS Applications</h3>
+                <p>Design and deploy interactive mapping applications using Leaflet, Mapbox GL, and OpenLayers — connecting live spatial data to browser-based dashboards.</p>
+                <div class="course-meta-row">
+                  <span class="course-meta-item"><i class="bi bi-collection-play-fill"></i> ~10 Modules</span>
+                  <span class="course-meta-item"><i class="bi bi-bar-chart-steps"></i> Intermediate</span>
+                  <span class="course-meta-item"><i class="bi bi-patch-check-fill"></i> Certificate</span>
+                </div>
+                <span class="btn-course-soon"><i class="bi bi-bell"></i> Notify Me When Live</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── COMING SOON: Drone Mapping ── -->
+          <div class="col-lg-4 col-md-6">
+            <div class="course-card coming-soon">
+              <div class="course-card-thumb" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%);">
+                <i class="bi bi-send-fill course-card-thumb-icon"></i>
+                <span class="badge-soon"><i class="bi bi-clock"></i> Coming Soon</span>
+              </div>
+              <div class="course-card-body">
+                <h3>Drone Mapping &amp; Photogrammetry</h3>
+                <p>Plan and execute UAV survey missions, process point clouds and orthomosaics, and deliver survey-grade outputs using DJI drones and Agisoft Metashape.</p>
+                <div class="course-meta-row">
+                  <span class="course-meta-item"><i class="bi bi-collection-play-fill"></i> ~9 Modules</span>
+                  <span class="course-meta-item"><i class="bi bi-bar-chart-steps"></i> Beginner</span>
+                  <span class="course-meta-item"><i class="bi bi-patch-check-fill"></i> Certificate</span>
+                </div>
+                <span class="btn-course-soon"><i class="bi bi-bell"></i> Notify Me When Live</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── INSTRUCTOR STRIP ── -->
+    <section class="academy-instructor" data-aos="fade-up">
+      <div class="container">
+        <div class="academy-section-title mb-4">
+          <span class="academy-eyebrow-label">Who Teaches</span>
+          <h2>Built by Practitioners, Not Just Academics</h2>
+          <p>Courses at Orion Academy are created and delivered by professionals who run live geospatial projects across Africa every day.</p>
+        </div>
+        <div class="instructor-card">
+          <div class="instructor-avatar"><i class="bi bi-person-fill"></i></div>
+          <div class="instructor-info">
+            <h4>Orion Terrametrics Expert Faculty</h4>
+            <div class="role">GIS Professionals &amp; Field Surveyors — Nairobi, Kenya</div>
+            <p>Our instructors have delivered 5,000+ geospatial projects across 15+ African countries — covering land registration, infrastructure mapping, precision agriculture, disaster response, and urban planning.</p>
+          </div>
+          <div class="instructor-stats">
+            <div class="instructor-stat"><strong>20+</strong><span>Years Experience</span></div>
+            <div class="instructor-stat"><strong>5,000+</strong><span>Projects Delivered</span></div>
+            <div class="instructor-stat"><strong>15+</strong><span>Countries</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BOTTOM CTA ── -->
+    <section class="academy-cta" data-aos="fade-up">
+      <div class="container">
+        <h2>Have a Topic You'd Like Us to Cover?</h2>
+        <p>We're building the curriculum around what African geospatial professionals actually need. Tell us what you want to learn and we'll prioritise it.</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <a href="introduction-to-GIS-using-QGIS.html" class="btn-cta-academy-primary">Start the Free GIS Course <i class="bi bi-arrow-right"></i></a>
+          <a href="index.html#contact" class="btn-cta-academy-secondary"><i class="bi bi-chat-dots"></i> Suggest a Course Topic</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer id="footer" class="footer">
+    <div class="container footer-top">
+      <div class="row gy-5">
+        <div class="col-lg-4 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center mb-3">
+            <img src="assets/img/OrionLogo.png" alt="Orion Terrametrics Africa" class="logo-img">
+          </a>
+          <p class="footer-tagline">Africa's Geospatial Technology Company — combining field expertise with cloud-native spatial tools to help governments, development organizations, and enterprises make better decisions with location data.</p>
+          <div class="social-links d-flex mt-4 gap-2">
+            <a href="https://www.linkedin.com/company/orion-geospatia" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://x.com/OrionGeospatial" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61572468435793" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="surveying.html">Surveying &amp; Field Data</a></li>
+            <li><a href="GIS.html">GIS &amp; Spatial Analytics</a></li>
+            <li><a href="Remote-Sensing.html">Remote Sensing &amp; EO</a></li>
+            <li><a href="Utilities.html">Geospatial Digital Transformation</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="CloudGIS.html">OrionGIS Platform</a></li>
+            <li><a href="OrionSpatialDataHub.html">Spatial Data Hub</a></li>
+            <li><a href="index.html#contact">Mobile Field Apps</a></li>
+          </ul>
+          <h4 class="mt-4">Company</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="courses.html">Orion Academy</a></li>
+            <li><a href="https://orionterrametrics.co.ke/blog/">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-12 footer-contact">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><p>Mukhtar Dadah Street, GMC Mansion, 1st Floor<br>Nairobi, Kenya</p></div>
+          <div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><div><a href="tel:+254799882124">+254 799 882124</a><br><a href="tel:+254729212061">+254 729 212061</a></div></div>
+          <div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><a href="mailto:info@orionterrametrics.com">info@orionterrametrics.com</a></div>
+          <a href="CloudGIS.html" class="footer-trial-btn mt-4 d-inline-flex align-items-center gap-2">Start Free Trial <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start"><p>&copy; 2026 <strong>Orion Terrametrics Africa Limited</strong>. All Rights Reserved.</p></div>
+        <div class="col-md-6 text-center text-md-end"><p class="footer-geo">Nairobi &middot; Meru &middot; Kampala &middot; Harare</p></div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    #footer { background: #07263a !important; color: rgba(255,255,255,0.8) !important; }
+    #footer .footer-top { padding: 60px 0 40px; }
+    #footer .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1) !important; padding: 20px 0; }
+    #footer .logo-img { height: 40px; width: auto; filter: brightness(0) invert(1); }
+    #footer .footer-tagline { color: rgba(255,255,255,0.7) !important; font-size: 0.9rem; line-height: 1.6; }
+    #footer .social-links a { background: rgba(255,255,255,0.1) !important; color: rgba(255,255,255,0.8) !important; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; transition: background 0.3s, color 0.3s; }
+    #footer .social-links a:hover { background: var(--accent-color) !important; color: #fff !important; }
+    #footer .footer-links h4 { color: #ffffff !important; font-size: 1rem; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+    #footer .footer-links ul { list-style: none; padding: 0; margin: 0; }
+    #footer .footer-links ul li { margin-bottom: 8px; }
+    #footer .footer-links ul a { color: rgba(255,255,255,0.65) !important; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+    #footer .footer-links ul a:hover { color: var(--accent-color) !important; }
+    #footer .footer-contact h4 { color: #ffffff !important; font-size: 1rem; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+    #footer .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+    #footer .footer-contact-item i { color: var(--accent-color) !important; font-size: 1rem; margin-top: 3px; flex-shrink: 0; }
+    #footer .footer-contact-item p, #footer .footer-contact-item div, #footer .footer-contact-item a { color: rgba(255,255,255,0.7) !important; font-size: 0.9rem; margin: 0; text-decoration: none; line-height: 1.6; }
+    #footer .footer-contact-item a:hover { color: var(--accent-color) !important; }
+    #footer .footer-trial-btn { background: var(--accent-color) !important; color: #ffffff !important; padding: 10px 22px; border-radius: 6px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: opacity 0.3s; }
+    #footer .footer-trial-btn:hover { opacity: 0.88; }
+    #footer .footer-bottom p { color: rgba(255,255,255,0.5) !important; font-size: 0.85rem; margin: 0; }
+    #footer .footer-bottom strong { color: rgba(255,255,255,0.75) !important; }
+    #footer .footer-geo { color: rgba(255,255,255,0.4) !important; font-size: 0.8rem; letter-spacing: 0.08em; }
+  </style>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
