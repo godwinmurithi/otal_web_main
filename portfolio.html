@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MT4CKPHV49"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MT4CKPHV49');
+</script>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Projects &amp; Portfolio | Orion Terrametrics Africa</title>
+  <meta name="description" content="Explore Orion Terrametrics Africa's project portfolio — GIS, remote sensing, UAV/LiDAR mapping, engineering surveys, and geospatial digital transformation across Africa.">
+  <meta name="keywords" content="Orion Terrametrics projects, geospatial portfolio Kenya, GIS projects Africa, UAV LiDAR mapping, engineering surveys Kenya, remote sensing projects">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Orion Terrametrics Africa Limited">
+  <link rel="canonical" href="https://www.orionterrametrics.com/portfolio.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.orionterrametrics.com/portfolio.html">
+  <meta property="og:title" content="Projects &amp; Portfolio | Orion Terrametrics Africa">
+  <meta property="og:description" content="Explore our geospatial project portfolio — GIS, remote sensing, UAV LiDAR mapping, engineering surveys, and digital transformation across Africa.">
+
+  <!-- Favicons -->
+  <link href="assets/img/OrionLogoIcon.png" rel="icon">
+  <link href="assets/img/OrionLogoIcon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900&family=Raleway:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* ── Portfolio Hero ── */
+    .pf-hero {
+      background: linear-gradient(135deg, #07263a 0%, #0a3d5c 100%);
+      padding: 140px 0 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    .pf-hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(26,179,90,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .pf-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 6px 16px; border-radius: 999px;
+      font-size: 0.78rem; font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px;
+    }
+    .pf-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900; color: #fff !important; line-height: 1.1; margin-bottom: 16px;
+    }
+    .pf-hero p {
+      font-size: 1.05rem; color: rgba(255,255,255,0.75);
+      max-width: 560px; line-height: 1.7; margin-bottom: 36px;
+    }
+    .pf-hero-stats { display: flex; flex-wrap: wrap; gap: 32px; }
+    .pf-stat strong { display: block; font-size: 1.7rem; font-weight: 900; color: #fff !important; line-height: 1; }
+    .pf-stat span { font-size: 0.75rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* ── Filter Bar ── */
+    .pf-filter-section { background: #fff; padding: 32px 0; border-bottom: 1px solid #e2e8f0; position: sticky; top: 72px; z-index: 100; }
+    .pf-filters { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .pf-filter-btn {
+      padding: 8px 20px; border-radius: 999px;
+      border: 1px solid #e2e8f0;
+      background: #fff; color: #475569;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .pf-filter-btn:hover, .pf-filter-btn.active {
+      background: var(--accent-color, #1a9e55);
+      border-color: var(--accent-color, #1a9e55);
+      color: #fff;
+    }
+
+    /* ── Project Grid ── */
+    .pf-grid-section { padding: 70px 0 90px; background: #f8fafc; }
+    .pf-grid-section .svc-section-title { text-align: left; margin-bottom: 36px; }
+    .pf-grid-section .svc-section-title h2 { color: #07334f !important; }
+
+    .pf-card {
+      background: #fff;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      height: 100%;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .pf-card:hover { box-shadow: 0 12px 36px rgba(0,0,0,0.10); transform: translateY(-4px); }
+    .pf-card-img {
+      height: 210px; position: relative; overflow: hidden;
+      background: #0a1628;
+    }
+    .pf-card-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .pf-card:hover .pf-card-img img { transform: scale(1.05); opacity: 0.85; }
+    .pf-badge {
+      position: absolute; top: 12px; left: 12px;
+      padding: 4px 12px; border-radius: 999px;
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .pf-badge.surveying    { background: rgba(7,38,58,0.88); color: #fff; }
+    .pf-badge.gis          { background: rgba(16,120,69,0.92); color: #fff; }
+    .pf-badge.remote       { background: rgba(14,90,140,0.92); color: #fff; }
+    .pf-badge.infrastructure { background: rgba(120,53,15,0.92); color: #fff; }
+    .pf-badge.digital      { background: rgba(91,33,182,0.92); color: #fff; }
+    .pf-badge.inspection   { background: rgba(153,27,27,0.92); color: #fff; }
+
+    .pf-card-body { padding: 22px 20px; flex: 1; display: flex; flex-direction: column; }
+    .pf-card-body h4 {
+      font-size: 1rem; font-weight: 800; color: #07334f !important;
+      margin-bottom: 10px; line-height: 1.35;
+    }
+    .pf-card-body p { font-size: 0.85rem; color: #64748b; line-height: 1.65; margin-bottom: 16px; flex: 1; }
+    .pf-metric {
+      display: flex; align-items: baseline; gap: 6px;
+      padding-top: 14px; border-top: 1px solid #f1f5f9;
+    }
+    .pf-metric-val { font-size: 1.2rem; font-weight: 900; color: var(--accent-color, #1a9e55); }
+    .pf-metric-label { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* Hidden category items */
+    .pf-item { display: block; }
+    .pf-item.hidden { display: none; }
+
+    /* ── CTA ── */
+    .pf-cta {
+      background: linear-gradient(135deg, #07263a 0%, #0a3d5c 100%);
+      padding: 80px 0; text-align: center;
+    }
+    .pf-cta h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 900; color: #fff !important; margin-bottom: 14px; }
+    .pf-cta p { color: rgba(255,255,255,0.75); font-size: 1rem; max-width: 500px; margin: 0 auto 32px; line-height: 1.7; }
+    .btn-pf-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent-color, #1a9e55); color: #fff !important;
+      padding: 13px 30px; border-radius: 8px; font-size: 0.95rem; font-weight: 700;
+      text-decoration: none; transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-pf-cta:hover { opacity: 0.88; transform: translateY(-2px); color: #fff !important; }
+  </style>
+
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/OrionLogo.png" alt="Orion Logo Main">
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li class="dropdown"><a href="index.html#services"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="surveying.html">Surveying &amp; Field Data Collection</a></li>
+              <li><a href="GIS.html">GIS &amp; Spatial Analytics</a></li>
+              <li><a href="Remote-Sensing.html">Remote Sensing &amp; Earth Observation</a></li>
+              <li><a href="Utilities.html">Geospatial Digital Transformation</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="index.html#products"><span>Products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="CloudGIS.html">OrionGIS &mdash; Cloud GIS Platform</a></li>
+              <li><a href="OrionSpatialDataHub.html">OrionSpatial Data Hub</a></li>
+              <li><a href="index.html#contact">Mobile Field Apps</a></li>
+            </ul>
+          </li>
+          <li><a href="courses.html">Academy</a></li>
+          <li><a href="portfolio.html" class="active">Projects</a></li>
+          <li><a href="https://orionterrametrics.co.ke/blog/">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="CloudGIS.html" class="nav-trial-btn">Start Free Trial</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="tel:+254799882124">TALK TO US</a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- ── HERO ── -->
+    <section class="pf-hero">
+      <div class="container">
+        <div class="pf-eyebrow"><i class="bi bi-folder2-open"></i> Our Work</div>
+        <h1>Projects &amp; Portfolio</h1>
+        <p>From UAV LiDAR industrial surveys to national GIS platforms — a selection of geospatial engagements delivered across Africa.</p>
+        <div class="pf-hero-stats">
+          <div class="pf-stat"><strong>5,000+</strong><span>Projects Delivered</span></div>
+          <div class="pf-stat"><strong>15+</strong><span>Countries</span></div>
+          <div class="pf-stat"><strong>20+</strong><span>Years in Field</span></div>
+          <div class="pf-stat"><strong>ISO</strong><span>Certified</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FILTER BAR ── -->
+    <div class="pf-filter-section">
+      <div class="container">
+        <div class="pf-filters">
+          <button class="pf-filter-btn active" data-filter="all">All Projects</button>
+          <button class="pf-filter-btn" data-filter="surveying">Surveying &amp; UAV</button>
+          <button class="pf-filter-btn" data-filter="gis">GIS &amp; Analytics</button>
+          <button class="pf-filter-btn" data-filter="remote">Remote Sensing</button>
+          <button class="pf-filter-btn" data-filter="infrastructure">Infrastructure</button>
+          <button class="pf-filter-btn" data-filter="digital">Digital Transformation</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PROJECT GRID ── -->
+    <section class="pf-grid-section">
+      <div class="container">
+        <div class="row g-4" id="pf-grid">
+
+          <!-- 1. UAV LiDAR Industrial Park -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="surveying" data-aos="fade-up">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/services/lidar-mapping.jpg" alt="UAV LiDAR Industrial Park" loading="lazy">
+                <span class="pf-badge surveying">Surveying &amp; UAV</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>UAV LiDAR Mapping – Infinity Industrial Park</h4>
+                <p>Full-area LiDAR and photogrammetric mapping for a 199.98-acre industrial park — delivering DEMs, DSMs, and orthomosaics with RTK/GCP ground control to support infrastructure planning and design.</p>
+                <div class="pf-metric"><span class="pf-metric-val">199.98</span><span class="pf-metric-label">Acres Mapped</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Tree Inventory Campus Survey -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="surveying" data-aos="fade-up" data-aos-delay="100">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/services/civil-engineering-surveys.jpg" alt="Tree Inventory Campus Survey" loading="lazy">
+                <span class="pf-badge surveying">Surveying</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Tree Inventory &amp; Campus Topographic Survey</h4>
+                <p>Directed a detailed 12-acre campus tree inventory and topographic survey for Flux Design Limited — spatial datasets for environmental management and campus development planning.</p>
+                <div class="pf-metric"><span class="pf-metric-val">12</span><span class="pf-metric-label">Acres Surveyed</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Residential Engineering Surveys -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="surveying" data-aos="fade-up" data-aos-delay="200">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/services/ALTA4.jpg" alt="Residential Engineering Surveys" loading="lazy">
+                <span class="pf-badge surveying">Surveying</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Engineering Surveying – Residential Development</h4>
+                <p>Construction setting-out and building surveys for residential developments — providing precise control for foundation works, structural alignment, and finished level verification.</p>
+                <div class="pf-metric"><span class="pf-metric-val">cm</span><span class="pf-metric-label">Level Accuracy</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Drone LiDAR Power Lines -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="surveying" data-aos="fade-up">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/services/droneimage.jpg" alt="Drone LiDAR Power Lines" loading="lazy">
+                <span class="pf-badge inspection">Inspection</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Drone LiDAR &amp; Thermal Inspection – 4 km Power Lines</h4>
+                <p>UAV-based LiDAR and thermal imaging of a 4km high-voltage transmission corridor — identifying heat stress, insulator defects, conductor sagging, and encroachments to support maintenance decisions.</p>
+                <div class="pf-metric"><span class="pf-metric-val">4 km</span><span class="pf-metric-label">Transmission Line</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Stockpile Volume Estimation -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="surveying" data-aos="fade-up" data-aos-delay="100">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/services/mapping.jpg" alt="Stockpile Volume Estimation" loading="lazy">
+                <span class="pf-badge surveying">UAV Survey</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Drone LiDAR Stockpile Volume Survey – Cement Plant</h4>
+                <p>Precision UAV LiDAR surveys with ground control for accurate bulk material stockpile volume computation — supporting production tracking and inventory management at a cement manufacturing facility.</p>
+                <div class="pf-metric"><span class="pf-metric-val">&lt;1%</span><span class="pf-metric-label">Volume Error</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Road Sewer Drainage -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="infrastructure" data-aos="fade-up" data-aos-delay="200">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/services/urban-roads.jpg" alt="Road Sewer Drainage Surveys" loading="lazy">
+                <span class="pf-badge infrastructure">Infrastructure</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Engineering Surveys – 7 km Road, Sewer &amp; Drainage</h4>
+                <p>Comprehensive surveys for a 7km industrial road project — OGL topographic surveys, geometric design support, setting-out, excavation control, and finished level verification.</p>
+                <div class="pf-metric"><span class="pf-metric-val">7 km</span><span class="pf-metric-label">Infrastructure Corridor</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Outer Ring Road Assets Survey -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="surveying" data-aos="fade-up">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/portfolio/11.jpg" alt="Outer Ring Road Survey" loading="lazy">
+                <span class="pf-badge surveying">Surveying</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Outer Ring Road Assets Survey – Nairobi</h4>
+                <p>Complete asset inventory and topographic survey of Nairobi's Outer Ring Road corridor for infrastructure planning and capital works programming.</p>
+                <div class="pf-metric"><span class="pf-metric-val">1M+</span><span class="pf-metric-label">Assets Mapped</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Drone Mapping Land Administration -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="remote" data-aos="fade-up" data-aos-delay="100">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/portfolio/20.jpg" alt="Drone Mapping Land Administration" loading="lazy">
+                <span class="pf-badge remote">Remote Sensing</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Drone Mapping for Land Administration</h4>
+                <p>High-resolution UAV mapping for land registration and title adjudication in peri-urban Kenya — enabling systematic land tenure documentation at scale.</p>
+                <div class="pf-metric"><span class="pf-metric-val">50K+</span><span class="pf-metric-label">Parcels Mapped</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. NaMSIP RAPs -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="gis" data-aos="fade-up" data-aos-delay="200">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/portfolio/19.jpg" alt="NaMSIP Resettlement Plans" loading="lazy">
+                <span class="pf-badge gis">GIS &amp; Planning</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>NaMSIP Resettlement Action Plans</h4>
+                <p>Spatial analysis and resettlement planning support for the Nairobi Metropolitan Services Improvement Project, covering thousands of affected households.</p>
+                <div class="pf-metric"><span class="pf-metric-val">12K+</span><span class="pf-metric-label">Households Surveyed</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. World Vision Hydro -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="infrastructure" data-aos="fade-up">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/portfolio/13.jpg" alt="World Vision Hydro" loading="lazy">
+                <span class="pf-badge infrastructure">Utilities</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>World Vision Hydrogeological Study</h4>
+                <p>Comprehensive hydrogeological survey to guide rural water access infrastructure, supporting underserved communities across Kenya's arid counties.</p>
+                <div class="pf-metric"><span class="pf-metric-val">30+</span><span class="pf-metric-label">Sites Analysed</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Water Utility Network Digitization -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="digital" data-aos="fade-up" data-aos-delay="100">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/portfolio/utility-digital-twin.jpg" alt="Water Utility Digitization" loading="lazy">
+                <span class="pf-badge digital">Digital Transformation</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Water Utility Network Digitization</h4>
+                <p>Full GIS-based asset inventory and network digitization for a major water utility — enabling proactive maintenance and dramatically reducing non-revenue water losses.</p>
+                <div class="pf-metric"><span class="pf-metric-val">85%</span><span class="pf-metric-label">Data Gaps Closed</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. AWWDA Water Utility Asset Registry -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="digital" data-aos="fade-up">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/portfolio/awwda-dams-dashboard.png" alt="AWWDA Water Utility Asset Registry" loading="lazy">
+                <span class="pf-badge digital">Digital Transformation</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Water Utility Asset Registry – Athi Water Works</h4>
+                <p>Full GIS asset registry and utility network model for Athi Water Works Development Agency — mapping 5 dams (113.1M m³ capacity), 12 treatment plants, and 1,254+ service connections to power real-time dashboards, asset lifecycle management, and field operations via OrionGIS Cloud.</p>
+                <div class="pf-metric"><span class="pf-metric-val">1,254+</span><span class="pf-metric-label">Service Connections Mapped</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13. Trans Nzoia Health BIP -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="gis" data-aos="fade-up" data-aos-delay="100">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/portfolio/trans-nzoia-health-bip.png" alt="Trans Nzoia Health BIP" loading="lazy">
+                <span class="pf-badge gis">Health GIS</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Trans Nzoia County Health Services BIP</h4>
+                <p>Real-time Business Intelligence Platform for Trans Nzoia County Government — baseline survey and geo-mapping of 178 health facilities across 5 PCNs, with live inpatient and outpatient data streaming into executive dashboards via OrionGIS Cloud and mobile field apps.</p>
+                <div class="pf-metric"><span class="pf-metric-val">178</span><span class="pf-metric-label">Health Facilities Mapped</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 14. NGO Health Digital Transformation -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="digital" data-aos="fade-up" data-aos-delay="200">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/portfolio/ngo-health-facilities.png" alt="NGO Health Digital Transformation" loading="lazy">
+                <span class="pf-badge digital">Digital Transformation</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Health Services Digital Transformation – NGO Network</h4>
+                <p>Geospatial digital transformation for an NGO health network — 42 facilities geo-mapped and integrated into OrionGIS for streamlined routine reporting, real-time KPI monitoring, disease surveillance, and operational decision-making across the region.</p>
+                <div class="pf-metric"><span class="pf-metric-val">42</span><span class="pf-metric-label">Facilities Digitised</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 15. National Smart Geoportal -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="gis" data-aos="fade-up" data-aos-delay="200">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/portfolio/smartcity.jpg" alt="National Smart Geoportal" loading="lazy">
+                <span class="pf-badge gis">GIS Platform</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>National Smart Geoportal</h4>
+                <p>Nationwide GIS platform integrating IoT sensors, real-time traffic, utilities, and environmental data for smart city management and government decision-making.</p>
+                <div class="pf-metric"><span class="pf-metric-val">National</span><span class="pf-metric-label">Scale Platform</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13. Disease Surveillance GIS -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="gis" data-aos="fade-up">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/portfolio/disease-suveilance.png" alt="Disease Surveillance GIS" loading="lazy">
+                <span class="pf-badge gis">Health GIS</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Cross-Border Disease Surveillance GIS</h4>
+                <p>Real-time GIS system tracking disease outbreaks across East African borders, integrating health, mobility, and climate data for early warning and response.</p>
+                <div class="pf-metric"><span class="pf-metric-val">5+</span><span class="pf-metric-label">Countries Covered</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 14. County SDI -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="gis" data-aos="fade-up" data-aos-delay="100">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/portfolio/county-gis.png" alt="County Spatial Data Infrastructure" loading="lazy">
+                <span class="pf-badge gis">GIS &amp; SDI</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>County Spatial Data Infrastructure</h4>
+                <p>Built a full county-level SDI with geoportal, asset registers, and executive dashboards for land, water, and public health management — serving county government operations.</p>
+                <div class="pf-metric"><span class="pf-metric-val">County</span><span class="pf-metric-label">Wide Coverage</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 15. Land Parcel Registry -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="gis" data-aos="fade-up" data-aos-delay="200">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/portfolio/parcel-map.png" alt="Land Parcel Registry" loading="lazy">
+                <span class="pf-badge gis">Land GIS</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>National Land Parcel Registry</h4>
+                <p>Secure, spatially-indexed land ownership platform providing transparent parcel records, title history, and boundary data for millions of registered parcels.</p>
+                <div class="pf-metric"><span class="pf-metric-val">Millions</span><span class="pf-metric-label">Parcels Registered</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 16. Crop Health Monitoring -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="remote" data-aos="fade-up">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/services/vegetation-health.webp" alt="Crop Health Monitoring" loading="lazy">
+                <span class="pf-badge remote">Remote Sensing</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Crop Health Monitoring – Narok County</h4>
+                <p>Multi-temporal satellite and UAV analysis of large-scale wheat and maize zones — generating NDVI, NDRE, and soil moisture indices for precision agronomic interventions.</p>
+                <div class="pf-metric"><span class="pf-metric-val">5cm</span><span class="pf-metric-label">UAV Resolution</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 17. Urban Expansion Study -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="remote" data-aos="fade-up" data-aos-delay="100">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/services/urban-sprawl.gif" alt="Urban Expansion Study" loading="lazy">
+                <span class="pf-badge remote">Remote Sensing</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>Urban Expansion Study – Nairobi Metropolitan</h4>
+                <p>Multi-decade land cover change detection and urban growth modelling for Nairobi's metropolitan zone — informing city-wide planning and infrastructure investment priorities.</p>
+                <div class="pf-metric"><span class="pf-metric-val">30 yr</span><span class="pf-metric-label">Change Period</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 18. LiDAR Terrain Suswa -->
+          <div class="col-lg-4 col-md-6 pf-item" data-category="remote" data-aos="fade-up" data-aos-delay="200">
+            <div class="pf-card">
+              <div class="pf-card-img">
+                <img src="assets/img/services/lidar-mapping.jpg" alt="LiDAR Terrain Suswa" loading="lazy">
+                <span class="pf-badge remote">LiDAR / EO</span>
+              </div>
+              <div class="pf-card-body">
+                <h4>LiDAR Terrain Mapping – Suswa</h4>
+                <p>Airborne LiDAR data acquisition and processing delivering bare-earth DTMs and high-density point clouds for geological assessment and pipeline route planning in the Suswa corridor.</p>
+                <div class="pf-metric"><span class="pf-metric-val">10 pts/m²</span><span class="pf-metric-label">Point Density</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="pf-cta" data-aos="fade-up">
+      <div class="container">
+        <h2>Have a Project in Mind?</h2>
+        <p>Tell us what you need — from a single survey to a national-scale GIS platform, we'll scope it and deliver.</p>
+        <a href="index.html#contact" class="btn-pf-cta">Start a Conversation <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer id="footer" class="footer">
+    <div class="container footer-top">
+      <div class="row gy-5">
+        <div class="col-lg-4 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center mb-3">
+            <img src="assets/img/OrionLogo.png" alt="Orion Terrametrics Africa" class="logo-img">
+          </a>
+          <p class="footer-tagline">Africa's Geospatial Technology Company — combining field expertise with cloud-native spatial tools to help governments, development organizations, and enterprises make better decisions with location data.</p>
+          <div class="social-links d-flex mt-4 gap-2">
+            <a href="https://www.linkedin.com/company/orion-geospatia" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://x.com/OrionGeospatial" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61572468435793" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="surveying.html">Surveying &amp; Field Data</a></li>
+            <li><a href="GIS.html">GIS &amp; Spatial Analytics</a></li>
+            <li><a href="Remote-Sensing.html">Remote Sensing &amp; EO</a></li>
+            <li><a href="Utilities.html">Geospatial Digital Transformation</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="CloudGIS.html">OrionGIS Platform</a></li>
+            <li><a href="OrionSpatialDataHub.html">Spatial Data Hub</a></li>
+            <li><a href="index.html#contact">Mobile Field Apps</a></li>
+          </ul>
+          <h4 class="mt-4">Company</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="courses.html">Orion Academy</a></li>
+            <li><a href="portfolio.html">Projects</a></li>
+            <li><a href="https://orionterrametrics.co.ke/blog/">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-12 footer-contact">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><p>Mukhtar Dadah Street, GMC Mansion, 1st Floor<br>Nairobi, Kenya</p></div>
+          <div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><div><a href="tel:+254799882124">+254 799 882124</a><br><a href="tel:+254729212061">+254 729 212061</a></div></div>
+          <div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><a href="mailto:info@orionterrametrics.com">info@orionterrametrics.com</a></div>
+          <a href="CloudGIS.html" class="footer-trial-btn mt-4 d-inline-flex align-items-center gap-2">Start Free Trial <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start"><p>&copy; 2026 <strong>Orion Terrametrics Africa Limited</strong>. All Rights Reserved.</p></div>
+        <div class="col-md-6 text-center text-md-end"><p class="footer-geo">Nairobi &middot; Meru &middot; Kampala &middot; Harare</p></div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    #footer { background: #07263a !important; color: rgba(255,255,255,0.8) !important; }
+    #footer .footer-top { padding: 60px 0 40px; }
+    #footer .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1) !important; padding: 20px 0; }
+    #footer .logo-img { height: 40px; width: auto; filter: brightness(0) invert(1); }
+    #footer .footer-tagline { color: rgba(255,255,255,0.7) !important; font-size: 0.9rem; line-height: 1.6; }
+    #footer .social-links a { background: rgba(255,255,255,0.1) !important; color: rgba(255,255,255,0.8) !important; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; transition: background 0.3s, color 0.3s; }
+    #footer .social-links a:hover { background: var(--accent-color) !important; color: #fff !important; }
+    #footer .footer-links h4 { color: #ffffff !important; font-size: 1rem; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+    #footer .footer-links ul { list-style: none; padding: 0; margin: 0; }
+    #footer .footer-links ul li { margin-bottom: 8px; }
+    #footer .footer-links ul a { color: rgba(255,255,255,0.65) !important; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+    #footer .footer-links ul a:hover { color: var(--accent-color) !important; }
+    #footer .footer-contact h4 { color: #ffffff !important; font-size: 1rem; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+    #footer .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+    #footer .footer-contact-item i { color: var(--accent-color) !important; font-size: 1rem; margin-top: 3px; flex-shrink: 0; }
+    #footer .footer-contact-item p, #footer .footer-contact-item div, #footer .footer-contact-item a { color: rgba(255,255,255,0.7) !important; font-size: 0.9rem; margin: 0; text-decoration: none; line-height: 1.6; }
+    #footer .footer-contact-item a:hover { color: var(--accent-color) !important; }
+    #footer .footer-trial-btn { background: var(--accent-color) !important; color: #ffffff !important; padding: 10px 22px; border-radius: 6px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: opacity 0.3s; }
+    #footer .footer-trial-btn:hover { opacity: 0.88; }
+    #footer .footer-bottom p { color: rgba(255,255,255,0.5) !important; font-size: 0.85rem; margin: 0; }
+    #footer .footer-bottom strong { color: rgba(255,255,255,0.75) !important; }
+    #footer .footer-geo { color: rgba(255,255,255,0.4) !important; font-size: 0.8rem; letter-spacing: 0.08em; }
+  </style>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Filter Logic -->
+  <script>
+    document.querySelectorAll('.pf-filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.pf-filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.pf-item').forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
