@@ -585,7 +585,7 @@
     /* Overview */
     .svc-overview { padding: 90px 0; background: #fff; }
     .svc-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-color, #1a73e8); margin-bottom: 12px; display: block; }
-    .svc-overview h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: var(--heading-color, #07334f); line-height: 1.25; margin-bottom: 16px; }
+    .svc-overview h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: #07334f !important; line-height: 1.25; margin-bottom: 16px; }
     .svc-overview .lead { font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 20px; }
     .svc-check-list { list-style: none; padding: 0; margin: 0 0 26px; }
     .svc-check-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: #334155; margin-bottom: 11px; line-height: 1.5; }
@@ -596,7 +596,7 @@
     /* Sectors */
     .svc-sectors { background: #f8fafc; padding: 90px 0; }
     .svc-section-title { text-align: center; margin-bottom: 52px; }
-    .svc-section-title h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: var(--heading-color, #07334f); margin-bottom: 10px; }
+    .svc-section-title h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: #07334f !important; margin-bottom: 10px; }
     .svc-section-title p { color: #64748b; font-size: 1rem; max-width: 500px; margin: 0 auto; line-height: 1.6; }
     .svc-sector-card {
       background: #fff;
@@ -610,7 +610,7 @@
     .svc-sector-card:hover { border-color: var(--accent-color, #1a73e8); box-shadow: 0 8px 28px rgba(0,0,0,0.08); transform: translateY(-4px); }
     .svc-sector-icon { width: 50px; height: 50px; background: rgba(26,115,232,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
     .svc-sector-icon i { font-size: 1.4rem; color: var(--accent-color, #1a73e8); }
-    .svc-sector-card h4 { font-size: 1rem; font-weight: 700; color: var(--heading-color, #07334f); margin-bottom: 8px; }
+    .svc-sector-card h4 { font-size: 1rem; font-weight: 700; color: #07334f !important; margin-bottom: 8px; }
     .svc-sector-card p { font-size: 0.87rem; color: #64748b; line-height: 1.65; margin: 0; }
 
     /* Process */
@@ -647,7 +647,7 @@
       border: 3px solid #fff;
       box-shadow: 0 0 0 3px var(--accent-color, #1a73e8);
     }
-    .svc-process-step h5 { font-size: 0.88rem; font-weight: 700; color: var(--heading-color, #07334f); margin-bottom: 8px; }
+    .svc-process-step h5 { font-size: 0.88rem; font-weight: 700; color: #07334f !important; margin-bottom: 8px; }
     .svc-process-step p { font-size: 0.81rem; color: #64748b; line-height: 1.55; }
 
     /* Benefits */
@@ -656,11 +656,63 @@
     .svc-benefit-card:hover { box-shadow: 0 10px 32px rgba(0,0,0,0.09); transform: translateY(-3px); }
     .svc-benefit-icon { width: 58px; height: 58px; background: linear-gradient(135deg, var(--accent-color, #1a73e8), #0ea5e9); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
     .svc-benefit-icon i { font-size: 1.5rem; color: #fff; }
-    .svc-benefit-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--heading-color, #07334f); margin-bottom: 10px; }
+    .svc-benefit-card h4 { font-size: 1.05rem; font-weight: 700; color: #07334f !important; margin-bottom: 10px; }
     .svc-benefit-card p { font-size: 0.9rem; color: #64748b; line-height: 1.68; margin: 0; }
 
     /* Portfolio */
     .svc-portfolio { background: #fff; padding: 90px 0; }
+    .svc-portfolio .portfolio-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      height: 260px;
+      background: #071e2e;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      cursor: pointer;
+    }
+    .svc-portfolio .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s ease, opacity 0.45s ease;
+    }
+    .svc-portfolio .portfolio-item:hover img {
+      transform: scale(1.06);
+      opacity: 0.45;
+    }
+    .svc-portfolio .portfolio-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 60px 20px 20px;
+      background: linear-gradient(to top, rgba(7,38,58,0.98) 0%, rgba(7,38,58,0.65) 55%, transparent 100%);
+    }
+    .svc-portfolio .portfolio-info h5 {
+      color: #fff !important;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.35;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+      transition: margin-bottom 0.3s ease;
+    }
+    .svc-portfolio .portfolio-item:hover .portfolio-info h5 { margin-bottom: 10px; }
+    .svc-portfolio .portfolio-info p {
+      color: rgba(255,255,255,0.85) !important;
+      font-size: 0.80rem;
+      line-height: 1.55;
+      margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.28s ease 0.08s;
+    }
+    .svc-portfolio .portfolio-item:hover .portfolio-info p {
+      max-height: 120px;
+      opacity: 1;
+    }
 
     /* Testimonial */
     .svc-testimonial { background: #f8fafc; padding: 70px 0; }
@@ -683,7 +735,7 @@
     .svc-testimonial-author { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
     .author-avatar { width: 48px; height: 48px; background: var(--accent-color, #1a73e8); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
     .author-avatar i { font-size: 1.6rem; color: #fff; }
-    .svc-testimonial-author strong { display: block; font-size: 0.95rem; color: var(--heading-color, #07334f); }
+    .svc-testimonial-author strong { display: block; font-size: 0.95rem; color: #07334f !important; }
     .svc-testimonial-author span { font-size: 0.82rem; color: #64748b; }
     .svc-testimonial-author .rating i { color: #f59e0b; font-size: 0.85rem; }
 
