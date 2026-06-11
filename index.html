@@ -191,7 +191,7 @@
               <div class="divider"></div>
 
               <div class="description">
-                <p>Orion Terrametrics combines <strong>20+ years of on-the-ground African expertise</strong> with purpose-built cloud GIS technology — helping governments, development organizations, and engineering firms turn complex spatial data into decisions that move projects forward.</p>
+                <p>Orion Terrametrics combines <strong>5+ years of on-the-ground African expertise</strong> with purpose-built cloud GIS technology — helping governments, development organizations, and engineering firms turn complex spatial data into decisions that move projects forward.</p>
               </div>
 
               <div class="cta-buttons d-flex flex-wrap gap-3">
@@ -225,21 +225,245 @@
       </div>
     </section><!-- /Hero Section -->
 
-    <!-- Trust Strip -->
-    <section id="clients" class="clients section">
+<!-- ======================================================================
+  PARTNERS CAROUSEL - Orion Terrametrics homepage
+  Replaces the previous static partners grid. Uses the site's existing
+  Swiper (init-swiper pattern auto-initialised by main.js) - no new libraries.
+  Copy the 7 partner-*.png files into assets/img/portfolio/ first.
+====================================================================== -->
+
+    <!-- Partners Section -->
+    <section id="clients" class="partners section">
       <div class="container" data-aos="fade-up">
-        <p class="clients-label">Trusted by leading organizations across Africa</p>
-        <div class="clients-grid">
-          <div class="client-badge"><i class="bi bi-building-fill"></i> Government &amp; Municipal</div>
-          <div class="client-badge"><i class="bi bi-globe-americas"></i> NGOs &amp; Development</div>
-          <div class="client-badge"><i class="bi bi-gear-wide-connected"></i> Engineering &amp; Infrastructure</div>
-          <div class="client-badge"><i class="bi bi-lightning-charge-fill"></i> Water &amp; Energy Utilities</div>
-          <div class="client-badge"><i class="bi bi-bank2"></i> Financial &amp; Insurance</div>
-          <div class="client-badge"><i class="bi bi-mortarboard-fill"></i> Education &amp; Research</div>
+
+        <div class="partners-header text-center">
+          <p class="partners-eyebrow">Our Partners &amp; Clients</p>
+          <h2 class="partners-title">Trusted by Leading Organisations across Africa</h2>
         </div>
+
+        <div class="partners-carousel swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 700,
+              "autoplay": {
+                "delay": 2600,
+                "disableOnInteraction": false,
+                "pauseOnMouseEnter": true
+              },
+              "slidesPerView": 2,
+              "spaceBetween": 20,
+              "grabCursor": true,
+              "breakpoints": {
+                "576": { "slidesPerView": 3, "spaceBetween": 24 },
+                "992": { "slidesPerView": 4, "spaceBetween": 28 },
+                "1200": { "slidesPerView": 5, "spaceBetween": 32 }
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper align-items-stretch">
+
+            <div class="swiper-slide">
+              <a href="https://eastafricauniversity.net/" target="_blank" rel="noopener noreferrer" class="partner-item" aria-label="Visit East Africa University website">
+                <div class="partner-logo-wrap">
+                  <img src="assets/img/portfolio/East_Africa_University_(crest).jpg" alt="East Africa University logo" loading="lazy">
+                </div>
+                <span class="partner-name">East Africa University</span>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="https://oloo.co.ke/" target="_blank" rel="noopener noreferrer" class="partner-item" aria-label="Visit GeoPsy Research website">
+                <div class="partner-logo-wrap">
+                  <img src="assets/img/portfolio/partner-geopsy-research.png" alt="GeoPsy Research logo" loading="lazy">
+                </div>
+                <span class="partner-name">GeoPsy Research</span>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="https://catholicdioceseofmeru.org/" target="_blank" rel="noopener noreferrer" class="partner-item" aria-label="Visit Catholic Diocese of Meru website">
+                <div class="partner-logo-wrap">
+                  <img src="assets/img/portfolio/partner-diocese-of-meru.png" alt="Catholic Diocese of Meru crest" loading="lazy">
+                </div>
+                <span class="partner-name">Diocese of Meru</span>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="https://geomindsolutions.co.ke/" target="_blank" rel="noopener noreferrer" class="partner-item" aria-label="Visit GeoMind Solutions website">
+                <div class="partner-logo-wrap">
+                  <img src="assets/img/portfolio/partner-geomind-solutions.png" alt="GeoMind Solutions logo" loading="lazy">
+                </div>
+                <span class="partner-name">GeoMind Solutions</span>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="https://meruaudiology.co.ke/" target="_blank" rel="noopener noreferrer" class="partner-item" aria-label="Visit Meru Audiology website">
+                <div class="partner-logo-wrap">
+                  <img src="assets/img/portfolio/Meru_Audiology_logo.png" alt="Meru Audiology Hearing and Balance Center logo" loading="lazy">
+                </div>
+                <span class="partner-name">Meru Audiology</span>
+              </a>
+            </div>
+
+            <!-- OutLook Solutions: website not confirmed — add href when available -->
+            <div class="swiper-slide">
+              <span class="partner-item partner-item--nolink" aria-label="OutLook Solutions">
+                <div class="partner-logo-wrap">
+                  <img src="assets/img/portfolio/partner-outlook-solutions.png" alt="OutLook Solutions logo" loading="lazy">
+                </div>
+                <span class="partner-name">OutLook Solutions</span>
+              </span>
+            </div>
+
+            <!-- Trans Nzoia County: delete this slide if not needed -->
+            <div class="swiper-slide">
+              <a href="https://transnzoia.go.ke/" target="_blank" rel="noopener noreferrer" class="partner-item" aria-label="Visit Trans Nzoia County Government website">
+                <div class="partner-logo-wrap">
+                  <img src="assets/img/portfolio/partner-trans-nzoia.png" alt="Trans Nzoia County Government coat of arms" loading="lazy">
+                </div>
+                <span class="partner-name">Trans Nzoia County</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
-    <!-- /Trust Strip -->
+    <!-- /Partners Section -->
+
+    <style>
+      /* ── Partners Section (carousel) ── */
+      .partners.section {
+        padding: 64px 0;
+        background: var(--surface-color);
+        border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+        border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+        overflow: hidden;
+      }
+
+      .partners-header {
+        margin-bottom: 40px;
+      }
+
+      .partners-eyebrow {
+        font-size: 0.74rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.6px;
+        color: var(--accent-color);
+        font-family: var(--nav-font);
+        margin-bottom: 8px;
+      }
+
+      .partners-title {
+        font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+        font-weight: 800;
+        color: var(--heading-color);
+        font-family: var(--heading-font);
+        margin: 0;
+      }
+
+      .partners-carousel {
+        padding: 6px 4px 10px;
+      }
+
+      .partners-carousel .swiper-slide {
+        height: auto;
+        display: flex;
+      }
+
+      .partner-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .partner-item--nolink {
+        cursor: default;
+      }
+
+      .partner-logo-wrap {
+        width: 100%;
+        height: 110px;
+        background: #ffffff;
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+
+      .partner-logo-wrap img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        filter: grayscale(35%);
+        opacity: 0.92;
+        transition: filter 0.3s ease, opacity 0.3s ease;
+      }
+
+      .partner-item:hover .partner-logo-wrap,
+      .partner-item:focus-visible .partner-logo-wrap {
+        transform: translateY(-4px);
+        border-color: color-mix(in srgb, var(--accent-color), transparent 55%);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+      }
+
+      .partner-item:hover .partner-logo-wrap img,
+      .partner-item:focus-visible .partner-logo-wrap img {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+
+      .partner-item:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 4px;
+        border-radius: 14px;
+      }
+
+      .partner-name {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--default-color);
+        font-family: var(--nav-font);
+        letter-spacing: 0.3px;
+        opacity: 0.85;
+        line-height: 1.35;
+        transition: color 0.25s ease, opacity 0.25s ease;
+      }
+
+      .partner-item:hover .partner-name {
+        color: var(--accent-color);
+        opacity: 1;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .partner-logo-wrap,
+        .partner-logo-wrap img,
+        .partner-name {
+          transition: none;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .partner-logo-wrap {
+          height: 92px;
+          padding: 12px 14px;
+        }
+      }
+    </style>
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -1092,7 +1316,7 @@
             </div>
           </div><!-- End Step Item -->
 
-         <!-- <div class="step-item" data-aos="fade-right" data-aos-delay="400">
+          <!-- <div class="step-item" data-aos="fade-right" data-aos-delay="400">
             <div class="step-content">
               <div class="step-icon">
                 <i class="bi bi-bar-chart"></i>
