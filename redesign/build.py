@@ -6,7 +6,7 @@
 
 No dependencies beyond the Python standard library.
 """
-import json, os, re, shutil, html as H
+import json, os, re, shutil, urllib.parse, html as H
 from pathlib import Path
 from data import COM, PROJECTS, SOLUTIONS, INDUSTRIES, PRODUCTS, CLIENTS, COURSES
 
@@ -50,9 +50,9 @@ SOL_ICON = {"surveying":"survey","gis":"map","remote-sensing":"sat","transformat
 NAV = [
  ("Solutions","Field data, analysis and platforms, delivered end to end.","solutions.html",[("Services",[(s["name"],s["short"],s["file"]) for s in SOLUTIONS.values()])]),
  ("Industries","Any organisation whose decisions depend on place.","industries.html",[("Public sector and infrastructure",[(i["name"],i["short"],i["file"]) for i in INDUSTRIES.values() if i["group"]=="public"]),("Enterprise and markets",[(i["name"],i["short"],i["file"]) for i in INDUSTRIES.values() if i["group"]=="commercial"])]),
- ("Technology","OrionGIS, built by Orion TerraMetrics, with OrionAI across all of it.","technology.html",[("Platform",[("OrionGIS ecosystem","Maps, data, forms and dashboards on one platform.","technology.html"),("OrionAI and GeoAI","Plain-language questions, finished and explained answers.","technology.html#orionai"),("Spatial data infrastructure","Geoportals, registries and open data at scale.","data-infrastructure.html")]),("Engineering",[("Integration","QGIS, OGC services, APIs and Orion Collect.","technology.html#integration"),("Research and innovation","What our R&D team is working on.","research.html"),("Visit OrionGIS ↗","Sign in or start free at orionterrametrics.com.",COM)])]),
+ ("Technology","OrionGIS: the AI-powered geospatial workspace.","technology.html",[("Platform",[("OrionGIS workspace","Ask, map, collect and report in one AI-powered workspace.","technology.html"),("OrionAI and GeoAI","Plain-language questions, finished and explained answers.","technology.html#orionai"),("Spatial data infrastructure","Geoportals, registries and open data at scale.","data-infrastructure.html")]),("Engineering",[("Integration","QGIS, OGC services, APIs and Orion Collect.","technology.html#integration"),("Research and innovation","What our R&D team is working on.","research.html"),("Visit OrionGIS ↗","Sign in or start free at orionterrametrics.com.",COM)])]),
  ("Our work","Projects delivered for governments, utilities, health networks and businesses.","portfolio.html",[("Evidence",[("Project portfolio","Every published project, filterable by service and sector.","portfolio.html"),("Case study: Athi Water Works","Asset registry and network model for a national water agency.","projects/athi-water-works-registry.html"),("Case study: Trans Nzoia Health","178 facilities mapped into live executive dashboards.","projects/trans-nzoia-health-bip.html")]),("Relationships",[("Clients and partners","Institutions we work with.","clients.html"),("Partner with us","Technology, delivery and institutional partnerships.","partners.html")])]),
- ("Insights","News, perspectives, research and events from Orion.","insights.html",[("Read",[("Newsroom","Company and product news.","newsroom.html"),("Articles and perspectives","Writing from our team.","insights.html#articles"),("Research and publications","Published research by our people.","research.html#publications")]),("Learn",[("Orion Academy","Professional and corporate geospatial training.","courses.html"),("Events and webinars","Where to meet our team.","insights.html#events")])]),
+ ("Insights","News, perspectives, research and events from Orion.","insights.html",[("Read",[("Newsroom","Company and product news.","newsroom.html"),("Blog","Articles from the people who do the work.","blog/"),("Research and publications","Published research by our people.","research.html#publications")]),("Learn",[("Orion Academy","Professional and corporate geospatial training.","courses.html"),("Events and webinars","Where to meet our team.","insights.html#events")])]),
  ("Company","Who we are, how we work and where we are going.","about.html",[("Who we are",[("About Orion TerraMetrics","Our story, mission and values.","about.html"),("Leadership","The people accountable for our work.","leadership.html"),("Locations","Nairobi head office and where we work.","contact.html#office")]),("Beyond business",[("Careers","Build technology that shapes Africa's future.","careers.html"),("Corporate responsibility","Open data, skills and public-interest work.","responsibility.html"),("Trust and governance","Security, privacy, ethics and policies.","trust.html")])]),
 ]
 
@@ -78,17 +78,17 @@ def header():
 def footer():
     col = lambda t, items: f'<div><h4>{t}</h4><ul>' + "".join(f'<li><a href="{x if x.startswith("http") else u(x)}">{e(l)}</a></li>' for l, x in items) + "</ul></div>"
     return f'''<footer class="site-footer"><div class="wrap"><div class="foot-top">
-<div class="foot-brand"><img src="{u('assets/OrionLogo.svg')}" alt="Orion TerraMetrics" width="110" height="42"><p>Orion TerraMetrics Africa Limited is a geospatial engineering and technology company in Nairobi. We survey, map and analyse, and we build OrionGIS.</p><p>{e(ADDRESS)}<br><a href="tel:+254799882124">{PHONE1}</a> · <a href="tel:+254729212061">{PHONE2}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
-<a class="foot-oriongis" href="{COM}" target="_blank" rel="noopener"><img src="{u('assets/logos/oriongis-icon.png')}" alt="" width="30" height="30"><span><b style="color:#fff">OrionGIS</b><br>Our platform, at orionterrametrics.com ↗</span></a></div>
+<div class="foot-brand"><img src="{u('assets/OrionLogo.svg')}" alt="Orion TerraMetrics" width="110" height="42"><p>Orion TerraMetrics Africa Limited is an AI-native geospatial engineering and technology company in Nairobi, and the maker of OrionGIS, the AI-powered geospatial workspace.</p><p>{e(ADDRESS)}<br><a href="tel:+254799882124">{PHONE1}</a> · <a href="tel:+254729212061">{PHONE2}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
+<a class="foot-oriongis" href="{COM}" target="_blank" rel="noopener"><img src="{u('assets/logos/oriongis-icon.png')}" alt="" width="30" height="30"><span><b style="color:#fff">OrionGIS</b><br>The AI-powered geospatial workspace ↗</span></a></div>
 {col("Solutions",[(s["name"].split(" and ")[0] if len(s["name"])>30 else s["name"],s["file"]) for s in SOLUTIONS.values()])}
 {col("Industries",[(INDUSTRIES[k]["name"],INDUSTRIES[k]["file"]) for k in ["government","banking","retail","insurance","energy","health","agriculture"]]+[("All industries","industries.html")])}
-{col("Our work",[("Project portfolio","portfolio.html"),("Clients and partners","clients.html"),("Technology","technology.html"),("Research","research.html"),("Newsroom","newsroom.html"),("Insights","insights.html")])}
+{col("Our work",[("Project portfolio","portfolio.html"),("Clients and partners","clients.html"),("Technology","technology.html"),("Research","research.html"),("Blog","blog/"),("Newsroom","newsroom.html")])}
 {col("Company",[("About us","about.html"),("Leadership","leadership.html"),("Careers","careers.html"),("Internships","internships.html"),("Academy","courses.html"),("Responsibility","responsibility.html")])}
 {col("Get in touch",[("Discuss a project","contact.html?type=project"),("Request a proposal","contact.html?type=proposal"),("Become a partner","partners.html#become"),("Training enquiries","courses.html#enquire"),("Media enquiries","newsroom.html#media"),("Site directory","directory.html")])}
 </div><div class="foot-bottom"><span>© 2026 Orion TerraMetrics Africa Limited. All rights reserved.</span><ul><li><a href="{u('privacy.html')}">Privacy</a></li><li><a href="{u('cookies.html')}">Cookies</a></li><li><a href="{u('terms.html')}">Terms</a></li><li><a href="{u('accessibility.html')}">Accessibility</a></li><li><a href="{u('security.html')}">Security</a></li><li><a href="{u('ethics.html')}">Ethics</a></li></ul></div></div></footer>'''
 
 def page(path, title, desc, body, cat="Page", featured=False, keywords=""):
-    canonical = SITE + ("" if path == "index.html" else path)
+    canonical = SITE + ("" if path == "index.html" else (path[:-10] if path.endswith("/index.html") else path))
     full = title if path == "index.html" else f"{title} | Orion TerraMetrics"
     ld = {"@context":"https://schema.org","@type":"Organization","name":"Orion TerraMetrics Africa Limited","url":SITE,"logo":SITE+"assets/OrionLogo.png","email":EMAIL,"telephone":PHONE1,"address":{"@type":"PostalAddress","streetAddress":"GMC Mansion, 1st Floor, Mukhtar Dadah Street","addressLocality":"Nairobi","addressCountry":"KE"},"sameAs":[COM]} if path=="index.html" else {"@context":"https://schema.org","@type":"WebPage","name":title,"description":desc,"url":canonical,"isPartOf":{"@type":"WebSite","name":"Orion TerraMetrics","url":SITE}}
     doc = f'''<!doctype html><html lang="en-KE" data-base="{BASE}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -167,11 +167,10 @@ HOME_IMG = {"athi-water-works-registry":"ph-dam"}  # mockup placeholder photogra
 
 def home():
     # Hero proof strip: real figures from published case studies + the live OrionGIS index.
-    proof = [("113.1M m³","Dam capacity in a national water asset registry","projects/athi-water-works-registry.html"),
-             ("178","Health facilities streaming into live dashboards","projects/trans-nzoia-health-bip.html"),
-             ("50K+","Land parcels mapped by drone for administration","projects/drone-land-administration.html"),
-             ("43,000+","Open datasets indexed on OrionGIS",None)]
-    proofh = "".join((f'<a href="{u(l)}">' if l else f'<a href="{COM}/data" target="_blank" rel="noopener">') + f'<b>{e(n)}</b><span>{e(t)}</span></a>' for n, t, l in proof)
+    # Platform scale, verified against the live OrionGIS index on 2026-11-27 (published + indexable rows).
+    proof = [("43,000+","Open datasets indexed and ready to map",None),("7M+","Mapped features across those datasets",None),
+             ("1,400+","Data publishers worldwide",None),("200+","Countries and territories covered",None)]
+    proofh = '<p class="proof-k">On the Orion platform today</p>' + "".join(f'<a href="{COM}/data" target="_blank" rel="noopener"><b>{e(n)}</b><span>{e(t)}</span></a>' for n, t, l in proof)
     # Logo carousel: two identical runs so the CSS loop is seamless; the second run is hidden from assistive tech.
     run = "".join(f'<li><img src="{u("assets/logos/"+f)}" alt="{e(n)}" loading="eager" height="64"></li>' for f, n in CLIENTS)
     runb = "".join(f'<li aria-hidden="true"><img src="{u("assets/logos/"+f)}" alt="" loading="eager" height="64"></li>' for f, n in CLIENTS)
@@ -191,10 +190,10 @@ def home():
     panels = "".join(f'<div class="show-panel" role="tabpanel" id="p-{k}" aria-labelledby="t-{k}"{"" if i==0 else " hidden"}><figure><img src="{u("assets/img/"+sc+".webp")}" alt="{e(n)} in OrionGIS" loading="eager" decoding="async"></figure><div class="txt"><p>{e(d)}</p><a class="btn btn-ghost btn-sm" href="{COM}{l}" target="_blank" rel="noopener">See {e(n)} ↗</a></div></div>' for i,(k,n,ic,sc,d,l) in enumerate(PRODUCTS))
     body = f'''
 <section class="hx"><div class="hx-media">{img("ph-hero","Nairobi skyline at dusk",eager=True)}</div>
-<div class="wrap hx-body hx-ai"><div><p class="hx-kicker">Orion TerraMetrics · AI-native location intelligence</p>
-<h1>AI that knows the ground.</h1>
-<p class="hx-lead">OrionAI answers questions about any place, from a single plot to a whole country, and our surveyors, drones and satellites keep those answers true. Tell us the decision in front of you.</p></div>
-{concierge()}</div>
+<div class="wrap hx-body"><p class="hx-kicker">Orion TerraMetrics Africa Limited</p>
+<h1>Geospatial intelligence for the age of AI.</h1>
+<p class="hx-lead">We are an AI-native geospatial engineering and technology company. We measure the physical world, turn it into intelligence and build the AI platform that puts it to work for governments and enterprises across Africa and beyond.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="{u('contact.html?type=project')}">Discuss a project</a><a class="btn btn-ghost" href="{u('portfolio.html')}">Explore our work</a></div></div>
 <div class="hx-proof"><div class="wrap">{proofh}</div></div>
 <p class="hx-cap">Nairobi at dusk · placeholder photo: Nbi101, CC BY-SA 4.0</p></section>
 
@@ -216,7 +215,7 @@ def home():
 <ul class="rail" tabindex="0" aria-label="Selected projects">{slides}</ul></section>
 
 <section class="platform"><div class="wrap">
-<div class="platform-head"><img src="{u('assets/logos/oriongis-wordmark-tagline-white.png')}" alt="OrionGIS" height="44"><div><h2>Your organisation's location intelligence, in one place.</h2><p>OrionGIS brings every map, dataset, field submission and dashboard together, and lets anyone ask it a question in plain words. Our own teams deliver on it, so your results stay live and useful long after the project closes.</p></div><div class="platform-cta"><a class="btn btn-primary" href="{COM}" target="_blank" rel="noopener">Open OrionGIS ↗</a><a class="btn btn-ghost" href="{COM}/signup" target="_blank" rel="noopener">Start free ↗</a></div></div>
+<div class="platform-head"><img src="{u('assets/logos/oriongis-wordmark-tagline-white.png')}" alt="OrionGIS" height="44"><div><h2>The AI-powered geospatial workspace.</h2><p>Ask a question in plain words and get back a finished map, analysis or dashboard. Bring your own data or start from 43,000+ open datasets, collect from the field and share securely across your organisation. One workspace for analysts, field teams and leadership.</p></div><div class="platform-cta"><a class="btn btn-primary" href="{COM}" target="_blank" rel="noopener">Open OrionGIS ↗</a><a class="btn btn-ghost" href="{COM}/signup" target="_blank" rel="noopener">Start free ↗</a></div></div>
 <div class="showcase"><div class="show-tabs" role="tablist" aria-label="OrionGIS products">{tabs}</div><div class="show-stage">{panels}</div></div></div></section>
 
 <section class="spot2"><figure>{img("ph-health","Mother and child at a Kenyan hospital (placeholder photo)")}</figure><div class="spot2-txt"><p class="hx-kicker">Case study · Health</p><h2>Every health facility in Trans Nzoia County, live on one screen.</h2><p>We geo-mapped all 178 facilities across five primary care networks, then connected monthly inpatient and outpatient reporting from mobile forms to executive dashboards on OrionGIS.</p>
@@ -226,25 +225,21 @@ def home():
 <section class="section why"><div class="wrap why-grid"><div class="why-photo">{img("about-team","Orion TerraMetrics surveyor with a total station on an engineering survey")}</div>
 <div><h2>Why clients stay with us.</h2><ol class="why-list">
 <li><h3>We measure it ourselves.</h3><p>Our surveyors and pilots capture the data, so we can stand behind its accuracy and lineage.</p></li>
-<li><h3>We own the software.</h3><p>OrionGIS is built in-house. When a programme needs a feature, our engineers build it.</p></li>
+<li><h3>Software that adapts to you.</h3><p>When your programme needs a new capability, our engineers build it into the workspace, so you are never waiting on a vendor roadmap.</p></li>
 <li><h3>AI is in the workflow, not the brochure.</h3><p>OrionAI drafts maps, forms, dashboards and analysis, and every result shows its sources.</p></li>
 <li><h3>Your data stays yours.</h3><p>Private by default, organisation-level access control, cloud or on-premise deployment.</p></li></ol>
 <a class="arrow-link" href="{u('about.html')}">About Orion TerraMetrics</a></div></div></section>
 
-<section class="section soft"><div class="wrap"><div class="section-head"><div><h2>News and perspectives</h2></div><a class="arrow-link" href="{u('insights.html')}">All insights</a></div><div class="grid g3">{news_cards(3)}</div></div></section>
+<section class="section soft"><div class="wrap"><div class="section-head"><div><h2>From the blog</h2></div><a class="arrow-link" href="{u('blog/')}">All articles</a></div><div class="bgrid">{news_cards(3)}</div></div></section>
 
-<section class="closer"><div class="closer-media">{img("ph-space","East African Rift Valley seen from the International Space Station")}</div><div class="wrap closer-body">
-<div><h2>Tell us the decision.<br>We will bring the ground truth.</h2><p>From a single site survey to a national programme. A specialist replies within two working days.</p>{channels()}</div>
-<div class="hero-actions" style="margin:0"><a class="btn btn-primary" href="{u('contact.html?type=project')}">Discuss a project</a><a class="btn btn-ghost" href="{u('contact.html?type=proposal')}">Request a proposal</a></div></div></section>
+<section class="closer closer-ask"><div class="closer-media">{img("ph-space","East African Rift Valley seen from the International Space Station")}</div><div class="wrap closer-ask-grid">
+<div><h2>Tell us the decision.<br>We will bring the ground truth.</h2><p>Describe what you are trying to decide and we will point you to the right team, the closest proof and the fastest way to talk to a specialist.</p>{channels()}</div>
+{concierge()}</div></section>
 '''
-    page("index.html", "Orion TerraMetrics | AI that knows the ground", "Orion TerraMetrics is an AI-native location intelligence company. OrionAI answers questions about any place, and our surveyors, drones and satellites keep those answers true.", body, "Home", True)
+    page("index.html", "Orion TerraMetrics | Geospatial intelligence for the age of AI", "Orion TerraMetrics is an AI-native geospatial engineering and technology company: we measure the physical world, turn it into intelligence and build the AI platform that puts it to work.", body, "Home", True)
 
-NEWS = [
- ("2026-11-10","Organisations arrive on OrionGIS","Teams can now share data, maps and dashboards inside an organisation with roles and seats.",COM+"/releases"),
- ("2026-10-31","OrionAI draws elevation, slope and relief maps","Plain-language terrain questions now return finished relief, slope and contour maps.",COM+"/releases"),
- ("2026-10-13","OrionAI is now everywhere in OrionGIS","Ask in plain words from any page: data, maps, forms and dashboards.",COM+"/releases"),
- ("2026-09-23","Orion Collect field app released for testing","An offline field collection app for Android, signed in with OrionGIS.",COM+"/releases"),
- ("2026-09-20","OrionGIS launches at orionterrametrics.com","Orion TerraMetrics' platform for maps, open data, forms and dashboards goes live.",COM),
+NEWS = [   # company-level announcements only; product release notes stay off the public company site (founder 2026-11-27)
+ ("2026-09-20","OrionGIS launches at orionterrametrics.com","Orion TerraMetrics' AI-native platform for maps, data, field collection and dashboards goes live.",COM),
 ]
 def news_cards(n):
     out = ""
@@ -328,11 +323,11 @@ def technology():
 # ------------------------------------------------------------------ insights
 def insights():
     body = phero("Insights","News, perspectives and research.","What we are building, what we are learning and where to meet our team.",[("Insights",None)],"ph-dusk")
-    body += f'<section class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">Newsroom</span><h2>Latest news</h2></div><a class="arrow-link" href="{u("newsroom.html")}">Newsroom</a></div><div class="grid g3">{news_cards(3)}</div></div></section>'
-    body += f'''<section class="section soft" id="articles"><div class="wrap split"><div><span class="eyebrow">Articles and perspectives</span><h2>Writing from our team</h2><p>Practical articles on GIS, surveying, remote sensing and open data. Our current articles live on the Orion TerraMetrics blog and the OrionGIS blog while they move to this site.</p><p><a class="btn btn-ghost btn-sm" href="https://orionterrametrics.co.ke/blog/">Orion TerraMetrics blog</a> <a class="btn btn-ghost btn-sm" href="{COM}/blog" target="_blank" rel="noopener">OrionGIS blog ↗</a></p></div><div class="card"><span class="pill">Research</span><h3 style="margin-top:12px">Quantifying Tree Cover Loss in Urban Forests within Nairobi Metropolitan Area</h3><p>Earth observation research by Godwin Murithi.</p><a class="arrow-link" href="{u("research.html#publications")}">Publications</a></div></div></section>
+    body += f'<section class="section" id="articles"><div class="wrap"><div class="xhead"><h2>Latest from the blog</h2><p>Practical writing from the people who do the work. <a href="{u("blog/")}">All articles →</a></p></div><div class="bgrid">{news_cards(6)}</div></div></section>'
+    body += f'''<section class="section soft"><div class="wrap split"><div><h2>Research and publications</h2><p>Peer research and technical notes from our team.</p><a class="arrow-link" href="{u("research.html#publications")}">Publications</a></div><div class="card"><span class="pill">Research</span><h3 style="margin-top:12px">Quantifying Tree Cover Loss in Urban Forests within Nairobi Metropolitan Area</h3><p>Earth observation research by Godwin Murithi.</p></div></div></section>
 <section class="section" id="events"><div class="wrap prose"><span class="eyebrow">Events and webinars</span><h2>Where to meet us</h2><p>There are no events scheduled right now. Webinars, workshops and conference appearances will be listed here with dates and registration links.</p><p><a class="arrow-link" href="{u("contact.html?type=general")}">Invite us to speak</a></p></div></section>'''
     page("insights.html","Insights","News, articles, research and events from Orion TerraMetrics.", body, "Insights", True)
-    allnews = "".join(f'<li style="padding:18px 0;border-bottom:1px solid var(--line)"><span class="muted">{d}</span><h3 style="margin:4px 0">{e(t)}</h3><p style="margin:0">{e(s)} <a href="{l}" target="_blank" rel="noopener">Read more ↗</a></p></li>' for d,t,s,l in NEWS)
+    allnews = "".join(f'<li style="padding:18px 0;border-bottom:1px solid var(--line)"><span class="muted">{d}</span><h3 style="margin:4px 0">{e(t)}</h3><p style="margin:0">{e(s)} <a href="{l}" target="_blank" rel="noopener">Visit OrionGIS ↗</a></p></li>' for d,t,s,l in NEWS)
     body = phero("Insights","Newsroom","Company and product announcements from Orion TerraMetrics.",[("Insights","insights.html"),("Newsroom",None)])
     body += f'''<section class="section"><div class="wrap split wide-left" style="align-items:start"><div><h2>Announcements</h2><ul style="list-style:none;padding:0;margin:0">{allnews}</ul></div>
 <aside id="media"><div class="card"><h3>Media enquiries</h3><p>Journalists and event organisers can reach our communications team for interviews, comment and speakers.</p><p><a href="mailto:{EMAIL}?subject=Media%20enquiry">{EMAIL}</a><br>{PHONE1}</p><a class="btn btn-primary btn-sm" href="{u("contact.html?type=media")}">Media enquiry form</a></div>
@@ -478,18 +473,18 @@ LEGACY = {"index01.html":"index.html","service-details.html":"solutions.html","s
 def write():
     if DIST.exists(): shutil.rmtree(DIST)
     (DIST/"assets").mkdir(parents=True)
-    shutil.copytree(ROOT/"assets/img", DIST/"assets/img"); shutil.copytree(ROOT/"assets/logos", DIST/"assets/logos")
+    shutil.copytree(ROOT/"assets/img", DIST/"assets/img"); shutil.copytree(ROOT/"assets/logos", DIST/"assets/logos"); shutil.copytree(ROOT/"assets/blog", DIST/"assets/blog")
     for f in ["OrionLogo.svg","OrionLogo.png","favicon.png","apple-touch-icon.png"]: shutil.copy(ROOT/"assets"/f, DIST/"assets"/f)
     shutil.copy(ROOT/"src/site.css", DIST/"assets/site.css"); shutil.copy(ROOT/"src/site.js", DIST/"assets/site.js")
     idx = []
     for path, title, desc, cat, featured, kw, doc in PAGES:
         out = DIST/path; out.parent.mkdir(parents=True, exist_ok=True); out.write_text(doc)
-        idx.append({"u":path if path!="index.html" else "","t":title,"d":desc,"c":cat,"k":kw,"f":featured and cat in("Solution","Industry")})
+        idx.append({"u":"" if path=="index.html" else (path[:-10] if path.endswith("/index.html") else path),"t":title,"d":desc,"c":cat,"k":kw,"f":featured and cat in("Solution","Industry")})
     (DIST/"search-index.json").write_text(json.dumps(idx))
     for old, new in LEGACY.items():
         (DIST/old).write_text(f'<!doctype html><meta charset="utf-8"><title>Moved</title><link rel="canonical" href="{SITE}{new}"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url={u(new)}"><a href="{u(new)}">This page has moved.</a>')
     (DIST/"redirects.json").write_text(json.dumps(LEGACY, indent=1))
-    urls = "".join(f"<url><loc>{SITE}{'' if p[0]=='index.html' else p[0]}</loc></url>" for p in PAGES)
+    urls = "".join(f"<url><loc>{SITE}{'' if p[0]=='index.html' else (p[0][:-10] if p[0].endswith('/index.html') else p[0])}</loc></url>" for p in PAGES)
     (DIST/"sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>')
     (DIST/"robots.txt").write_text("User-agent: *\nDisallow: /\n" if PREVIEW else f"User-agent: *\nAllow: /\nSitemap: {SITE}sitemap.xml\n")
 
@@ -531,8 +526,8 @@ def ruled(items, cols=2, numbered=True):
     li = "".join(f'<li>{f"<span class=num>{i+1:02d}</span>" if numbered else ""}<div><h3>{e(a)}</h3><p>{e(b)}</p></div></li>' for i,(a,b) in enumerate(items))
     return f'<ol class="ruled c{cols}{" nonum" if not numbered else ""}">{li}</ol>'
 
-def platform_band(text="Every deliverable can live on OrionGIS, our own platform, so your team keeps viewing, querying and sharing it long after the project closes, and can ask it questions in plain words."):
-    return f'''<section class="pband"><div class="wrap pband-grid"><div><img src="{u('assets/logos/oriongis-wordmark-tagline-white.png')}" alt="OrionGIS" height="38"><h2>Results that stay live.</h2><p>{e(text)}</p><a class="btn btn-primary" href="{COM}" target="_blank" rel="noopener">Open OrionGIS ↗</a> <a class="btn btn-ghost" href="{COM}/signup" target="_blank" rel="noopener">Start free ↗</a></div><div class="pband-shot">{img("wf-map","A published map in OrionGIS Map Studio")}</div></div></section>'''
+def platform_band(text="Project deliverables open in OrionGIS, an AI-powered geospatial workspace, where your team can explore, question and share them long after the project closes."):
+    return f'''<section class="pband"><div class="wrap pband-grid"><div><img src="{u('assets/logos/oriongis-wordmark-tagline-white.png')}" alt="OrionGIS" height="38"><h2>Your results become a live workspace.</h2><p>{e(text)}</p><a class="btn btn-primary" href="{COM}" target="_blank" rel="noopener">Open OrionGIS ↗</a> <a class="btn btn-ghost" href="{COM}/signup" target="_blank" rel="noopener">Start free ↗</a></div><div class="pband-shot">{img("wf-map","A published map in OrionGIS Map Studio")}</div></div></section>'''
 
 # ------------------------------------------------------------------ solutions
 SOL_HOOK = {"surveying":"Every investment starts with a measurement. Make sure it is right.",
@@ -612,13 +607,13 @@ def technology():
     prods = "".join(f'''<div class="prow" id="{k}"><div class="prow-txt"><img src="{u("assets/logos/"+ic+".png")}" alt="" width="52" height="52"><p class="hx-kicker" style="color:var(--green);margin:16px 0 10px">{e(n)}</p><h2>{e(PROD_HEAD[k])}</h2><p>{e(d)}</p><a class="arrow-link" href="{COM}{l}" target="_blank" rel="noopener">{e(n)} on OrionGIS ↗</a></div><figure class="browser"><img src="{u("assets/img/"+sc+".webp")}" alt="{e(n)} in OrionGIS" loading="lazy"></figure></div>''' for k,n,ic,sc,d,l in PRODUCTS)
     gallery = [("naivasha-sentinel2","Lake Naivasha: water and vegetation from Sentinel-2"),("mount-kenya-slope","Mount Kenya: slope analysis"),("nairobi-landcover","Nairobi: land cover classification"),("kilimanjaro-relief","Kilimanjaro: shaded relief"),("mwea-crop-vigour","Mwea irrigation scheme: crop vigour"),("po-valley-false-colour","Po Valley: false-colour composite")]
     gal = "".join(f'<li><figure>{img(f,c)}<figcaption>{e(c)}</figcaption></figure></li>' for f, c in gallery)
-    body = phero("Technology","Everything your organisation knows about place, in one platform.","OrionGIS brings maps, data, field collection and dashboards together, and lets anyone ask it a question in plain words. We build it in Nairobi and deliver every project on it.",[("Technology",None)],"ph-dusk",f'<div class="hero-actions"><a class="btn btn-primary" href="{COM}" target="_blank" rel="noopener">Visit OrionGIS ↗</a><a class="btn btn-ghost" href="{u("contact.html?type=consultation")}">Plan an enterprise rollout</a></div>')
+    body = phero("OrionGIS","The AI-powered geospatial workspace.","Ask questions in plain words and get finished maps and analysis. Collect from the field, run live dashboards and share securely, in one workspace your whole organisation can use.",[("Technology",None)],"ph-dusk",f'<div class="hero-actions"><a class="btn btn-primary" href="{COM}" target="_blank" rel="noopener">Visit OrionGIS ↗</a><a class="btn btn-ghost" href="{u("contact.html?type=consultation")}">Plan an enterprise rollout</a></div>')
     body += statement('Most organisations already have the data. <span>They just cannot ask it anything.</span>', "It sits in shapefiles, spreadsheets, survey reports and dashboards nobody updates. OrionGIS puts it in one place and makes it answer.")
     body += f'<section class="section prows">{"<div class=wrap>"+prods+"</div>"}</section>'
     body += f'<section class="platform" id="orionai"><div class="wrap"><div class="xhead"><h2 style="color:#fff">Real answers from OrionAI.</h2><p style="color:#b9cad7">Each began as a plain-language question and came back as a finished map with its sources and a matching colour key.</p></div></div><ul class="rail rail-wide">{gal}</ul></section>'
     body += f'<section class="section" id="integration"><div class="wrap"><div class="xhead"><h2>Built for the enterprise.</h2><p>Fits the systems, security rules and teams you already have.</p></div>{ruled([("Your data stays yours","Private by default, with organisation-level separation, roles and seats."),("Cloud or on-premise","Hosted by Orion, or deployed in your own data centre for data residency."),("Works with your tools","QGIS sync, OGC web services and developer APIs, so nothing gets stranded."),("Field-ready","Orion Collect captures data offline on Android and syncs straight to the map."),("Every source on record","Each dataset keeps its publisher, licence and history."),("AI with receipts","OrionAI shows the data and method behind every answer.")],3)}</div></section>'
     body += cta("Rolling OrionGIS out across an organisation?","We plan enterprise rollouts, integrations, training and on-premise deployments.",("Book a consultation","contact.html?type=consultation"),("Request a proposal","contact.html?type=proposal"),"ph-dusk")
-    page("technology.html","Technology and OrionGIS","OrionGIS, built by Orion TerraMetrics: one platform for maps, data, field collection and dashboards, with OrionAI answering questions in plain words.", body, "Technology", True, "OrionGIS OrionAI GeoAI Map Studio Spatial Data Hub OrionForms OrionInsights QGIS API")
+    page("technology.html","Technology and OrionGIS","OrionGIS is an AI-powered geospatial workspace: ask questions in plain words, get finished maps and analysis, collect from the field and run live dashboards.", body, "Technology", True, "OrionGIS OrionAI GeoAI Map Studio Spatial Data Hub OrionForms OrionInsights QGIS API")
 
 # ------------------------------------------------------------------ about
 _v1_company = company
@@ -665,7 +660,36 @@ def contact():
     page("contact.html","Contact","Contact Orion TerraMetrics: discuss a project, request a proposal, book a consultation, partnerships and media.", body, "Contact", True)
 
 
+# ------------------------------------------------------------------ blog (migrated from WordPress 2026-11-27; content/blog/*.json is now the source)
+import glob as _glob
+POSTS = sorted((json.load(open(f)) for f in _glob.glob(str(ROOT/"content/blog/*.json"))), key=lambda r: r["date"], reverse=True)
+def fdate(d):
+    import datetime; return datetime.date.fromisoformat(d).strftime("%-d %B %Y")
+def bcard(r, big=False):
+    cover = f'<img src="{u(r["cover"])}" alt="" loading="lazy">' if r["cover"] else ""
+    return f'<a class="bcard{" bcard-big" if big else ""}" href="{u("blog/"+r["slug"]+"/")}" data-tags="{"|".join(r["categories"])}"><figure>{cover}</figure><div><span class="tag">{e((r["categories"] or ["Article"])[0])}</span><h3>{e(r["title"])}</h3>{f"<p>{e(r[chr(101)+chr(120)+chr(99)+chr(101)+chr(114)+chr(112)+chr(116)])}</p>" if big else ""}<span class="meta">{fdate(r["date"])} · {r["minutes"]} min read</span></div></a>'
+def news_cards(n):
+    return "".join(bcard(r) for r in POSTS[:n])
+BLOG_SLUG_FIX = {"the-5-components-of-gis":"the-components-of-geographic-information-systems-gis","how-gis-powers-your-world":"how-geographic-information-systems-gis-powers-your-world","what-is-a-gis-used-for-complete-guide-for-beginners":"what-is-a-gis"}
+def blog():
+    cats = sorted({c for r in POSTS for c in r["categories"]})
+    fb = '<button aria-pressed="true" data-f="all">All articles</button>' + "".join(f'<button aria-pressed="false" data-f="{e(c)}">{e(c)}</button>' for c in cats)
+    body = phero("Insights","The Orion TerraMetrics blog","Practical writing on GIS, surveying, Earth observation and the future of location intelligence, from the people who do the work.",[("Insights","insights.html"),("Blog",None)],"ph-dusk")
+    body += f'<section class="section"><div class="wrap">{bcard(POSTS[0], True)}<div class="filters" role="group" aria-label="Filter articles" style="margin-top:56px">{fb}</div><div class="bgrid">{"".join(bcard(r) for r in POSTS[1:])}</div></div></section>' + cta()
+    page("blog/index.html","Blog","Articles on GIS, surveying, remote sensing and location intelligence from Orion TerraMetrics.", body, "Insights", True)
+    for i, r in enumerate(POSTS):
+        rel = [x for x in POSTS if x is not r and set(x["categories"]) & set(r["categories"])][:3]
+        art = r["html"].replace("{BASE}", BASE)
+        for old, new in BLOG_SLUG_FIX.items(): art = art.replace(f"{BASE}blog/{old}/", f"{BASE}blog/{new}/")
+        body = f'''<section class="art-hero"><div class="wrap art-head">{crumbs([("Insights","insights.html"),("Blog","blog/"),(r["title"][:40]+("…" if len(r["title"])>40 else ""),None)])}<p class="tag">{" · ".join(e(c) for c in r["categories"]) or "Article"}</p><h1>{e(r["title"])}</h1><p class="meta">Orion TerraMetrics · {fdate(r["date"])} · {r["minutes"]} min read</p></div>
+{f'<figure class="art-cover wrap"><img src="{u(r["cover"])}" alt="" fetchpriority="high"></figure>' if r["cover"] else ""}</section>
+<section class="section art-body"><div class="wrap art-grid"><article class="prose art">{art}</article>
+<aside class="art-side"><div><h3>Working on something like this?</h3><p>Talk to the team behind this article.</p><a class="btn btn-primary btn-sm" href="{u("contact.html?type=consultation")}">Book a consultation</a><p class="art-ch"><a href="https://wa.me/{WA}?text={urllib.parse.quote("Hello Orion TerraMetrics, I read: "+r["title"])}" target="_blank" rel="noopener">WhatsApp</a> · <a href="tel:+254799882124">Call</a></p></div></aside></div></section>
+{f'<section class="section soft"><div class="wrap"><div class="xhead"><h2>Keep reading</h2></div><div class="bgrid">{"".join(bcard(x) for x in rel)}</div></div></section>' if rel else ""}'''
+        body += cta()
+        page(f"blog/{r['slug']}/index.html", r["title"], r["excerpt"][:155] or r["title"], body, "Article", False, " ".join(r["categories"]))
+
 if __name__ == "__main__":
-    home(); solutions(); industries(); portfolio(); technology(); insights(); company(); careers(); partners(); academy(); contact(); trust(); proposal(); notfound(); directory()
+    home(); solutions(); industries(); portfolio(); technology(); insights(); company(); careers(); partners(); academy(); contact(); trust(); blog(); proposal(); notfound(); directory()
     write()
     print(f"built {len(PAGES)} pages into {DIST} (BASE={BASE}, preview={PREVIEW})")

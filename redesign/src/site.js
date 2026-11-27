@@ -26,7 +26,7 @@
   // Portfolio filter
   var fb=[].slice.call(document.querySelectorAll(".filters button"));
   fb.forEach(function(b){b.addEventListener("click",function(){fb.forEach(function(x){x.setAttribute("aria-pressed",String(x===b))});var f=b.dataset.f;
-    document.querySelectorAll(".pcard[data-tags]").forEach(function(c){c.hidden=!(f==="all"||c.dataset.tags.split("|").indexOf(f)>-1)});});});
+    document.querySelectorAll("[data-tags]").forEach(function(c){c.hidden=!(f==="all"||c.dataset.tags.split("|").indexOf(f)>-1)});});});
   var hash=decodeURIComponent(location.hash.slice(1));if(hash){var hb=fb.filter(function(b){return b.dataset.f===hash})[0];if(hb)hb.click();}
 
   // Product showcase tabs
