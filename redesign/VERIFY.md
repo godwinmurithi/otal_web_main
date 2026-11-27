@@ -13,3 +13,9 @@
 | Policy pages (privacy, cookies, terms, accessibility, security, ethics) | trust/* | Drafts for legal review (Kenya Data Protection Act, 2019). |
 | Academy module titles for the QGIS course | introduction-to-GIS-using-QGIS | Reconstructed; verify against the live course. |
 | REMOVED: ISO certification, 5+ vs 20+ years, 500+ vs 5,000+ projects, 15+ countries, 450+ learners, template testimonials, placeholder team members | — | Removed (unsupported or conflicting). |
+
+## Added 2026-11-27 (v2)
+- Case study "Diocese of Meru Health": 41 facilities reporting monthly (count from the 2026 report facility list); confirm the diocese is happy to be named. No clinical figures are published.
+- Case study "Diocese of Meru Education": registry + monthly + termly reporting, 3 dashboards; confirm naming.
+- "Built on OrionGIS" marker on Trans Nzoia Health BIP: confirm it ran on OrionGIS (summary says "through OrionGIS and mobile field apps").
+- Homepage: "more than 43,000 open datasets" = live OrionGIS index count (43,563 published + indexable on 2026-11-27).
