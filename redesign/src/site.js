@@ -64,3 +64,35 @@
   var rail=document.querySelector(".rail");
   [].forEach.call(document.querySelectorAll("[data-scroll]"),function(b){b.addEventListener("click",function(){if(!rail)return;var w=rail.querySelector("li");rail.scrollBy({left:(+b.dataset.scroll)*((w?w.offsetWidth:400)+22)*2,behavior:"smooth"});});});
 })();
+(function(){
+  // "Talk to us" launcher
+  var lb=document.querySelector(".launch-btn"),lp=document.getElementById("launch-panel");
+  if(lb){lb.addEventListener("click",function(e){e.stopPropagation();var o=lp.hidden;lp.hidden=!o;lb.setAttribute("aria-expanded",String(o));});
+    document.addEventListener("click",function(e){if(!e.target.closest(".launch")){lp.hidden=true;lb.setAttribute("aria-expanded","false");}});
+    document.addEventListener("keydown",function(e){if(e.key==="Escape"){lp.hidden=true;lb.setAttribute("aria-expanded","false");}});}
+
+  // Ask Orion concierge (preview): routes a plain-language need to the right sector, capabilities, proof and a human handoff.
+  var box=document.querySelector("[data-ask]");if(!box)return;
+  var kb=JSON.parse(document.getElementById("ask-kb").textContent),form=box.querySelector("form"),q=box.querySelector("input"),out=box.querySelector(".ask-out");
+  var SYN={"Banking":"bank branch atm agent loan lend lending credit collateral mortgage microfinance fintech sacco unbanked","Insurance":"insur claim claims exposure premium underwrit parametric reinsur catastrophe","Retail":"store stores shop shops outlet outlets catchment footfall retail fmcg distributor supermarket franchise sales territory","Real estate":"property properties real estate developer development plot plots valuation housing apartment land buy","Telecoms":"tower towers fibre fiber coverage network telecom mobile operator 5g site acquisition","Mining":"mine mining quarry stockpile pit tailings concession oil gas mineral","Transport":"route routes routing depot warehouse fleet delivery deliveries logistics last-mile address truck trucks transport","Agriculture":"farm farms farmer crop crops drought yield tea coffee irrigation agri harvest livestock traceab deforestation","Health":"health clinic clinics hospital hospitals facility facilities disease malaria patients maternal","Government":"county counties ministry government public citizen registry parcel parcels cadastr planning permit","Energy":"water pipe pipes power utility utilities electricity grid meter leakage non-revenue transmission","Infrastructure":"road roads bridge bridges construction contractor engineering corridor dam railway","Environment":"forest forests climate carbon flood floods wetland conservation environment biodiversity emissions","Education":"school schools university universities research students enrolment","International development":"ngo donor donors beneficiar humanitarian refugee programme vulnerab aid"};
+  var SSYN={"Survey":"survey surveys measure boundary topographic lidar drone uav setting-out volume volumes","Location analytics":"where site sites select selection location analysis best open next suitab catchment risk","Earth observation":"satellite imagery monitor monitoring change drought stress crop vegetation flood from space","Digital operations":"dashboard dashboards report reporting forms paper spreadsheet field team live operations","Enterprise data":"registry registries portal platform database single source data hub catalogue","Strategy":"strategy plan advise advice procurement roadmap where to start"};
+  function words(t){return t.toLowerCase().replace(/[^a-z0-9\s-]/g," ").split(/\s+/).filter(function(w){return w.length>2});}
+  function score(list,syn,ws){return list.map(function(x){var s=0;for(var key in syn){if(x.n.indexOf(key)===0||x.n.indexOf(key)>-1){syn[key].split(" ").forEach(function(sw){ws.forEach(function(w){if(w.indexOf(sw)===0||sw.indexOf(w)===0&&w.length>4)s+=3;});});}}
+    ws.forEach(function(w){if(w.length>3&&x.k.indexOf(w)>-1)s+=1;});return {x:x,s:s};}).sort(function(a,b){return b.s-a.s});}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]});}
+  function answer(text){
+    var ws=words(text);if(!ws.length)return;
+    var sec=score(kb.sectors,SYN,ws),sol=score(kb.solutions,SSYN,ws),s0=sec[0].s>2?sec[0].x:null,sols=sol.filter(function(r){return r.s>1}).slice(0,2).map(function(r){return r.x});
+    if(!sols.length)sols=[kb.solutions[1],kb.solutions[3]];
+    var pr=kb.projects.map(function(p){var s=0;ws.forEach(function(w){if(w.length>3&&p.k.indexOf(w)>-1)s++;});if(s0&&p.k.indexOf(s0.n.split(" ")[0].toLowerCase())>-1)s+=1;return{p:p,s:s}}).sort(function(a,b){return b.s-a.s})[0];
+    var msg=encodeURIComponent(text),h='<p class="ask-q">“'+esc(text)+'”</p><div class="ask-a">';
+    h+=s0?'<p>This is '+(/^[aeiou]/i.test(s0.n)?'an':'a')+' <a href="'+s0.u+'">'+esc(s0.n.toLowerCase())+'</a> decision, and one we can help with. ':'<p>We can help with that. ';
+    h+='We would typically combine '+sols.map(function(s){return'<a href="'+s.u+'">'+esc(s.n.toLowerCase())+'</a>'}).join(' and ')+', then put the answer on a live map your team can question in plain words.</p>';
+    if(pr&&pr.s>1)h+='<a class="ask-proof" href="'+pr.p.u+'"><span>Related work</span><b>'+esc(pr.p.n)+'</b><em>'+esc(pr.p.m)+'</em></a>';
+    h+='<div class="ask-act"><a class="btn btn-primary btn-sm" href="'+kb.contact+'?type=project&msg='+msg+'">Send this to a specialist</a><a class="btn btn-ghost btn-sm" href="https://wa.me/'+kb.wa+'?text='+encodeURIComponent("Hello Orion TerraMetrics. "+text)+'" target="_blank" rel="noopener">Continue on WhatsApp</a><a class="btn btn-ghost btn-sm" href="tel:+'+kb.wa+'">Call us</a></div>';
+    h+='<p class="ask-note">Preview assistant. At launch this connects to OrionAI for full answers.</p></div>';
+    out.innerHTML=h;out.hidden=false;
+  }
+  form.addEventListener("submit",function(e){e.preventDefault();answer(q.value.trim());});
+  [].forEach.call(box.querySelectorAll(".ask-chips button"),function(b){b.addEventListener("click",function(){q.value=b.textContent;answer(b.textContent);});});
+})();
