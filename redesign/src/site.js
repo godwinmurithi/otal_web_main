@@ -53,3 +53,14 @@
     });
   });
 })();
+(function(){
+  // Sector index: swap the large image on hover/focus
+  var fig=document.querySelector(".sectors-img"),im=fig&&fig.querySelector("img");
+  if(im){[].forEach.call(document.querySelectorAll(".sectors-lists a[data-img]"),function(a){
+    var pre=new Image();pre.src=a.dataset.img;
+    function show(){if(im.getAttribute("src")===a.dataset.img)return;fig.classList.add("fade");setTimeout(function(){im.src=a.dataset.img;fig.classList.remove("fade");},160);}
+    a.addEventListener("mouseenter",show);a.addEventListener("focus",show);});}
+  // Project rail arrows
+  var rail=document.querySelector(".rail");
+  [].forEach.call(document.querySelectorAll("[data-scroll]"),function(b){b.addEventListener("click",function(){if(!rail)return;var w=rail.querySelector("li");rail.scrollBy({left:(+b.dataset.scroll)*((w?w.offsetWidth:400)+22)*2,behavior:"smooth"});});});
+})();

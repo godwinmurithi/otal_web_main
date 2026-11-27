@@ -49,9 +49,9 @@ SOL_ICON = {"surveying":"survey","gis":"map","remote-sensing":"sat","transformat
 # ------------------------------------------------------------------ navigation
 NAV = [
  ("Solutions","Field data, analysis and platforms, delivered end to end.","solutions.html",[("Services",[(s["name"],s["short"],s["file"]) for s in SOLUTIONS.values()])]),
- ("Industries","Sector teams that know the regulation, the data and the terrain.","industries.html",[("Sectors",[(i["name"],i["short"],i["file"]) for i in INDUSTRIES.values()])]),
+ ("Industries","Any organisation whose decisions depend on place.","industries.html",[("Public sector and infrastructure",[(i["name"],i["short"],i["file"]) for i in INDUSTRIES.values() if i["group"]=="public"]),("Enterprise and markets",[(i["name"],i["short"],i["file"]) for i in INDUSTRIES.values() if i["group"]=="commercial"])]),
  ("Technology","OrionGIS, built by Orion TerraMetrics, with OrionAI across all of it.","technology.html",[("Platform",[("OrionGIS ecosystem","Maps, data, forms and dashboards on one platform.","technology.html"),("OrionAI and GeoAI","Plain-language questions, finished and explained answers.","technology.html#orionai"),("Spatial data infrastructure","Geoportals, registries and open data at scale.","data-infrastructure.html")]),("Engineering",[("Integration","QGIS, OGC services, APIs and Orion Collect.","technology.html#integration"),("Research and innovation","What our R&D team is working on.","research.html"),("Visit OrionGIS ↗","Sign in or start free at orionterrametrics.com.",COM)])]),
- ("Our work","Projects delivered for governments, utilities, health networks and enterprises.","portfolio.html",[("Evidence",[("Project portfolio","Every published project, filterable by service and sector.","portfolio.html"),("Case study: Athi Water Works","Asset registry and network model for a national water agency.","projects/athi-water-works-registry.html"),("Case study: Trans Nzoia Health","178 facilities mapped into live executive dashboards.","projects/trans-nzoia-health-bip.html")]),("Relationships",[("Clients and partners","Institutions we work with.","clients.html"),("Partner with us","Technology, delivery and institutional partnerships.","partners.html")])]),
+ ("Our work","Projects delivered for governments, utilities, health networks and businesses.","portfolio.html",[("Evidence",[("Project portfolio","Every published project, filterable by service and sector.","portfolio.html"),("Case study: Athi Water Works","Asset registry and network model for a national water agency.","projects/athi-water-works-registry.html"),("Case study: Trans Nzoia Health","178 facilities mapped into live executive dashboards.","projects/trans-nzoia-health-bip.html")]),("Relationships",[("Clients and partners","Institutions we work with.","clients.html"),("Partner with us","Technology, delivery and institutional partnerships.","partners.html")])]),
  ("Insights","News, perspectives, research and events from Orion.","insights.html",[("Read",[("Newsroom","Company and product news.","newsroom.html"),("Articles and perspectives","Writing from our team.","insights.html#articles"),("Research and publications","Published research by our people.","research.html#publications")]),("Learn",[("Orion Academy","Professional and corporate geospatial training.","courses.html"),("Events and webinars","Where to meet our team.","insights.html#events")])]),
  ("Company","Who we are, how we work and where we are going.","about.html",[("Who we are",[("About Orion TerraMetrics","Our story, mission and values.","about.html"),("Leadership","The people accountable for our work.","leadership.html"),("Locations","Nairobi head office and where we work.","contact.html#office")]),("Beyond business",[("Careers","Build technology that shapes Africa's future.","careers.html"),("Corporate responsibility","Open data, skills and public-interest work.","responsibility.html"),("Trust and governance","Security, privacy, ethics and policies.","trust.html")])]),
 ]
@@ -81,7 +81,7 @@ def footer():
 <div class="foot-brand"><img src="{u('assets/OrionLogo.svg')}" alt="Orion TerraMetrics" width="110" height="42"><p>Orion TerraMetrics Africa Limited is a geospatial engineering and technology company in Nairobi. We survey, map and analyse, and we build OrionGIS.</p><p>{e(ADDRESS)}<br><a href="tel:+254799882124">{PHONE1}</a> · <a href="tel:+254729212061">{PHONE2}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
 <a class="foot-oriongis" href="{COM}" target="_blank" rel="noopener"><img src="{u('assets/logos/oriongis-icon.png')}" alt="" width="30" height="30"><span><b style="color:#fff">OrionGIS</b><br>Our platform, at orionterrametrics.com ↗</span></a></div>
 {col("Solutions",[(s["name"].split(" and ")[0] if len(s["name"])>30 else s["name"],s["file"]) for s in SOLUTIONS.values()])}
-{col("Industries",[(i["name"],i["file"]) for i in INDUSTRIES.values()])}
+{col("Industries",[(INDUSTRIES[k]["name"],INDUSTRIES[k]["file"]) for k in ["government","banking","retail","insurance","energy","health","agriculture"]]+[("All industries","industries.html")])}
 {col("Our work",[("Project portfolio","portfolio.html"),("Clients and partners","clients.html"),("Technology","technology.html"),("Research","research.html"),("Newsroom","newsroom.html"),("Insights","insights.html")])}
 {col("Company",[("About us","about.html"),("Leadership","leadership.html"),("Careers","careers.html"),("Internships","internships.html"),("Academy","courses.html"),("Responsibility","responsibility.html")])}
 {col("Get in touch",[("Discuss a project","contact.html?type=project"),("Request a proposal","contact.html?type=proposal"),("Become a partner","partners.html#become"),("Training enquiries","courses.html#enquire"),("Media enquiries","newsroom.html#media"),("Site directory","directory.html")])}
@@ -137,54 +137,81 @@ def enquiry_form(default="project", heading=None, types=None, extra=""):
 <div class="form-status" role="status" aria-live="polite"></div></form>'''
 
 # ------------------------------------------------------------------ home
+HOME_IMG = {"athi-water-works-registry":"ph-dam"}  # mockup placeholder photography
+
 def home():
-    sols = "".join(f'<a class="card" href="{u(s["file"])}"><div class="icon">{ico(SOL_ICON[k])}</div><h3>{e(s["name"])}</h3><p>{e(s["short"])}</p><span class="arrow-link">Explore</span></a>' for k, s in SOLUTIONS.items())
-    inds = list(INDUSTRIES.values())
-    tiles = "".join(f'<a class="tile" href="{u(i["file"])}">{img(i["img"], "")}<div><h3>{e(i["name"])}</h3><p>{e(i["short"])}</p></div></a>' for i in inds[:7])
-    feat = "".join(pcard(P[s]) for s in ["athi-water-works-registry","trans-nzoia-health-bip","outer-ring-road-assets"])
-    tabs = "".join(f'<button role="tab" id="t-{k}" aria-controls="p-{k}" aria-selected="{str(i==0).lower()}" tabindex="{0 if i==0 else -1}"><img src="{u("assets/logos/"+ic+".png")}" alt="">{e(n)}</button>' for i,(k,n,ic,sc,d,l) in enumerate(PRODUCTS))
-    panels = "".join(f'<div class="show-panel" role="tabpanel" id="p-{k}" aria-labelledby="t-{k}"{"" if i==0 else " hidden"}><figure>{img(sc, n+" in OrionGIS")}</figure><div class="txt"><div><h3>{e(n)}</h3><p>{e(d)}</p></div><a class="btn btn-ghost btn-sm" href="{COM}{l}" target="_blank" rel="noopener">See {e(n)} on OrionGIS ↗</a></div></div>' for i,(k,n,ic,sc,d,l) in enumerate(PRODUCTS))
+    # Hero proof strip: real figures from published case studies + the live OrionGIS index.
+    proof = [("113.1M m³","Dam capacity in a national water asset registry","projects/athi-water-works-registry.html"),
+             ("178","Health facilities streaming into live dashboards","projects/trans-nzoia-health-bip.html"),
+             ("50K+","Land parcels mapped by drone for administration","projects/drone-land-administration.html"),
+             ("43,000+","Open datasets indexed on OrionGIS",None)]
+    proofh = "".join((f'<a href="{u(l)}">' if l else f'<a href="{COM}/data" target="_blank" rel="noopener">') + f'<b>{e(n)}</b><span>{e(t)}</span></a>' for n, t, l in proof)
+    # Logo carousel: two identical runs so the CSS loop is seamless; the second run is hidden from assistive tech.
+    run = "".join(f'<li><img src="{u("assets/logos/"+f)}" alt="{e(n)}" loading="eager" height="64"></li>' for f, n in CLIENTS)
+    runb = "".join(f'<li aria-hidden="true"><img src="{u("assets/logos/"+f)}" alt="" loading="eager" height="64"></li>' for f, n in CLIENTS)
+    # Capability rows
+    stages = [("01","Know","what is really there.",["surveying","remote-sensing"],"Every asset, parcel, facility and customer, measured on the ground and watched from the sky, so nobody argues about the facts."),
+              ("02","Understand","what it means.",["gis","data-infrastructure"],"Where to invest, where risk is building, who is being missed. Clear answers, traceable to their source, that stand up in the boardroom and in an audit."),
+              ("03","Act","on it, every day.",["transformation","consulting"],"Live maps and dashboards your people actually use, with AI that answers their questions, so the insight becomes how the organisation runs.")]
+    stageh = "".join(f'<li><span class="num">{n}</span><div><h3>{t} <em>{e(s)}</em></h3><p>{e(d)}</p><p class="svc">' + " ".join(f'<a href="{u(SOLUTIONS[k]["file"])}">{e(SOLUTIONS[k]["name"])}</a>' for k in ks) + '</p></div></li>' for n, t, s, ks, d in stages)
+    # Sector index, two groups, image swaps on hover/focus
+    def sec(group):
+        return "".join(f'<li><a href="{u(i["file"])}" data-img="{u("assets/img/"+i["img"]+".webp")}"><b>{e(i["name"])}</b><span>{e(i["short"])}</span></a></li>' for i in INDUSTRIES.values() if i["group"] == group)
+    first = next(iter(INDUSTRIES.values()))
+    # Project carousel
+    feat = ["athi-water-works-registry","infinity-industrial-park-lidar","drone-land-administration","power-line-lidar-thermal","narok-crop-health","outer-ring-road-assets","cement-stockpile-volumes","nairobi-urban-expansion"]
+    slides = "".join(f'<li><a href="{u("projects/"+P[s][0]+".html")}"><figure>{img(HOME_IMG.get(s, P[s][5]), P[s][1])}</figure><div><span class="tag">{e(P[s][2])}</span><h3>{e(P[s][1])}</h3><p class="m"><b>{e(P[s][7])}</b> {e(P[s][8])}</p></div></a></li>' for s in feat)
+    tabs = "".join(f'<button role="tab" id="t-{k}" aria-controls="p-{k}" aria-selected="{str(i==0).lower()}" tabindex="{0 if i==0 else -1}"><img src="{u("assets/logos/"+ic+".png")}" alt=""><span><b>{e(n)}</b><small>{e(d.split(":")[0].split(",")[0])}</small></span></button>' for i,(k,n,ic,sc,d,l) in enumerate(PRODUCTS))
+    panels = "".join(f'<div class="show-panel" role="tabpanel" id="p-{k}" aria-labelledby="t-{k}"{"" if i==0 else " hidden"}><figure><img src="{u("assets/img/"+sc+".webp")}" alt="{e(n)} in OrionGIS" loading="eager" decoding="async"></figure><div class="txt"><p>{e(d)}</p><a class="btn btn-ghost btn-sm" href="{COM}{l}" target="_blank" rel="noopener">See {e(n)} ↗</a></div></div>' for i,(k,n,ic,sc,d,l) in enumerate(PRODUCTS))
     body = f'''
-<section class="hero"><div class="hero-media">{img("lidar","LiDAR terrain model of the Suswa corridor",eager=True)}</div><div class="wrap on-dark">
-<span class="eyebrow">Orion TerraMetrics Africa Limited</span>
-<h1>The AI-native geospatial company.</h1>
-<p class="lead">We survey, map and analyse the places that matter to governments, utilities, health networks and enterprises. And we build OrionGIS, the platform where OrionAI turns that data into decisions.</p>
-<div class="hero-actions"><a class="btn btn-primary" href="{u('contact.html?type=project')}">Discuss a project</a><a class="btn btn-ghost" href="{u('portfolio.html')}">See our work</a></div>
-<div class="hero-panel"><a href="{u('government.html')}"><b>Government</b><span>Land, planning and county data</span></a><a href="{u('energy-utilities.html')}"><b>Utilities and infrastructure</b><span>Assets, networks and surveys</span></a><a href="{u('health.html')}"><b>Health and development</b><span>Facilities, reporting, surveillance</span></a><a href="{COM}" target="_blank" rel="noopener"><b>Use OrionGIS ↗</b><span>Sign in or start free</span></a></div>
-</div><p class="hero-caption">Airborne LiDAR terrain model, Suswa corridor. Orion TerraMetrics project imagery.</p></section>
+<section class="hx"><div class="hx-media">{img("ph-hero","Nairobi skyline at dusk",eager=True)}</div>
+<div class="wrap hx-body"><p class="hx-kicker">Orion TerraMetrics · AI-native location intelligence</p>
+<h1>See the ground.<br>Decide with certainty.</h1>
+<p class="hx-lead">Orion TerraMetrics gives governments and businesses a live, trusted picture of the places they serve, invest in and operate, and the AI to act on it. We measure it, we make sense of it, and we keep it running on our own platform.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="{u('contact.html?type=project')}">Discuss a project</a><a class="btn btn-ghost" href="{u('portfolio.html')}">See our work</a></div></div>
+<div class="hx-proof"><div class="wrap">{proofh}</div></div>
+<p class="hx-cap">Nairobi at dusk · placeholder photo: Nbi101, CC BY-SA 4.0</p></section>
 
-<section class="section tight"><div class="wrap"><p class="eyebrow" style="text-align:center;display:block">Trusted by public institutions, health networks and enterprises</p>{logos_strip()}</div></section>
+<section class="marquee" aria-label="Clients and partners"><p>Trusted by</p><div class="marquee-view"><ul class="marquee-track">{run}{runb}</ul></div></section>
 
-<section class="section soft"><div class="wrap"><div class="section-head"><div><span class="eyebrow">What we do</span><h2>From the field to the boardroom, one accountable team.</h2><p>Six service lines cover every stage of a geospatial programme: capture, analysis, platforms and the advice that ties them together.</p></div><a class="arrow-link" href="{u('solutions.html')}">All solutions</a></div><div class="grid g3">{sols}</div></div></section>
+<section class="section stmt"><div class="wrap">
+<h2 class="stmt-h">From the first measurement to the board decision, <span>one accountable team.</span></h2>
+<div class="stmt-grid"><p class="stmt-p">Most organisations buy data from one firm, software from another and advice from a third, then spend years reconciling them. We do all three, so the number measured in the field is the number your leadership acts on.<br><br><a class="arrow-link" href="{u('solutions.html')}">All solutions</a></p>
+<ol class="stages">{stageh}</ol></div></div></section>
 
-<section class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">Industries</span><h2>Built around the sectors we serve.</h2><p>Each sector team knows the regulation, the data and the decisions its clients face.</p></div><a class="arrow-link" href="{u('industries.html')}">All industries</a></div><div class="tiles">{tiles}</div></div></section>
+<section class="sectors"><div class="wrap">
+<div class="sectors-head"><h2>If the decision depends on <span>where</span>, we can help.</h2><p>Location is the common thread in risk, revenue and public service. Our teams bring the same rigour to a bank's branch network as to a county's land registry.</p></div>
+<div class="sectors-grid"><figure class="sectors-img" aria-hidden="true"><img src="{u('assets/img/'+first['img']+'.webp')}" alt="" loading="eager"></figure>
+<div class="sectors-lists"><div><h3>Public sector and infrastructure</h3><ul>{sec("public")}</ul></div><div><h3>Enterprise and markets</h3><ul>{sec("commercial")}</ul></div></div></div>
+<p class="sectors-more">Not listed? <a href="{u('contact.html?type=consultation')}">Tell us the decision you are trying to make.</a></p></div></section>
 
-<section class="section soft"><div class="wrap"><div class="section-head"><div><span class="eyebrow">Our work</span><h2>Evidence, not adjectives.</h2><p>Projects delivered for national agencies, county governments and health networks.</p></div><a class="arrow-link" href="{u('portfolio.html')}">All {len(PROJECTS)} projects</a></div><div class="grid g3">{feat}</div></div></section>
+<section class="section work"><div class="wrap"><div class="work-head"><div><h2>Proof, not promises.</h2><p>{len(PROJECTS)} published projects for national agencies, counties, utilities, health networks and private clients.</p></div>
+<div class="work-nav"><button class="icon-btn" data-scroll="-1" aria-label="Previous projects">←</button><button class="icon-btn" data-scroll="1" aria-label="Next projects">→</button><a class="arrow-link" href="{u('portfolio.html')}">All projects</a></div></div></div>
+<ul class="rail" tabindex="0" aria-label="Selected projects">{slides}</ul></section>
 
-<section class="section dark"><div class="wrap"><div class="section-head"><div><span class="eyebrow">Technology and innovation</span><h2>We build the platform our teams deliver on.</h2><p>OrionGIS is Orion TerraMetrics' own technology: maps, open data, field forms and dashboards on one platform, with OrionAI across all of it.</p></div><a class="btn btn-ghost btn-sm" href="{COM}" target="_blank" rel="noopener" style="color:#fff">Visit OrionGIS ↗</a></div>
-<div class="showcase"><div class="show-tabs" role="tablist" aria-label="OrionGIS products">{tabs}</div><div>{panels}</div></div></div></section>
+<section class="platform"><div class="wrap">
+<div class="platform-head"><img src="{u('assets/logos/oriongis-wordmark-tagline-white.png')}" alt="OrionGIS" height="44"><div><h2>Your organisation's location intelligence, in one place.</h2><p>OrionGIS brings every map, dataset, field submission and dashboard together, and lets anyone ask it a question in plain words. Our own teams deliver on it, so your results stay live and useful long after the project closes.</p></div><a class="btn btn-primary" href="{COM}" target="_blank" rel="noopener">Visit OrionGIS ↗</a></div>
+<div class="showcase"><div class="show-tabs" role="tablist" aria-label="OrionGIS products">{tabs}</div><div class="show-stage">{panels}</div></div></div></section>
 
-<section class="section"><div class="wrap"><div class="spot"><figure>{img("transnzoia","Trans Nzoia County health dashboard")}</figure><div class="txt"><span class="eyebrow">Spotlight · Health</span><h3>Trans Nzoia County Health Services</h3><p>A baseline survey and geo-mapping of every health facility, then live inpatient and outpatient data streaming into executive dashboards through OrionGIS and mobile field apps.</p><div class="facts"><div><b>178</b><span>Health facilities mapped</span></div><div><b>5</b><span>Primary care networks</span></div><div><b>Live</b><span>Executive dashboards</span></div></div><a class="btn btn-primary btn-sm" href="{u('projects/trans-nzoia-health-bip.html')}">Read the case study</a> <a class="btn btn-ghost btn-sm" href="{u('health.html')}" style="color:#fff">Health and development</a></div></div></div></section>
+<section class="spot2"><figure>{img("ph-health","Mother and child at a Kenyan hospital (placeholder photo)")}</figure><div class="spot2-txt"><p class="hx-kicker">Case study · Health</p><h2>Every health facility in Trans Nzoia County, live on one screen.</h2><p>We geo-mapped all 178 facilities across five primary care networks, then connected monthly inpatient and outpatient reporting from mobile forms to executive dashboards on OrionGIS.</p>
+<dl><div><dt>178</dt><dd>Facilities mapped</dd></div><div><dt>5</dt><dd>Primary care networks</dd></div><div><dt>Live</dt><dd>Executive dashboards</dd></div></dl>
+<a class="btn btn-primary" href="{u('projects/trans-nzoia-health-bip.html')}">Read the case study</a></div></section>
 
-<section class="section soft"><div class="wrap split wide-left"><div><span class="eyebrow">Why Orion TerraMetrics</span><h2>Few firms both deliver in the field and build the software.</h2>
-<div class="grid g2" style="margin-top:20px"><div class="card"><div class="icon">{ico('survey')}</div><h3>Field to platform</h3><p>The surveyors who capture your data and the engineers who build the platform it lives on work in the same company.</p></div><div class="card"><div class="icon">{ico('spark')}</div><h3>AI-native</h3><p>OrionAI is part of every workflow we deliver: data discovery, analysis, forms and reporting.</p></div><div class="card"><div class="icon">{ico('globe')}</div><h3>Built in Africa</h3><p>Designed for African terrain, connectivity and data gaps, and held to international standards.</p></div><div class="card"><div class="icon">{ico('shield')}</div><h3>Your data stays yours</h3><p>Organisation-level access, private data by default and cloud or on-premise deployment.</p></div></div></div>
-<div><div class="media-frame">{img("about-team","Orion TerraMetrics surveyor with a total station on site")}</div><p class="caption">Our field team on an engineering survey.</p></div></div></section>
+<section class="section why"><div class="wrap why-grid"><div class="why-photo">{img("about-team","Orion TerraMetrics surveyor with a total station on an engineering survey")}</div>
+<div><h2>Why clients stay with us.</h2><ol class="why-list">
+<li><h3>We measure it ourselves.</h3><p>Our surveyors and pilots capture the data, so we can stand behind its accuracy and lineage.</p></li>
+<li><h3>We own the software.</h3><p>OrionGIS is built in-house. When a programme needs a feature, our engineers build it.</p></li>
+<li><h3>AI is in the workflow, not the brochure.</h3><p>OrionAI drafts maps, forms, dashboards and analysis, and every result shows its sources.</p></li>
+<li><h3>Your data stays yours.</h3><p>Private by default, organisation-level access control, cloud or on-premise deployment.</p></li></ol>
+<a class="arrow-link" href="{u('about.html')}">About Orion TerraMetrics</a></div></div></section>
 
-<section class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">How we deliver</span><h2>A delivery method clients can audit.</h2></div><a class="arrow-link" href="{u('about.html#approach')}">Our approach</a></div><ol class="steps"><li><h4>Discover</h4><p>Objectives, stakeholders, data and constraints.</p></li><li><h4>Design</h4><p>Method, architecture and a costed, phased plan.</p></li><li><h4>Capture</h4><p>Field, drone, satellite and existing records.</p></li><li><h4>Build</h4><p>Analysis, registries and dashboards on OrionGIS.</p></li><li><h4>Sustain</h4><p>Training, support and measured adoption.</p></li></ol></div></section>
+<section class="section soft"><div class="wrap"><div class="section-head"><div><h2>News and perspectives</h2></div><a class="arrow-link" href="{u('insights.html')}">All insights</a></div><div class="grid g3">{news_cards(3)}</div></div></section>
 
-<section class="section soft"><div class="wrap split"><div><span class="eyebrow">Company</span><h2>A Nairobi company with a global platform.</h2><p>Orion TerraMetrics Africa Limited is a geospatial engineering and technology company. We started in surveying and GIS, and we now run OrionGIS, used by organisations and data users worldwide.</p><p><a class="arrow-link" href="{u('about.html')}">About Orion TerraMetrics</a></p></div>
-<div class="grid g2"><a class="card" href="{u('leadership.html')}"><div class="person" style="grid-template-columns:72px 1fr">{img("godwin","Godwin Murithi")}<div><h4>Godwin Murithi</h4><span class="muted">Chief Executive Officer</span></div></div></a><a class="card" href="{u('leadership.html')}"><div class="person" style="grid-template-columns:72px 1fr">{img("nicholas","Nicholas Mutethia")}<div><h4>Nicholas Mutethia</h4><span class="muted">Chief Operations Officer</span></div></div></a></div></div></section>
-
-<section class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">Insights</span><h2>News and perspectives.</h2></div><a class="arrow-link" href="{u('insights.html')}">All insights</a></div><div class="grid g3">{news_cards(3)}</div></div></section>
-
-<section class="section dark"><div class="wrap grid g2" style="gap:40px">
-<div><span class="eyebrow">Careers</span><h2>Build technology that shapes Africa's future.</h2><p>Geospatial engineering, software, AI and field delivery in one team. Internships and attachments for students every year.</p><a class="btn btn-primary" href="{u('careers.html')}">Explore careers</a></div>
-<div><span class="eyebrow">Partnerships</span><h2>Grow with us.</h2><p>We work with technology firms, universities, delivery partners and development organisations across the continent.</p><a class="btn btn-ghost" href="{u('partners.html')}" style="color:#fff">Become a partner</a></div></div></section>
-
-<section class="section soft"><div class="wrap"><div class="section-head"><div><span class="eyebrow">Start a conversation</span><h2>How would you like to begin?</h2></div></div>
-<div class="grid g4"><a class="card" href="{u('contact.html?type=project')}"><div class="icon">{ico('compass')}</div><h3>Discuss a project</h3><p>Talk to a specialist about scope, method and timelines.</p><span class="arrow-link">Start</span></a><a class="card" href="{u('contact.html?type=proposal')}"><div class="icon">{ico('book')}</div><h3>Request a proposal</h3><p>Send terms of reference or an RFP and get a costed response.</p><span class="arrow-link">Request</span></a><a class="card" href="{u('contact.html?type=consultation')}"><div class="icon">{ico('people')}</div><h3>Book a consultation</h3><p>A 45-minute session with our technical leads.</p><span class="arrow-link">Book</span></a><a class="card" href="{COM}/signup" target="_blank" rel="noopener"><div class="icon">{ico('map')}</div><h3>Use OrionGIS</h3><p>Self-serve maps, data and AI at orionterrametrics.com.</p><span class="arrow-link">Start free ↗</span></a></div></div></section>
+<section class="closer"><div class="closer-media">{img("ph-space","East African Rift Valley seen from the International Space Station")}</div><div class="wrap closer-body">
+<div><h2>Tell us the decision.<br>We will bring the ground truth.</h2><p>From a single site survey to a national programme. A specialist replies within two working days.</p></div>
+<div class="hero-actions" style="margin:0"><a class="btn btn-primary" href="{u('contact.html?type=project')}">Discuss a project</a><a class="btn btn-ghost" href="{u('contact.html?type=proposal')}">Request a proposal</a><a class="btn btn-ghost" href="{u('careers.html')}">Careers</a></div></div></section>
 '''
-    page("index.html", "Orion TerraMetrics | The AI-native geospatial company", "Orion TerraMetrics surveys, maps and analyses for governments, utilities, health networks and enterprises, and builds OrionGIS, the AI-native geospatial platform.", body, "Home", True)
+    page("index.html", "Orion TerraMetrics | AI-native geospatial engineering and technology", "Orion TerraMetrics captures ground truth by survey, drone and satellite, turns it into intelligence with GeoAI and delivers it on OrionGIS, for any organisation whose decisions depend on place.", body, "Home", True)
 
 NEWS = [
  ("2026-11-10","Organisations arrive on OrionGIS","Teams can now share data, maps and dashboards inside an organisation with roles and seats.",COM+"/releases"),
@@ -220,14 +247,14 @@ def solutions():
 
 def industries():
     tiles = "".join(f'<a class="tile" href="{u(i["file"])}">{img(i["img"], "")}<div><h3>{e(i["name"])}</h3><p>{e(i["short"])}</p></div></a>' for i in INDUSTRIES.values())
-    page("industries.html","Industries","The sectors Orion TerraMetrics serves: government, infrastructure, health, utilities, agriculture, environment and education.", phero("Industries","Built around the sectors we serve.","Sector teams that know the regulation, the data and the decisions in front of our clients.",[("Industries",None)],"parcels")+f'<section class="section"><div class="wrap"><div class="tiles">{tiles}</div></div></section>'+cta(), "Industry", True)
+    page("industries.html","Industries","Location intelligence for every sector: government, banking, insurance, retail, real estate, telecoms, mining, logistics, utilities, health, agriculture, environment and more.", phero("Industries","If the decision depends on where, we can help.","Location is the common thread in risk, revenue and public service. We bring the same rigour to a bank's branch network as to a county's land registry.",[("Industries",None)],"ph-space")+f'<section class="section"><div class="wrap"><div class="tiles">{tiles}</div></div></section>'+cta(), "Industry", True)
     for k, i in INDUSTRIES.items():
         rel = projects_for(k, "ind")
-        svcs = sorted({s for p in rel for s in p[3]}) or ["gis","consulting"]
+        svcs = i.get("svcs") or sorted({s for p in rel for s in p[3]}) or ["gis","consulting"]
         needs = "".join(f"<li>{e(n)}</li>" for n in i["needs"])
         svch = "".join(f'<a class="card" href="{u(SOLUTIONS[s]["file"])}"><div class="icon">{ico(SOL_ICON[s])}</div><h3>{e(SOLUTIONS[s]["name"])}</h3><p>{e(SOLUTIONS[s]["short"])}</p><span class="arrow-link">Explore</span></a>' for s in svcs)
         body = phero("Industries", i["name"], i["lead"], [("Industries","industries.html"),(i["name"],None)], i["img"], f'<div class="hero-actions"><a class="btn btn-primary" href="{u("contact.html?type=consultation")}">Book a consultation</a></div>')
-        body += f'<section class="section"><div class="wrap split"><div><span class="eyebrow">Where we help</span><h2>What our {e(i["name"].lower())} clients ask us for</h2><ul class="checks">{needs}</ul></div><div><span class="eyebrow">Services used</span><div class="grid g2">{svch}</div></div></div></section>'
+        body += f'<section class="section"><div class="wrap split"><div><span class="eyebrow">Where we help</span><h2>Where location changes the answer</h2><ul class="checks">{needs}</ul></div><div><span class="eyebrow">Services used</span><div class="grid g2">{svch}</div></div></div></section>'
         if rel: body += f'<section class="section soft"><div class="wrap"><div class="section-head"><div><span class="eyebrow">Evidence</span><h2>Projects in {e(i["name"].lower())}</h2></div><a class="arrow-link" href="{u("portfolio.html#"+k)}">Filter the portfolio</a></div><div class="grid g3">{"".join(pcard(p) for p in rel[:6])}</div></div></section>'
         body += cta(f"Working in {i['name'].lower()}?", "Tell us about your programme. A sector lead replies within two working days.", ("Book a consultation","contact.html?type=consultation"))
         page(i["file"], i["name"], i["lead"][:155], body, "Industry", True, " ".join(i["needs"]))
