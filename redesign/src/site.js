@@ -1,0 +1,55 @@
+(function(){
+  var BASE=document.documentElement.dataset.base||"/";
+  // Mega menus
+  var tops=[].slice.call(document.querySelectorAll(".nav-top"));
+  function closeAll(except){tops.forEach(function(b){if(b!==except){b.setAttribute("aria-expanded","false");document.getElementById(b.getAttribute("aria-controls")).classList.remove("open");}});}
+  tops.forEach(function(b){
+    var m=document.getElementById(b.getAttribute("aria-controls"));
+    b.addEventListener("click",function(e){e.stopPropagation();var o=b.getAttribute("aria-expanded")==="true";closeAll(b);b.setAttribute("aria-expanded",String(!o));m.classList.toggle("open",!o);});
+  });
+  document.addEventListener("click",function(e){if(!e.target.closest(".nav"))closeAll();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeAll();closeSearch();}});
+  var mt=document.querySelector(".menu-toggle"),nav=document.querySelector(".nav");
+  if(mt)mt.addEventListener("click",function(){var o=nav.classList.toggle("open");mt.setAttribute("aria-expanded",String(o));});
+
+  // Search
+  var panel=document.querySelector(".search-panel"),input=panel&&panel.querySelector("input"),out=panel&&panel.querySelector(".search-results"),idx=null;
+  function openSearch(){panel.classList.add("open");input.focus();if(!idx){fetch(BASE+"search-index.json").then(function(r){return r.json()}).then(function(j){idx=j;run();});}}
+  function closeSearch(){if(panel)panel.classList.remove("open");}
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]});}
+  function run(){if(!idx)return;var q=input.value.trim().toLowerCase();var terms=q.split(/\s+/).filter(Boolean);
+    var res=idx.filter(function(p){var h=(p.t+" "+p.d+" "+p.k).toLowerCase();return terms.every(function(t){return h.indexOf(t)>-1});}).slice(0,12);
+    out.innerHTML=(q?res:idx.filter(function(p){return p.f}).slice(0,8)).map(function(p){return '<li><a href="'+BASE+p.u+'"><span class="kind">'+esc(p.c)+'</span><br>'+esc(p.t)+'<small>'+esc(p.d)+'</small></a></li>'}).join("")||'<li class="muted" style="padding:12px">No pages match. Try a service, sector or project name.</li>';}
+  document.querySelectorAll("[data-search]").forEach(function(b){b.addEventListener("click",openSearch)});
+  if(panel){panel.addEventListener("click",function(e){if(e.target===panel)closeSearch()});input.addEventListener("input",run);}
+
+  // Portfolio filter
+  var fb=[].slice.call(document.querySelectorAll(".filters button"));
+  fb.forEach(function(b){b.addEventListener("click",function(){fb.forEach(function(x){x.setAttribute("aria-pressed",String(x===b))});var f=b.dataset.f;
+    document.querySelectorAll(".pcard[data-tags]").forEach(function(c){c.hidden=!(f==="all"||c.dataset.tags.split("|").indexOf(f)>-1)});});});
+  var hash=decodeURIComponent(location.hash.slice(1));if(hash){var hb=fb.filter(function(b){return b.dataset.f===hash})[0];if(hb)hb.click();}
+
+  // Product showcase tabs
+  var tabs=[].slice.call(document.querySelectorAll(".show-tabs [role=tab]"));
+  tabs.forEach(function(t){t.addEventListener("click",function(){tabs.forEach(function(x){var on=x===t;x.setAttribute("aria-selected",String(on));x.tabIndex=on?0:-1;document.getElementById(x.getAttribute("aria-controls")).hidden=!on;});});
+    t.addEventListener("keydown",function(e){var i=tabs.indexOf(t);if(e.key==="ArrowDown"||e.key==="ArrowRight"){e.preventDefault();var n=tabs[(i+1)%tabs.length];n.focus();n.click();}if(e.key==="ArrowUp"||e.key==="ArrowLeft"){e.preventDefault();var p=tabs[(i-1+tabs.length)%tabs.length];p.focus();p.click();}});});
+
+  // Enquiry forms -> OrionGIS contact endpoint
+  document.querySelectorAll("form[data-enquiry]").forEach(function(form){
+    var status=form.querySelector(".form-status");
+    form.addEventListener("submit",function(e){e.preventDefault();var ok=true;
+      form.querySelectorAll("[required]").forEach(function(f){var w=f.closest(".field");var bad=!f.value.trim()||(f.type==="email"&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value));if(w)w.classList.toggle("invalid",bad);if(bad)ok=false;});
+      if(!ok){status.className="form-status bad";status.textContent="Please complete the highlighted fields.";return;}
+      if(form.querySelector(".hp input").value){return;}
+      var d=new FormData(form),type=(d.get("type")||form.dataset.enquiry);
+      var lines=["["+type+"] via Orion TerraMetrics corporate site ("+location.pathname+")"];
+      ["role","sector","country","timeline","budget","link"].forEach(function(k){if(d.get(k))lines.push(k[0].toUpperCase()+k.slice(1)+": "+d.get(k))});
+      lines.push("",d.get("message"));
+      var btn=form.querySelector("button[type=submit]");btn.disabled=true;btn.textContent="Sending…";
+      fetch(form.dataset.endpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:d.get("name"),email:d.get("email"),organization:d.get("organization")||"",message:lines.join("\n")})})
+        .then(function(r){if(!r.ok)throw 0;status.className="form-status ok";status.textContent="Thank you. Your enquiry has reached our team at info@orionterrametrics.co.ke, and we reply within two working days.";form.reset();})
+        .catch(function(){status.className="form-status bad";status.textContent="We could not send that just now. Please email info@orionterrametrics.co.ke or call +254 799 882 124.";})
+        .finally(function(){btn.disabled=false;btn.textContent=btn.dataset.label;});
+    });
+  });
+})();
